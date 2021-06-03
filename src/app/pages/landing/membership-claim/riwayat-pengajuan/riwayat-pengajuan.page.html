@@ -1,0 +1,120 @@
+<ion-header [translucent]="true" mode="md">
+
+  <ion-toolbar class="toolbar-color">
+    <ion-buttons slot="start" style="color: white;">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">
+      Riwayat Pengajuan
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-segment mode="md" [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="0">
+        Active
+      </ion-segment-button>
+
+      <ion-segment-button value="1">
+        Completed
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <ion-slides #slides pager="false" [options]="sliderOptions" (ionSlideDidChange)="slideShanged(slides)" (ionSlidesDidLoad)="slideShanged(slides)">
+    <ion-slide>
+     <ion-card *ngFor="let data of user.data?.process">
+       <div *ngIf="(data.status_claim == 0 || data.status_claim == 1 || data.status_claim == 2)">
+     <ion-card-header>
+       <ion-card-title>Claimed</ion-card-title>
+     </ion-card-header>
+   
+     <ion-card-content >
+       
+         <ion-item>
+           <ion-label position="floating">Imei:</ion-label>
+           <ion-input value="{{ data.imei }}" readonly></ion-input>
+         </ion-item>
+
+         <ion-item>
+          <ion-label position="floating">Voucher Type:</ion-label>
+          <ion-input value="{{ data.voucher_type }}" readonly></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Voucher Key:</ion-label>
+          <ion-input value="{{ data.voucher_key }}" readonly></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Serial Number:</ion-label>
+          <ion-input value="{{ data.serial_number }}" readonly></ion-input>
+        </ion-item>
+
+         <ion-item>
+          <ion-label position="floating">Tanggal Pengajuan:</ion-label>
+          <ion-datetime value="{{ data.created_at }}" readonly></ion-datetime>
+        </ion-item>
+
+         <ion-item *ngIf="data.status == 2">
+           <ion-label position="stacked">Status</ion-label>
+           <ion-input readonly>Menunggu Verifikasi</ion-input>
+         </ion-item>
+
+         <ion-item *ngIf="data.status == 3">
+          <ion-label position="stacked">Status</ion-label>
+          <ion-input readonly>Claimed</ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="data.status_claim == 1">
+          <ion-label position="stacked">Progress</ion-label>
+          <ion-input readonly>Pick Up</ion-input>
+        </ion-item> 
+
+        <ion-item *ngIf="data.status_claim == 2">
+          <ion-label position="stacked">Progress</ion-label>
+          <ion-input readonly>On Process</ion-input> 
+        </ion-item>
+
+     </ion-card-content>
+       </div>
+     </ion-card>  
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card *ngFor="let data of user.data?.process">
+       <div *ngIf="data.status_claim == 3">
+     <ion-card-header>
+       <ion-card-title>Completed</ion-card-title>
+     </ion-card-header>
+   
+     <ion-card-content >
+       
+         <ion-item>
+           <ion-label position="floating">Imei:</ion-label>
+           <ion-input value="{{ data.imei }}" readonly></ion-input>
+         </ion-item>
+  
+         <ion-item>
+          <ion-label position="floating">Voucher Type:</ion-label>
+          <ion-input value="{{ data.voucher_type }}" readonly></ion-input>
+        </ion-item>
+
+         <ion-item>
+          <ion-label position="floating">Waktu Pengajuan:</ion-label>
+          <ion-datetime value="{{ data.created_at }}" readonly></ion-datetime>
+        </ion-item>
+
+         <ion-item *ngIf="data.status_claim == 3">
+           <ion-label position="stacked">Status</ion-label>
+           <ion-input readonly>Complete</ion-input>
+         </ion-item>
+       
+     </ion-card-content>
+     </div>
+     </ion-card>  
+      </ion-slide>
+  </ion-slides>
+</ion-content>

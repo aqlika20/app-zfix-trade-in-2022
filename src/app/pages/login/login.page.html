@@ -1,0 +1,38 @@
+<ion-content>
+  <img src="./assets/images/2.0x/login_header.png">
+
+  <div class="ion-text-center ion-text-uppercase ion-margin">
+    <h1>Login</h1>
+  </div>
+
+  <div class="middle">
+    <ion-card>
+      <ion-card-content>
+        <form>
+          <ion-list lines="full" >
+           
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input name="email" type="email" [(ngModel)]="credential.email" pattern="[A-Za-z0-9._%+-]{2,}@[a-zA-Z]{2,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" (keyup.enter)="utilsService.hideKeyboard()" required></ion-input>
+            </ion-item>
+  
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input name="password" type="password" [(ngModel)]="credential.password" minlength="8" (keyup.enter)="utilsService.hideKeyboard()" required></ion-input>
+            </ion-item>
+  
+          </ion-list>
+  
+          <div class="ion-padding">
+            <ion-button expand="block" (click)="login()" class="ion-margin">Login</ion-button>
+            <ion-button expand="block" routerLink="/privacy-policy" class="ion-margin">Register</ion-button>
+          </div>
+        </form>
+        <div class="ion-text-center ion-margin">
+          <p>Forgot Password? <a routerLink="/forgot-password">Click here</a></p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

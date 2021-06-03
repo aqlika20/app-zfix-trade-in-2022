@@ -1,0 +1,36 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar class="toolbar-color">
+    <ion-buttons slot="start" style="color: white;">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">My Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>My Voucher Key</ion-card-subtitle>
+      <ion-card-title>{{ user.data?.voucher_key }}</ion-card-title>   
+    </ion-card-header>
+    <ion-card-content>
+      <img src="" />
+    </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-card>
+    <ion-title align="center">
+      QR Code
+    </ion-title>
+    <ion-card-content>
+      
+    </ion-card-content>
+    <hr>
+    <ion-title align="center">
+      Barcode
+    </ion-title>
+    <ion-card-content>
+      
+    </ion-card-content>
+  </ion-card> -->
+</ion-content>

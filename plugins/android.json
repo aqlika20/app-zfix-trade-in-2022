@@ -1,0 +1,94 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com-badrit-base64": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-clipboard": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-camera-preview": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-dreamover-uid": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-extended-device-information": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-local-notification": {
+      "ANDROID_SUPPORT_V4_VERSION": "26.+",
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-unique-device-id2": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "phonegap-plugin-local-notification": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "com.ourcodeworld.preventscreenshots": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "cordova-plugin-app-exit": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.mta.zfix"
+    }
+  }
+}

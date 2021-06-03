@@ -1,0 +1,62 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar class="toolbar-color">
+    <ion-buttons slot="start" style="color: white;">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">Pengajuan Perbaikan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="vl" style="font-family: 'Arial' !important; margin-left: 10px;">
+    <h2>Bagaimana Cara Mengajukan Perbaikan Gadget di Zfix?</h2>
+  </div>
+  
+  <ion-card>
+  <ion-item lines="none">
+    <ion-thumbnail slot="start">
+      <img src="./assets/images/claim_step_1.png">
+    </ion-thumbnail>
+    <ion-text>
+      <h5>Laporkan Kerusakan Gadget Anda</h5>
+      <a>Ketika terjadi kerugian atau kerusakan pada gadget anda, laporkanlah hal tersebut maksimal 7 hari setelah kejadian</a>
+    </ion-text>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-thumbnail slot="start">
+      <img src="./assets/images/claim_step_2.png">
+    </ion-thumbnail>
+    <ion-text>
+      <h5>Isi Formulir Pengajuan Perbaikan</h5>
+      <a>Isilah formulir data pengajuan perbaikan sebagaimana tertera</a>
+    </ion-text>
+  </ion-item>
+
+  <ion-item lines="none" style="padding-bottom: 40px;">
+    <ion-thumbnail slot="start">
+      <img src="./assets/images/claim_step_3alt.png">
+    </ion-thumbnail>
+    <ion-text>
+      <h5>Zfix Siap Memperbaiki</h5>
+      <a>Kami akan menghubungi anda dalam waktu dekat untuk verifikasi kerusakan</a>
+    </ion-text>
+  </ion-item>
+
+<hr>
+    <div class="ion-text-center" style="padding-top: 40px;">
+      <a>Kami akan menghubungi anda dalam waktu dekat untuk verifikasi kerusakan</a>
+    </div>
+
+  <div class="ion-padding">
+    <ion-button expand="block" (click)="submit()"  class="ion-margin">Ajukan Perbaikan
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button expand="block" (click)="riwayat()"  class="ion-margin">Riwayat Perbaikan
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
+  </ion-card>
+
+</ion-content>

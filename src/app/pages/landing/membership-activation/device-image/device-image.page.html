@@ -1,0 +1,46 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar class="toolbar-color">
+    <ion-title style="color: white">Device Image</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="middle-page">
+    <ion-card>
+      <ion-card-content>
+        <form>
+          <div class="ion-text-center ion-margin">
+            <h1>Foto Gadget kamu</h1>
+          </div>
+          <div class="ion-text-center ion-margin">
+            <p>Aktifkan membership kamu dengan foto Gadget kamu secara jelas menggunakan <b>Gadget lain</b></p>
+          </div>
+
+          <h3>Kode Unik</h3>
+
+          <ion-card>
+          <h1>{{code}}</h1>
+          </ion-card>
+
+          <div class="ion-text-center ion-margin">
+            <p>Kode Unik, Stiker dan Kondisi Layar harus terlihat jelas saat foto cek fisik untuk verifikasi</p>
+          </div>
+
+          <div class="ion-text-center ion-margin">
+            <p>Akses link di bawah ini untuk mengupload foto cek fisik untuk verifikasi</p>
+          </div>
+
+          <ion-card>
+            <ion-input [(ngModel)]="link" name="link" readonly></ion-input>
+          </ion-card>
+<!--           
+        <ion-card>
+          <ion-textarea [(ngModel)]="CopyText" name="CopyText"  disabled readonly></ion-textarea>
+        </ion-card> -->
+        <ion-button expand="block" size="small" float-right (click)="share()">Bagikan Link</ion-button>
+
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
