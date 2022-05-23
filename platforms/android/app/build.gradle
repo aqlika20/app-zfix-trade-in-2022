@@ -44,11 +44,8 @@ buildscript {
         ext.kotlin_version = gradlePluginKotlinVersion
     }
 
-    repositories {
-        mavenCentral()
-        google()
-        jcenter()
-    }
+    apply from: 'repositories.gradle'
+    repositories repos
 
     dependencies {
         apply from: '../CordovaLib/cordova.gradle'
@@ -82,10 +79,8 @@ buildscript {
 
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
 allprojects {
-    repositories {
-        mavenCentral()
-        jcenter()
-    }
+    apply from: 'repositories.gradle'
+    repositories repos
 }
 
 task wrapper(type: Wrapper) {
@@ -147,8 +142,10 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "../cordova-plugin-badge/zfix-badge.gradle"
-apply from: "../cordova-plugin-local-notification/zfix-localnotification.gradle"
+apply from: "../cordova-plugin-badge/tradein-badge.gradle"
+apply from: "../cordova-plugin-fingerprint-aio/tradein-build.gradle"
+apply from: "../cordova-plugin-local-notification/tradein-localnotification.gradle"
+apply from: "../onesignal-cordova-plugin/tradein-build-extras-onesignal.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()
@@ -353,9 +350,12 @@ dependencies {
 
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
+    implementation "com.google.android.play:core:1.8.+"
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
     implementation "androidx.exifinterface:exifinterface:1.2.0"
     implementation "androidx.annotation:annotation:1.0.0"
+    implementation "androidx.appcompat:appcompat:1.3.1"
+    implementation "com.onesignal:OneSignal:3.16.0"
     implementation "androidx.legacy:legacy-support-v13:1.0.0"
     // SUB-PROJECT DEPENDENCIES END
 }

@@ -30,7 +30,7 @@ export class UtilitiesService {
   async showAlert(data) {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Alert',
+      header: 'ZFix',
       message: data,
       buttons: ['OK']
     });
@@ -64,7 +64,7 @@ export class UtilitiesService {
   async done(data) {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Alert',
+      header: 'ZFix',
       message: data,
       buttons: [
         {

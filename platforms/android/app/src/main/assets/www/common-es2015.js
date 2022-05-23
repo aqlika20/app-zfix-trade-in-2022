@@ -607,6 +607,52 @@ UserApiService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
+/***/ "./src/app/services/helper.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/services/helper.service.ts ***!
+  \********************************************/
+/*! exports provided: HelperService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelperService", function() { return HelperService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+
+
+
+let HelperService = class HelperService {
+    constructor(toastCtrl, alertCtrl) {
+        this.toastCtrl = toastCtrl;
+        this.alertCtrl = alertCtrl;
+    }
+    alertMessage(type, message) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const alert = yield this.alertCtrl.create({
+                header: type,
+                message,
+                buttons: ['OK'],
+            });
+            yield alert.present();
+        });
+    }
+};
+HelperService.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"] }
+];
+HelperService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], HelperService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/membership.service.ts":
 /*!************************************************!*\
   !*** ./src/app/services/membership.service.ts ***!
@@ -621,143 +667,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/__ivy_ngcc__/fesm2015/ionic-storage.js");
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config/api */ "./src/app/config/api.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
 
 
 
 
 let MembershipService = class MembershipService {
-    constructor(storage) {
+    constructor(storage, http) {
         this.storage = storage;
+        this.http = http;
     }
-    setMembershipActivation(data) {
-        this.storage.set(_config_api__WEBPACK_IMPORTED_MODULE_3__["membershipActivationKey"], data);
+    SetSelling(data) {
+        this.storage.set(_config_api__WEBPACK_IMPORTED_MODULE_3__["ActivationKey"], data);
     }
-    removeMembershipActivation() {
-        this.storage.remove(_config_api__WEBPACK_IMPORTED_MODULE_3__["membershipActivationKey"]);
+    removeSelling() {
+        this.storage.remove(_config_api__WEBPACK_IMPORTED_MODULE_3__["ActivationKey"]);
     }
 };
 MembershipService.ctorParameters = () => [
-    { type: _ionic_storage__WEBPACK_IMPORTED_MODULE_2__["Storage"] }
+    { type: _ionic_storage__WEBPACK_IMPORTED_MODULE_2__["Storage"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
 ];
 MembershipService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
         providedIn: 'root'
     })
 ], MembershipService);
-
-
-
-/***/ }),
-
-/***/ "./src/app/services/utilities.service.ts":
-/*!***********************************************!*\
-  !*** ./src/app/services/utilities.service.ts ***!
-  \***********************************************/
-/*! exports provided: UtilitiesService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UtilitiesService", function() { return UtilitiesService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/__ivy_ngcc__/ngx/index.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/keyboard/ngx */ "./node_modules/@ionic-native/keyboard/__ivy_ngcc__/ngx/index.js");
-
-
-
-
-
-
-
-let UtilitiesService = class UtilitiesService {
-    constructor(toastCtrl, alertController, splashScreen, router, keyboard) {
-        this.toastCtrl = toastCtrl;
-        this.alertController = alertController;
-        this.splashScreen = splashScreen;
-        this.router = router;
-        this.keyboard = keyboard;
-    }
-    showToast(data) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            let toast = yield this.toastCtrl.create({
-                message: data,
-                duration: 2000
-            });
-            toast.present();
-        });
-    }
-    showAlert(data) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            const alert = yield this.alertController.create({
-                cssClass: 'my-custom-class',
-                header: 'Alert',
-                message: data,
-                buttons: ['OK']
-            });
-            alert.present();
-        });
-    }
-    restart(data) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            const alert = yield this.alertController.create({
-                cssClass: 'my-custom-class',
-                header: 'ZFix',
-                message: data,
-                buttons: [
-                    {
-                        text: 'Ok',
-                        handler: () => {
-                            this.splashScreen.show();
-                            location.href = "/landing";
-                            setTimeout(() => {
-                                this.splashScreen.hide();
-                            }, 3000);
-                        }
-                    }
-                ]
-            });
-            alert.present();
-        });
-    }
-    done(data) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            const alert = yield this.alertController.create({
-                cssClass: 'my-custom-class',
-                header: 'Alert',
-                message: data,
-                buttons: [
-                    {
-                        text: 'Ok',
-                        handler: () => {
-                            this.router.navigate([
-                                "/landing",
-                            ]);
-                        }
-                    }
-                ]
-            });
-            alert.present();
-        });
-    }
-    hideKeyboard() {
-        this.keyboard.hide();
-    }
-};
-UtilitiesService.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"] },
-    { type: _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
-    { type: _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_5__["Keyboard"] }
-];
-UtilitiesService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
-    })
-], UtilitiesService);
 
 
 

@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-tabs>\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"home\">\n      <ion-icon name=\"home\"></ion-icon>\n      <ion-label>Home</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"my-plans\">\n      <ion-icon name=\"shield-checkmark\"></ion-icon>\n      <ion-label>My Plans</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"setting\">\n      <ion-icon name=\"settings\"></ion-icon>\n      <ion-label>Setting</ion-label>\n    </ion-tab-button>\n\n  </ion-tab-bar>\n</ion-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("\n  <ion-tabs>\n    <ion-tab-bar slot=\"bottom\" >\n      <ion-tab-button tab=\"type\">\n        <ion-icon name=\"home\"></ion-icon>\n        <ion-label>Home</ion-label>\n      </ion-tab-button>\n  \n      <ion-tab-button tab=\"my-qr\">\n        <ion-icon name=\"qr-code-outline\"></ion-icon>\n        <ion-label>My QrCode</ion-label>\n      </ion-tab-button>\n  \n      <ion-tab-button tab=\"setting\">\n        <ion-icon name=\"settings\"></ion-icon>\n        <ion-label>Setting</ion-label> \n      </ion-tab-button>\n  \n    </ion-tab-bar>\n  </ion-tabs>");
 
 /***/ }),
 
@@ -37,27 +37,31 @@ const routes = [
         component: _tabs_page__WEBPACK_IMPORTED_MODULE_3__["TabsPage"],
         children: [
             {
-                path: 'home',
-                loadChildren: () => Promise.all(/*! import() | pages-landing-home-home-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-landing-home-home-module")]).then(__webpack_require__.bind(null, /*! ../pages/landing/home/home.module */ "./src/app/pages/landing/home/home.module.ts")).then(m => m.HomePageModule)
+                path: 'type',
+                loadChildren: () => Promise.all(/*! import() | pages-landing-type-type-module */[__webpack_require__.e("common"), __webpack_require__.e("type-type-module")]).then(__webpack_require__.bind(null, /*! ../pages/landing/type/type.module */ "./src/app/pages/landing/type/type.module.ts")).then(m => m.TypePageModule)
             },
             {
-                path: 'my-plans',
-                loadChildren: () => Promise.all(/*! import() | pages-landing-my-plans-my-plans-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-landing-my-plans-my-plans-module")]).then(__webpack_require__.bind(null, /*! ../pages/landing/my-plans/my-plans.module */ "./src/app/pages/landing/my-plans/my-plans.module.ts")).then(m => m.MyPlansPageModule)
+                path: 'inbox',
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-landing-inbox-inbox-module */ "pages-landing-inbox-inbox-module").then(__webpack_require__.bind(null, /*! ../pages/landing/inbox/inbox.module */ "./src/app/pages/landing/inbox/inbox.module.ts")).then(m => m.InboxPageModule)
+            },
+            {
+                path: 'my-qr',
+                loadChildren: () => __webpack_require__.e(/*! import() | pages-landing-my-qr-my-qr-module */ "pages-landing-my-qr-my-qr-module").then(__webpack_require__.bind(null, /*! ../pages/landing/my-qr/my-qr.module */ "./src/app/pages/landing/my-qr/my-qr.module.ts")).then(m => m.MyQrPageModule)
             },
             {
                 path: 'setting',
-                loadChildren: () => Promise.all(/*! import() | pages-landing-setting-index-index-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-landing-setting-index-index-module")]).then(__webpack_require__.bind(null, /*! ../pages/landing/setting/index/index.module */ "./src/app/pages/landing/setting/index/index.module.ts")).then(m => m.IndexPageModule)
+                loadChildren: () => Promise.all(/*! import() | pages-landing-settings-index-index-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-landing-settings-index-index-module")]).then(__webpack_require__.bind(null, /*! ../pages/landing/settings/index/index.module */ "./src/app/pages/landing/settings/index/index.module.ts")).then(m => m.IndexPageModule)
             },
             {
                 path: '',
-                redirectTo: '/landing/home',
+                redirectTo: '/landing/type/',
                 pathMatch: 'full'
             }
         ]
     },
     {
         path: '',
-        redirectTo: '/landing/home',
+        redirectTo: '/landing/type/',
         pathMatch: 'full'
     }
 ];
@@ -66,7 +70,7 @@ let TabsPageRoutingModule = class TabsPageRoutingModule {
 TabsPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
     })
 ], TabsPageRoutingModule);
 
@@ -85,10 +89,10 @@ TabsPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
 /* harmony import */ var _tabs_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tabs-routing.module */ "./src/app/tabs/tabs-routing.module.ts");
 /* harmony import */ var _tabs_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tabs.page */ "./src/app/tabs/tabs.page.ts");
 
@@ -101,11 +105,11 @@ __webpack_require__.r(__webpack_exports__);
 let TabsPageModule = class TabsPageModule {
 };
 TabsPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         imports: [
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["IonicModule"],
-            _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
             _tabs_routing_module__WEBPACK_IMPORTED_MODULE_5__["TabsPageRoutingModule"]
         ],
         declarations: [_tabs_page__WEBPACK_IMPORTED_MODULE_6__["TabsPage"]]
@@ -145,6 +149,8 @@ __webpack_require__.r(__webpack_exports__);
 
 let TabsPage = class TabsPage {
     constructor() { }
+    ngOnInit() {
+    }
 };
 TabsPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

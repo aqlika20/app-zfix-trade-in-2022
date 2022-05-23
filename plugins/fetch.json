@@ -34,7 +34,7 @@
   "cordova-plugin-ionic-webview": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-ionic-webview@^4.0.0"
+      "id": "cordova-plugin-ionic-webview@latest"
     },
     "is_top_level": true,
     "variables": {}
@@ -98,7 +98,7 @@
   "cordova-plugin-camera": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-camera@4.1.0"
+      "id": "cordova-plugin-camera@^4.1.0"
     },
     "is_top_level": true,
     "variables": {}
@@ -114,7 +114,7 @@
   "cordova-plugin-camera-preview": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-camera-preview"
+      "id": "cordova-plugin-camera-preview@^0.12.0"
     },
     "is_top_level": true,
     "variables": {}
@@ -214,5 +214,95 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-network-information": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-network-information@^3.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova.plugins.diagnostic": {
+    "source": {
+      "type": "registry",
+      "id": "cordova.plugins.diagnostic@^6.1.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "clovelced-plugin-audiomanagement": {
+    "source": {
+      "type": "registry",
+      "id": "clovelced-plugin-audiomanagement"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-nativeaudio": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-nativeaudio"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-vibration": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-vibration@^3.1.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-fingerprint-aio": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-fingerprint-aio@^4.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "onesignal-cordova-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "onesignal-cordova-plugin@2.11"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-dialogs": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-dialogs"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-nativestorage": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-nativestorage"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-support-android-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-support-android-plugin@~1.0.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-app-review": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-app-review@^2.0.3"
+    },
+    "is_top_level": true,
+    "variables": {
+      "ANDROID_PLAY_CORE_VERSION": "1.8.+"
+    }
   }
 }

@@ -40,123 +40,233 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
     var routes = [{
-      path: 'membership-activation',
+      path: 'type',
       loadChildren: function loadChildren() {
         return Promise.all(
-        /*! import() | membership-activation-index-index-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("membership-activation-index-index-module")]).then(__webpack_require__.bind(null,
-        /*! ./membership-activation/index/index.module */
-        "./src/app/pages/landing/membership-activation/index/index.module.ts")).then(function (m) {
-          return m.IndexPageModule;
+        /*! import() | type-type-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("type-type-module")]).then(__webpack_require__.bind(null,
+        /*! ./type/type.module */
+        "./src/app/pages/landing/type/type.module.ts")).then(function (m) {
+          return m.TypePageModule;
         });
       }
     }, {
-      path: "membership-activation/device-detail",
+      path: 'selling-phone',
       loadChildren: function loadChildren() {
         return Promise.all(
-        /*! import() | membership-activation-device-detail-device-detail-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("membership-activation-device-detail-device-detail-module")]).then(__webpack_require__.bind(null,
-        /*! ./membership-activation/device-detail/device-detail.module */
-        "./src/app/pages/landing/membership-activation/device-detail/device-detail.module.ts")).then(function (m) {
-          return m.DeviceDetailPageModule;
+        /*! import() | selling-hp-brand2-brand2-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-hp-brand2-brand2-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-hp/brand2/brand2.module */
+        "./src/app/pages/landing/selling-hp/brand2/brand2.module.ts")).then(function (m) {
+          return m.Brand2PageModule;
         });
       }
     }, {
-      path: "membership-activation/device-detail/screen-testing",
+      path: 'selling-phone/screen-testing',
       loadChildren: function loadChildren() {
         return Promise.all(
-        /*! import() | membership-activation-screen-testing-screen-testing-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("membership-activation-screen-testing-screen-testing-module")]).then(__webpack_require__.bind(null,
-        /*! ./membership-activation/screen-testing/screen-testing.module */
-        "./src/app/pages/landing/membership-activation/screen-testing/screen-testing.module.ts")).then(function (m) {
+        /*! import() | selling-hp-screen-testing-screen-testing-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-hp-screen-testing-screen-testing-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-hp/screen-testing/screen-testing.module */
+        "./src/app/pages/landing/selling-hp/screen-testing/screen-testing.module.ts")).then(function (m) {
           return m.ScreenTestingPageModule;
         });
       }
     }, {
-      path: 'membership-activation/device-detail/screen-testing/device-image',
+      path: 'selling-phone/screen-testing/camera',
       loadChildren: function loadChildren() {
         return Promise.all(
-        /*! import() | membership-activation-device-image-device-image-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("membership-activation-device-image-device-image-module")]).then(__webpack_require__.bind(null,
-        /*! ./membership-activation/device-image/device-image.module */
-        "./src/app/pages/landing/membership-activation/device-image/device-image.module.ts")).then(function (m) {
-          return m.DeviceImagePageModule;
+        /*! import() | selling-hp-camera-camera-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-hp-camera-camera-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-hp/camera/camera.module */
+        "./src/app/pages/landing/selling-hp/camera/camera.module.ts")).then(function (m) {
+          return m.CameraPageModule;
         });
       }
     }, {
-      path: 'membership-claim/index',
-      loadChildren: function loadChildren() {
-        return Promise.all(
-        /*! import() | membership-claim-index-index-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("membership-claim-index-index-module")]).then(__webpack_require__.bind(null,
-        /*! ./membership-claim/index/index.module */
-        "./src/app/pages/landing/membership-claim/index/index.module.ts")).then(function (m) {
-          return m.IndexPageModule;
-        });
-      }
-    }, {
-      path: 'membership-claim',
-      loadChildren: function loadChildren() {
-        return Promise.all(
-        /*! import() | membership-claim-overview-overview-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("membership-claim-overview-overview-module")]).then(__webpack_require__.bind(null,
-        /*! ./membership-claim/overview/overview.module */
-        "./src/app/pages/landing/membership-claim/overview/overview.module.ts")).then(function (m) {
-          return m.OverviewPageModule;
-        });
-      }
-    }, {
-      path: 'membership-claim/done',
+      path: 'selling-phone/screen-testing/camera/wifi-detect',
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
-        /*! import() | membership-claim-done-done-module */
-        "membership-claim-done-done-module").then(__webpack_require__.bind(null,
-        /*! ./membership-claim/done/done.module */
-        "./src/app/pages/landing/membership-claim/done/done.module.ts")).then(function (m) {
-          return m.DonePageModule;
+        /*! import() | selling-hp-wifi-detect-wifi-detect-module */
+        "selling-hp-wifi-detect-wifi-detect-module").then(__webpack_require__.bind(null,
+        /*! ./selling-hp/wifi-detect/wifi-detect.module */
+        "./src/app/pages/landing/selling-hp/wifi-detect/wifi-detect.module.ts")).then(function (m) {
+          return m.WifiDetectPageModule;
         });
       }
     }, {
-      path: 'membership-claim/riwayat-pengajuan',
-      loadChildren: function loadChildren() {
-        return Promise.all(
-        /*! import() | membership-claim-riwayat-pengajuan-riwayat-pengajuan-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("membership-claim-riwayat-pengajuan-riwayat-pengajuan-module")]).then(__webpack_require__.bind(null,
-        /*! ./membership-claim/riwayat-pengajuan/riwayat-pengajuan.module */
-        "./src/app/pages/landing/membership-claim/riwayat-pengajuan/riwayat-pengajuan.module.ts")).then(function (m) {
-          return m.RiwayatPengajuanPageModule;
-        });
-      }
-    }, {
-      path: 'my-card',
-      loadChildren: function loadChildren() {
-        return Promise.all(
-        /*! import() | setting-my-card-my-card-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("setting-my-card-my-card-module")]).then(__webpack_require__.bind(null,
-        /*! ./setting/my-card/my-card.module */
-        "./src/app/pages/landing/setting/my-card/my-card.module.ts")).then(function (m) {
-          return m.MyCardPageModule;
-        });
-      }
-    }, {
-      path: 'faq',
+      path: 'selling-phone/screen-testing/camera/wifi-detect/vibration',
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
-        /*! import() | setting-faq-faq-module */
-        "setting-faq-faq-module").then(__webpack_require__.bind(null,
-        /*! ./setting/faq/faq.module */
-        "./src/app/pages/landing/setting/faq/faq.module.ts")).then(function (m) {
-          return m.FaqPageModule;
+        /*! import() | selling-hp-vibration-vibration-module */
+        "selling-hp-vibration-vibration-module").then(__webpack_require__.bind(null,
+        /*! ./selling-hp/vibration/vibration.module */
+        "./src/app/pages/landing/selling-hp/vibration/vibration.module.ts")).then(function (m) {
+          return m.VibrationPageModule;
+        });
+      }
+    }, {
+      path: 'selling-phone/screen-testing/camera/wifi-detect/vibration/fingerprint',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | selling-hp-fingerprint-fingerprint-module */
+        "selling-hp-fingerprint-fingerprint-module").then(__webpack_require__.bind(null,
+        /*! ./selling-hp/fingerprint/fingerprint.module */
+        "./src/app/pages/landing/selling-hp/fingerprint/fingerprint.module.ts")).then(function (m) {
+          return m.FingerprintPageModule;
+        });
+      }
+    }, {
+      path: 'selling-phone/screen-testing/camera/wifi-detect/vibration/fingerprint/allbutton',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-hp-allbuntton-allbuntton-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-hp-allbuntton-allbuntton-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-hp/allbuntton/allbuntton.module */
+        "./src/app/pages/landing/selling-hp/allbuntton/allbuntton.module.ts")).then(function (m) {
+          return m.AllbunttonPageModule;
+        });
+      }
+    }, {
+      path: 'selling-phone/screen-testing/camera/wifi-detect/vibration/fingerprint/allbutton/detail',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-hp-detail-detail-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-hp-detail-detail-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-hp/detail/detail.module */
+        "./src/app/pages/landing/selling-hp/detail/detail.module.ts")).then(function (m) {
+          return m.DetailPageModule;
+        });
+      }
+    }, {
+      path: 'laptop-brand',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-laptop-laptop-brand-laptop-brand-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-laptop-laptop-brand-laptop-brand-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-laptop/laptop-brand/laptop-brand.module */
+        "./src/app/pages/landing/selling-laptop/laptop-brand/laptop-brand.module.ts")).then(function (m) {
+          return m.LaptopBrandPageModule;
+        });
+      }
+    }, {
+      path: 'laptop-brand/detail-unit',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-laptop-detail-unit-detail-unit-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-laptop-detail-unit-detail-unit-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-laptop/detail-unit/detail-unit.module */
+        "./src/app/pages/landing/selling-laptop/detail-unit/detail-unit.module.ts")).then(function (m) {
+          return m.DetailUnitPageModule;
+        });
+      }
+    }, {
+      path: 'ps-brand',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-ps-ps-brand-ps-brand-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-ps-ps-brand-ps-brand-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-ps/ps-brand/ps-brand.module */
+        "./src/app/pages/landing/selling-ps/ps-brand/ps-brand.module.ts")).then(function (m) {
+          return m.PsBrandPageModule;
+        });
+      }
+    }, {
+      path: 'ps-brand/detail-unit-ps',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-ps-detail-unit-ps-detail-unit-ps-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-ps-detail-unit-ps-detail-unit-ps-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-ps/detail-unit-ps/detail-unit-ps.module */
+        "./src/app/pages/landing/selling-ps/detail-unit-ps/detail-unit-ps.module.ts")).then(function (m) {
+          return m.DetailUnitPsPageModule;
+        });
+      }
+    }, {
+      path: 'tv-brand',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-tv-tv-brand-tv-brand-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-tv-tv-brand-tv-brand-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-tv/tv-brand/tv-brand.module */
+        "./src/app/pages/landing/selling-tv/tv-brand/tv-brand.module.ts")).then(function (m) {
+          return m.TvBrandPageModule;
+        });
+      }
+    }, {
+      path: 'tv-brand/detail-tv',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-tv-detail-tv-detail-tv-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-tv-detail-tv-detail-tv-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-tv/detail-tv/detail-tv.module */
+        "./src/app/pages/landing/selling-tv/detail-tv/detail-tv.module.ts")).then(function (m) {
+          return m.DetailTvPageModule;
+        });
+      }
+    }, {
+      path: 'kulkas-brand',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-kulkas-kulkas-brand-kulkas-brand-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-kulkas-kulkas-brand-kulkas-brand-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-kulkas/kulkas-brand/kulkas-brand.module */
+        "./src/app/pages/landing/selling-kulkas/kulkas-brand/kulkas-brand.module.ts")).then(function (m) {
+          return m.KulkasBrandPageModule;
+        });
+      }
+    }, {
+      path: 'kulkas-brand/detail-kulkas',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-kulkas-detail-kulkas-detail-kulkas-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-kulkas-detail-kulkas-detail-kulkas-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-kulkas/detail-kulkas/detail-kulkas.module */
+        "./src/app/pages/landing/selling-kulkas/detail-kulkas/detail-kulkas.module.ts")).then(function (m) {
+          return m.DetailKulkasPageModule;
+        });
+      }
+    }, {
+      path: 'mesin-cuci-brand',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-mesin-cuci-mesin-cuci-brand-mesin-cuci-brand-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-mesin-cuci-mesin-cuci-brand-mesin-cuci-brand-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-mesin-cuci/mesin-cuci-brand/mesin-cuci-brand.module */
+        "./src/app/pages/landing/selling-mesin-cuci/mesin-cuci-brand/mesin-cuci-brand.module.ts")).then(function (m) {
+          return m.MesinCuciBrandPageModule;
+        });
+      }
+    }, {
+      path: 'mesin-cuci-brand/detail-mesin-cuci',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | selling-mesin-cuci-detail-mesin-cuci-detail-mesin-cuci-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-mesin-cuci-detail-mesin-cuci-detail-mesin-cuci-module")]).then(__webpack_require__.bind(null,
+        /*! ./selling-mesin-cuci/detail-mesin-cuci/detail-mesin-cuci.module */
+        "./src/app/pages/landing/selling-mesin-cuci/detail-mesin-cuci/detail-mesin-cuci.module.ts")).then(function (m) {
+          return m.DetailMesinCuciPageModule;
+        });
+      }
+    }, {
+      path: 'profile',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | settings-profile-profile-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("settings-profile-profile-module")]).then(__webpack_require__.bind(null,
+        /*! ./settings/profile/profile.module */
+        "./src/app/pages/landing/settings/profile/profile.module.ts")).then(function (m) {
+          return m.ProfilePageModule;
         });
       }
     }, {
       path: 'outlet',
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
-        /*! import() | setting-outlet-outlet-module */
-        "setting-outlet-outlet-module").then(__webpack_require__.bind(null,
-        /*! ./setting/outlet/outlet.module */
-        "./src/app/pages/landing/setting/outlet/outlet.module.ts")).then(function (m) {
+        /*! import() | settings-outlet-outlet-module */
+        "settings-outlet-outlet-module").then(__webpack_require__.bind(null,
+        /*! ./settings/outlet/outlet.module */
+        "./src/app/pages/landing/settings/outlet/outlet.module.ts")).then(function (m) {
           return m.OutletPageModule;
         });
       }
@@ -164,10 +274,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: 'call-us',
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
-        /*! import() | setting-call-us-call-us-module */
-        "setting-call-us-call-us-module").then(__webpack_require__.bind(null,
-        /*! ./setting/call-us/call-us.module */
-        "./src/app/pages/landing/setting/call-us/call-us.module.ts")).then(function (m) {
+        /*! import() | settings-call-us-call-us-module */
+        "settings-call-us-call-us-module").then(__webpack_require__.bind(null,
+        /*! ./settings/call-us/call-us.module */
+        "./src/app/pages/landing/settings/call-us/call-us.module.ts")).then(function (m) {
           return m.CallUsPageModule;
         });
       }
@@ -175,10 +285,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: 'privacy-policy',
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
-        /*! import() | setting-privacy-policy-privacy-policy-module */
-        "setting-privacy-policy-privacy-policy-module").then(__webpack_require__.bind(null,
-        /*! ./setting/privacy-policy/privacy-policy.module */
-        "./src/app/pages/landing/setting/privacy-policy/privacy-policy.module.ts")).then(function (m) {
+        /*! import() | settings-privacy-policy-privacy-policy-module */
+        "settings-privacy-policy-privacy-policy-module").then(__webpack_require__.bind(null,
+        /*! ./settings/privacy-policy/privacy-policy.module */
+        "./src/app/pages/landing/settings/privacy-policy/privacy-policy.module.ts")).then(function (m) {
           return m.PrivacyPolicyPageModule;
         });
       }
@@ -186,33 +296,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: 'terms',
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
-        /*! import() | setting-terms-terms-module */
-        "setting-terms-terms-module").then(__webpack_require__.bind(null,
-        /*! ./setting/terms/terms.module */
-        "./src/app/pages/landing/setting/terms/terms.module.ts")).then(function (m) {
+        /*! import() | settings-terms-terms-module */
+        "settings-terms-terms-module").then(__webpack_require__.bind(null,
+        /*! ./settings/terms/terms.module */
+        "./src/app/pages/landing/settings/terms/terms.module.ts")).then(function (m) {
           return m.TermsPageModule;
         });
       }
     }, {
-      path: 'edit-profile',
-      loadChildren: function loadChildren() {
-        return Promise.all(
-        /*! import() | setting-edit-profile-edit-profile-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("setting-edit-profile-edit-profile-module")]).then(__webpack_require__.bind(null,
-        /*! ./setting/edit-profile/edit-profile.module */
-        "./src/app/pages/landing/setting/edit-profile/edit-profile.module.ts")).then(function (m) {
-          return m.EditProfilePageModule;
-        });
-      }
-    }, {
-      path: 'privacy-register',
+      path: 'history',
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
-        /*! import() | setting-privacy-register-privacy-register-module */
-        "setting-privacy-register-privacy-register-module").then(__webpack_require__.bind(null,
-        /*! ./setting/privacy-register/privacy-register.module */
-        "./src/app/pages/landing/setting/privacy-register/privacy-register.module.ts")).then(function (m) {
-          return m.PrivacyRegisterPageModule;
+        /*! import() | settings-history-history-module */
+        "settings-history-history-module").then(__webpack_require__.bind(null,
+        /*! ./settings/history/history.module */
+        "./src/app/pages/landing/settings/history/history.module.ts")).then(function (m) {
+          return m.HistoryPageModule;
         });
       }
     }];

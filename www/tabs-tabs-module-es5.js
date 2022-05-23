@@ -1,3 +1,7 @@
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["tabs-tabs-module"], {
@@ -17,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-tabs>\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"home\">\n      <ion-icon name=\"home\"></ion-icon>\n      <ion-label>Home</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"my-plans\">\n      <ion-icon name=\"shield-checkmark\"></ion-icon>\n      <ion-label>My Plans</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"setting\">\n      <ion-icon name=\"settings\"></ion-icon>\n      <ion-label>Setting</ion-label>\n    </ion-tab-button>\n\n  </ion-tab-bar>\n</ion-tabs>";
+    __webpack_exports__["default"] = "\n  <ion-tabs>\n    <ion-tab-bar slot=\"bottom\" >\n      <ion-tab-button tab=\"type\">\n        <ion-icon name=\"home\"></ion-icon>\n        <ion-label>Home</ion-label>\n      </ion-tab-button>\n  \n      <ion-tab-button tab=\"my-qr\">\n        <ion-icon name=\"qr-code-outline\"></ion-icon>\n        <ion-label>My QrCode</ion-label>\n      </ion-tab-button>\n  \n      <ion-tab-button tab=\"setting\">\n        <ion-icon name=\"settings\"></ion-icon>\n        <ion-label>Setting</ion-label> \n      </ion-tab-button>\n  \n    </ion-tab-bar>\n  </ion-tabs>";
     /***/
   },
 
@@ -69,46 +73,57 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: 'landing',
       component: _tabs_page__WEBPACK_IMPORTED_MODULE_3__["TabsPage"],
       children: [{
-        path: 'home',
+        path: 'type',
         loadChildren: function loadChildren() {
           return Promise.all(
-          /*! import() | pages-landing-home-home-module */
-          [__webpack_require__.e("common"), __webpack_require__.e("pages-landing-home-home-module")]).then(__webpack_require__.bind(null,
-          /*! ../pages/landing/home/home.module */
-          "./src/app/pages/landing/home/home.module.ts")).then(function (m) {
-            return m.HomePageModule;
+          /*! import() | pages-landing-type-type-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("type-type-module")]).then(__webpack_require__.bind(null,
+          /*! ../pages/landing/type/type.module */
+          "./src/app/pages/landing/type/type.module.ts")).then(function (m) {
+            return m.TypePageModule;
           });
         }
       }, {
-        path: 'my-plans',
+        path: 'inbox',
         loadChildren: function loadChildren() {
-          return Promise.all(
-          /*! import() | pages-landing-my-plans-my-plans-module */
-          [__webpack_require__.e("common"), __webpack_require__.e("pages-landing-my-plans-my-plans-module")]).then(__webpack_require__.bind(null,
-          /*! ../pages/landing/my-plans/my-plans.module */
-          "./src/app/pages/landing/my-plans/my-plans.module.ts")).then(function (m) {
-            return m.MyPlansPageModule;
+          return __webpack_require__.e(
+          /*! import() | pages-landing-inbox-inbox-module */
+          "pages-landing-inbox-inbox-module").then(__webpack_require__.bind(null,
+          /*! ../pages/landing/inbox/inbox.module */
+          "./src/app/pages/landing/inbox/inbox.module.ts")).then(function (m) {
+            return m.InboxPageModule;
+          });
+        }
+      }, {
+        path: 'my-qr',
+        loadChildren: function loadChildren() {
+          return __webpack_require__.e(
+          /*! import() | pages-landing-my-qr-my-qr-module */
+          "pages-landing-my-qr-my-qr-module").then(__webpack_require__.bind(null,
+          /*! ../pages/landing/my-qr/my-qr.module */
+          "./src/app/pages/landing/my-qr/my-qr.module.ts")).then(function (m) {
+            return m.MyQrPageModule;
           });
         }
       }, {
         path: 'setting',
         loadChildren: function loadChildren() {
           return Promise.all(
-          /*! import() | pages-landing-setting-index-index-module */
-          [__webpack_require__.e("common"), __webpack_require__.e("pages-landing-setting-index-index-module")]).then(__webpack_require__.bind(null,
-          /*! ../pages/landing/setting/index/index.module */
-          "./src/app/pages/landing/setting/index/index.module.ts")).then(function (m) {
+          /*! import() | pages-landing-settings-index-index-module */
+          [__webpack_require__.e("common"), __webpack_require__.e("pages-landing-settings-index-index-module")]).then(__webpack_require__.bind(null,
+          /*! ../pages/landing/settings/index/index.module */
+          "./src/app/pages/landing/settings/index/index.module.ts")).then(function (m) {
             return m.IndexPageModule;
           });
         }
       }, {
         path: '',
-        redirectTo: '/landing/home',
+        redirectTo: '/landing/type/',
         pathMatch: 'full'
       }]
     }, {
       path: '',
-      redirectTo: '/landing/home',
+      redirectTo: '/landing/type/',
       pathMatch: 'full'
     }];
 
@@ -151,27 +166,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _ionic_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @ionic/angular */
-    "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
     /* harmony import */
 
 
@@ -189,8 +204,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _classCallCheck(this, TabsPageModule);
     };
 
-    TabsPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      imports: [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["IonicModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _tabs_routing_module__WEBPACK_IMPORTED_MODULE_5__["TabsPageRoutingModule"]],
+    TabsPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _tabs_routing_module__WEBPACK_IMPORTED_MODULE_5__["TabsPageRoutingModule"]],
       declarations: [_tabs_page__WEBPACK_IMPORTED_MODULE_6__["TabsPage"]]
     })], TabsPageModule);
     /***/
@@ -248,9 +263,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
-    var TabsPage = function TabsPage() {
-      _classCallCheck(this, TabsPage);
-    };
+    var TabsPage = /*#__PURE__*/function () {
+      function TabsPage() {
+        _classCallCheck(this, TabsPage);
+      }
+
+      _createClass(TabsPage, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return TabsPage;
+    }();
 
     TabsPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-tabs',

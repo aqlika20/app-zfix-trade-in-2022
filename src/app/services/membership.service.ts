@@ -1,19 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Storage } from "@ionic/storage";
-import { membershipActivationKey } from "../config/api";
+import { ActivationKey } from "../config/api";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MembershipService {
 
-  constructor(private storage: Storage) { }
+  constructor(private storage: Storage,
+    private http: HttpClient) { }
 
-  setMembershipActivation(data) {
-    this.storage.set(membershipActivationKey, data);
+  SetSelling(data) {
+    this.storage.set( ActivationKey, data);
   }
 
-  removeMembershipActivation() {
-    this.storage.remove(membershipActivationKey);
+  removeSelling() {
+    this.storage.remove( ActivationKey);
   }
+
+ 
 }

@@ -15,7 +15,7 @@ export class ForgotPasswordPage implements OnInit {
 
   constructor(private authApiService: AuthenticationApiService, 
     private authService: AuthenticationService, 
-    private utilsService: UtilitiesService,
+    public utilsService: UtilitiesService,
     private router: Router,
     ) { }
 
@@ -45,5 +45,9 @@ export class ForgotPasswordPage implements OnInit {
       );
     }
  
+  }
+
+  hideKeyboard() {
+    this.utilsService.hideKeyboard()
   }
 }

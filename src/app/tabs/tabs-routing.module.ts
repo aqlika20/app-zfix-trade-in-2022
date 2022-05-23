@@ -1,40 +1,47 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+
 import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
     path: 'landing',
     component: TabsPage,
-    children: [
+    children: [ 
       {
-        path: 'home',
-        loadChildren: () => import('../pages/landing/home/home.module').then(m => m.HomePageModule)
+        path: 'type',
+        loadChildren: () => import('../pages/landing/type/type.module').then( m => m.TypePageModule)
       },
       {
-        path: 'my-plans',
-        loadChildren: () => import('../pages/landing/my-plans/my-plans.module').then(m => m.MyPlansPageModule)
+        path: 'inbox',
+        loadChildren: () => import('../pages/landing/inbox/inbox.module').then( m => m.InboxPageModule)
+      },
+      {
+        path: 'my-qr',
+        loadChildren: () => import('../pages/landing/my-qr/my-qr.module').then( m => m.MyQrPageModule)
       },
       {
         path: 'setting',
-        loadChildren: () => import('../pages/landing/setting/index/index.module').then( m => m.IndexPageModule)
+        loadChildren: () => import('../pages/landing/settings/index/index.module').then( m => m.IndexPageModule)
       },
+       
       {
         path: '',
-        redirectTo: '/landing/home',
+        redirectTo: '/landing/type/',
         pathMatch: 'full'
       }
+
     ]
   },
   {
     path: '',
-    redirectTo: '/landing/home',
+    redirectTo: '/landing/type/',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class TabsPageRoutingModule {}

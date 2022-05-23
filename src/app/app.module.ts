@@ -21,7 +21,6 @@ import { File } from '@ionic-native/file/ngx';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Clipboard } from '@ionic-native/clipboard/ngx';
-import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { Keyboard } from "@ionic-native/keyboard/ngx";
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 import { PhonegapLocalNotification } from '@ionic-native/phonegap-local-notification/ngx';
@@ -29,10 +28,19 @@ import { BackgroundMode } from '@ionic-native/background-mode/ngx';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppVersion } from '@ionic-native/app-version/ngx';
-
+import { Network } from '@ionic-native/network/ngx';
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { AudioManagement } from '@ionic-native/audio-management/ngx';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
+import  { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
+import { PopoverComponent } from 'src/app/pages/landing/popover/popover.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    PopoverComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -40,9 +48,11 @@ import { AppVersion } from '@ionic-native/app-version/ngx';
     AppRoutingModule,
     IonicStorageModule.forRoot(),
     HttpClientModule,
-    NgxQRCodeModule,
     NgbModule,
     BrowserAnimationsModule,
+    NgxQRCodeModule,
+    
+
   ],
   providers: [
     StatusBar,
@@ -62,7 +72,14 @@ import { AppVersion } from '@ionic-native/app-version/ngx';
     PhonegapLocalNotification,
     BackgroundMode,
     AppVersion,
+    Network,
+    Vibration,
+    AudioManagement,
+    NativeAudio,
+    FingerprintAIO,
+    OneSignal,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    
   ],
   bootstrap: [AppComponent],
 })

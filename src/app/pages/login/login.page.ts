@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
   constructor(
     private authApiService: AuthenticationApiService,
     private authService: AuthenticationService,
-    private utilsService: UtilitiesService
+    public utilsService: UtilitiesService
   ) {}
 
   ngOnInit() {}
@@ -45,5 +45,9 @@ export class LoginPage implements OnInit {
       );
     }
 
+  }
+
+  hideKeyboard() {
+    this.utilsService.hideKeyboard()
   }
 }
