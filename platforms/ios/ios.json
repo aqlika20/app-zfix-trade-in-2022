@@ -179,6 +179,18 @@
             {
               "xml": "<feature name=\"AppReview\"><param name=\"ios-package\" value=\"AppReviewPlugin\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"ActionSheet\"><param name=\"ios-package\" value=\"ActionSheet\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"LaunchNavigator\"><param name=\"ios-package\" value=\"LaunchNavigatorPlugin\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -210,6 +222,10 @@
           "NSLocationWhenInUseUsageDescription": [
             {
               "xml": "<string>This app requires access to your location when the screen is on and the app is displayed.</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string>This app requires access to your location for navigation purposes</string>",
               "count": 1
             }
           ],
@@ -276,6 +292,12 @@
           "NSFaceIDUsageDescription": [
             {
               "xml": "<string> </string>",
+              "count": 1
+            }
+          ],
+          "LSApplicationQueriesSchemes": [
+            {
+              "xml": "<array><string>citymapper</string><string>comgooglemaps</string><string>navigon</string><string>transit</string><string>waze</string><string>yandexnavi</string><string>uber</string><string>tomtomhome</string><string>com.sygic.aura</string><string>here-route</string><string>moovit</string><string>lyft</string><string>mapsme</string><string>cabify</string><string>baidumap</string><string>taxis99</string><string>iosamap</string></array>",
               "count": 1
             }
           ]
@@ -410,6 +432,16 @@
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     },
     "cordova-plugin-app-review": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    },
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    },
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+      "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes",
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     }
   },
@@ -1019,6 +1051,46 @@
       "merges": [
         "cordova.plugins.AppReview"
       ]
+    },
+    {
+      "id": "cordova-plugin-actionsheet.ActionSheet",
+      "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
+      "pluginId": "cordova-plugin-actionsheet",
+      "clobbers": [
+        "window.plugins.actionsheet"
+      ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification",
+      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.Common",
+      "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/common.js",
+      "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+      "clobbers": [
+        "launchnavigator"
+      ]
+    },
+    {
+      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LocalForage",
+      "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/localforage.v1.5.0.min.js",
+      "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+      "clobbers": [
+        "localforage"
+      ]
+    },
+    {
+      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LaunchNavigator",
+      "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/ios/launchnavigator.js",
+      "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+      "merges": [
+        "launchnavigator"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -1056,6 +1128,9 @@
     "cordova-plugin-vibration": "3.1.1",
     "cordova-plugin-fingerprint-aio": "4.0.2",
     "onesignal-cordova-plugin": "2.11.4",
-    "cordova-plugin-app-review": "2.0.3"
+    "cordova-plugin-app-review": "2.0.3",
+    "cordova-plugin-actionsheet": "2.3.3",
+    "cordova-plugin-dialogs": "2.0.2",
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.6"
   }
 }

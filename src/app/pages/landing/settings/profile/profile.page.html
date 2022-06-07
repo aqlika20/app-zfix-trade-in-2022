@@ -1,40 +1,34 @@
-<ion-header [translucent]="true" mode="md">
-  <ion-toolbar class="toolbar-color">
-    <ion-buttons slot="start" style="color: white;">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title style="color: white;">EDIT PROFILE</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true" mode="md">
-  <img class="bg-image" src="../../../../assets/images/home/bg_home.png" alt="">
 
-  <ion-avatar style="position: relative;">
-    <img src="./assets/images/z_logo.png">
-  </ion-avatar>
+<div class="icon" routerLink="/landing/setting">
+  <ion-icon name="arrow-back-outline"></ion-icon>
+</div>
 
-  <ion-card class="edit-profle">
-    <ion-item>
-      <ion-label position="floating">Nama</ion-label>
-      <ion-input type="text" name="name" [(ngModel)]="user.data?.user.name" (keyup.enter)="hideKeyboard()" ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">No. Telepon</ion-label>
-      <ion-input name="contact"  [(ngModel)]="user.data?.user.contact" (keyup.enter)="hideKeyboard()" ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Alamat</ion-label>
-      <ion-input name="address"  [(ngModel)]="user.data?.user.address" (keyup.enter)="hideKeyboard()" ></ion-input>
-    </ion-item>
-    <ion-item line="none">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" name="email"  [(ngModel)]="user.data?.user.email" (keyup.enter)="hideKeyboard()" ></ion-input>
-    </ion-item>
-  </ion-card>
+  <h1>Edit Profile</h1>
 
-  <div class="ion-padding">
-    <ion-button expand="block" (click)="submit()" class="ion-margin">SUBMIT</ion-button>
-  </div>
+  <ion-item style="margin: 10px; border: black solid 0.5px; border-radius: 10px;">
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input type="text" name="name" [(ngModel)]="user.data?.user.name"></ion-input>
+  </ion-item>
+
+  <ion-item style="margin: 10px; border: black solid 0.5px; border-radius: 10px;">
+    <ion-label position="stacked">Mobile Phone</ion-label>
+    <ion-input name="contact" [(ngModel)]="user.data?.user.contact"></ion-input>
+  </ion-item>
+
+  <ion-item style="margin: 10px; border: black solid 0.5px; border-radius: 10px;">
+    <ion-label position="stacked">Address</ion-label>
+    <ion-input name="address" [(ngModel)]="user.data?.user.address"></ion-input>
+  </ion-item>
+
+  <ion-item style="margin: 10px; border: black solid 0.5px; border-radius: 10px;">
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input type="text" name="email"  [(ngModel)]="user.data?.user.email"></ion-input>
+  </ion-item>
+
+  <section>
+    <ion-button expand="block" (click)="submit()">Submit</ion-button>
+  </section>
 
 </ion-content>

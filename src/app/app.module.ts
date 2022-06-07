@@ -32,10 +32,11 @@ import { Network } from '@ionic-native/network/ngx';
 import { Vibration } from '@ionic-native/vibration/ngx';
 import { AudioManagement } from '@ionic-native/audio-management/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
-import  { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
 import { PopoverComponent } from 'src/app/pages/landing/popover/popover.component';
+import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { PopoverComponent } from 'src/app/pages/landing/popover/popover.componen
     NativeAudio,
     FingerprintAIO,
     OneSignal,
+    LaunchNavigator,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     
   ],

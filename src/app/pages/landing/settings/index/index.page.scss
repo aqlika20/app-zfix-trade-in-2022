@@ -1,8 +1,4 @@
-ion-img {
-    width: 15%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-  }
+
   
   ion-label p{
       margin-left: 10px;
@@ -18,22 +14,11 @@ ion-img {
     padding-right: 20px !important;
 }
 
-.bg-image {
-    width: 100vw;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  
-    &.top {
-    top:  0px;
-    transform: translateY(-30px);
-  
-    }
-  
-    &.bottom {
-    bottom: 0px;
-  
-    }
+ ion-text {
+   padding-top: 20px;
+   display: block;
+ }
+
+ p span {
+  display: block;
 }

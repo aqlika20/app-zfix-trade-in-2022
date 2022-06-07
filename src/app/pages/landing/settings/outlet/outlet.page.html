@@ -1,34 +1,41 @@
 <ion-header [translucent]="true" mode="md">
-  <ion-toolbar class="toolbar-color">
-    <ion-buttons slot="start" style="color: white;">
+  <ion-toolbar>
+    <ion-buttons slot="start" style="color: black;">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title style="color: white;">Lokasi Tukar Tambah</ion-title>
+    <ion-title style="color: black;">Lokasi Toko</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <img class="bg-image" src="../../../../assets/images/home/bg_home.png" alt="">
 
-  <div class="div-h1">
-    <div class="vl" style="font-family: 'Arial' !important; margin-left: 10px;">
-        <h2>Lokasi Tukar Tambah</h2>
-    </div>
-    <ion-text>
-      <p>Kami telah memiliki lokasi tukar tambah barang elektronik anda.</p>
-    </ion-text>
+  <ion-card class="info">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="1" size-sm="1">
+              <img src="./assets/images/info-circle.png" />
+            </ion-col>
+            <ion-col >
+              Kami telah memiliki lokasi tukar tambah barang elektronik anda
+            </ion-col>
+          </ion-row>
+        </ion-grid> 
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
 
-    <ion-card *ngFor="let item of stores">
-      <ion-card-header>
-        <ion-card-title>{{item.name}}</ion-card-title>
-      </ion-card-header>
+  <ion-list *ngFor="let item of stores">
+    <ion-item>
+      <ion-label>
+        <h2>{{item.name}}</h2>
+        <p>{{item.address}}</p>
+        <h3 (click)="navigate(item.address)" style="color: blue;">Open Map<img src="./assets/images/ico_external_link_minor.png" />
+        </h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 
-      <ion-card-content>
-       {{item.address}}
-      </ion-card-content>
-    </ion-card>
-
-    
-  </div>
 </ion-content>
 

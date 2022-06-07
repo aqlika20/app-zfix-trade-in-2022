@@ -142,6 +142,18 @@
             {
               "xml": "<feature name=\"LocalNotifications\"><param name=\"android-package\" value=\"com.adobe.phonegap.notification.LocalNotifications\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"ActionSheet\"><param name=\"android-package\" value=\"nl.xservices.plugins.actionsheet.ActionSheet\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"LaunchNavigator\"><param name=\"android-package\" value=\"uk.co.workingedge.phonegap.plugin.LaunchNavigatorPlugin\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -179,10 +191,14 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 1
+              "count": 2
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
+              "count": 1
+            },
+            {
+              "xml": "<queries><intent><action android:name=\"android.intent.action.VIEW\" /><data android:scheme=\"geo\" /></intent></queries>",
               "count": 1
             }
           ],
@@ -283,6 +299,10 @@
             },
             {
               "xml": "<activity android:exported=\"true\" android:name=\"com.adobe.phonegap.notification.NotificationHandlerActivity\" android:permission=\"${applicationId}.permission.PushHandlerActivity\" />",
+              "count": 1
+            },
+            {
+              "xml": "<meta-data android:name=\"launchnavigator.GOOGLE_API_KEY\" android:value=\"AIzaSyDx5sW1TWi32xMVsviKM6nlj1_ncSD7fUg\" />",
               "count": 1
             }
           ],
@@ -490,6 +510,17 @@
       "PACKAGE_NAME": "com.mta.zfix.tradein"
     },
     "phonegap-plugin-local-notification": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+      "GOOGLE_API_KEY_FOR_ANDROID": "AIzaSyDx5sW1TWi32xMVsviKM6nlj1_ncSD7fUg",
+      "OKHTTP_VERSION": "3.12.0",
       "PACKAGE_NAME": "com.mta.zfix.tradein"
     }
   },
@@ -1083,6 +1114,54 @@
       "clobbers": [
         "Notification"
       ]
+    },
+    {
+      "id": "cordova-plugin-actionsheet.ActionSheet",
+      "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
+      "pluginId": "cordova-plugin-actionsheet",
+      "clobbers": [
+        "window.plugins.actionsheet"
+      ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification",
+      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification_android",
+      "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.Common",
+      "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/common.js",
+      "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+      "clobbers": [
+        "launchnavigator"
+      ]
+    },
+    {
+      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LocalForage",
+      "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/localforage.v1.5.0.min.js",
+      "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+      "clobbers": [
+        "localforage"
+      ]
+    },
+    {
+      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LaunchNavigator",
+      "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/android/launchnavigator.js",
+      "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+      "merges": [
+        "launchnavigator"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -1120,6 +1199,9 @@
     "cordova-plugin-x-socialsharing": "6.0.2",
     "cordova.plugins.diagnostic": "6.1.0",
     "onesignal-cordova-plugin": "2.11.4",
-    "phonegap-plugin-local-notification": "1.0.1"
+    "phonegap-plugin-local-notification": "1.0.1",
+    "cordova-plugin-actionsheet": "2.3.3",
+    "cordova-plugin-dialogs": "2.0.2",
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.6"
   }
 }

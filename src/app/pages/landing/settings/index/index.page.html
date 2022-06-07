@@ -5,64 +5,81 @@
 </ion-header> -->
 
 <ion-content>
-  <img class="bg-image" src="../../../../assets/images/home/bg_home.png" alt="">
-
-  <ion-item lines="none" class="current-user" color="transparent" routerLink="../../profile">
+  <ion-item lines="none">
+   <ion-text>
+     <h2>Settings</h2>
+   </ion-text>
+  </ion-item>
+  
+  <ion-item lines="none" class="current-user" color="transparent">
     <ion-avatar>
-      <img src="./assets/images/z_logo.png">
+      <img class="avatars" src="./assets/images/z_logo.png">
     </ion-avatar>
     <ion-label class="ion-text-nowrap">
-      <p *ngIf="user != {}">Halo, {{ user.data?.user.name }}</p>
+      <p *ngIf="user != {}"><span style="font-size: 18px;">{{ user.data?.user.name }}</span><span style="font-size: 11px;" routerLink="../../profile">edit profile<img class="avatars" src="./assets/images/arrow-circle-right.png"></span></p>
+
     </ion-label>
-    <ion-icon name="chevron-forward-outline"></ion-icon> 
   </ion-item>
 
-  <ion-card class="welcome-card">
-    <ion-item routerLink="../../history">
-      <ion-img src="./assets/images/setting_menu_cards.png" class="img-btn"></ion-img>
-      <ion-label class="ion-text-nowrap">
-        <p>Daftar Transaksi</p>
-      </ion-label>
-    </ion-item> 
+  <ion-item lines="none">
+    <ion-text>
+      <p style="font-size: 12px;">General</p>
+    </ion-text>
+   </ion-item>
 
-    <ion-item routerLink="../../outlet">
-      <ion-img src="./assets/images/setting_menu_outlets.png" class="img-btn"></ion-img>
-      <ion-label class="ion-text-nowrap">
-        <p>Lokasi Tukar Tambah</p>
-      </ion-label>
-    </ion-item> 
-    
-    <ion-item routerLink="../../call-us">
-      <ion-img src="./assets/images/setting_menu_contact.png" class="img-btn"></ion-img>
-      <ion-label class="ion-text-nowrap">
-        <p>Hubungi Kami</p>
-      </ion-label>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-item routerLink="../../privacy-policy">
-      <ion-img src="./assets/images/setting_menu_privacy.png" class="img-btn"></ion-img>
-      <ion-label class="ion-text-nowrap">
-        <p>Kebijakan Privasi</p>
-      </ion-label>
-    </ion-item>
-
-    <ion-item routerLink="../../terms">
-      <ion-img src="./assets/images/setting_menu_terms.png" class="img-btn"></ion-img> 
-      <ion-label class="ion-text-nowrap">
-        <p>Syarat & Ketentuan</p>
-      </ion-label>
-    </ion-item>
-</ion-card>
-
-<ion-card>
-  <ion-item (click)="logout()">
-    <ion-img src="./assets/images/setting_menu_logout.png" class="img-btn"></ion-img>
+   <ion-item routerLink="../../history">
+    <ion-img src="./assets/images/transaction-minus.png" class="img-btn"></ion-img>
     <ion-label class="ion-text-nowrap">
-      <p>Logout</p>
-    </ion-label> 
+      <p>Daftar Transaksi</p>
+    </ion-label>
   </ion-item>
-</ion-card>
+
+  <ion-item routerLink="../../outlet">
+    <ion-img src="./assets/images/share.png" class="img-btn"></ion-img>
+    <ion-label class="ion-text-nowrap">
+      <p>Service Center Zfix</p>
+    </ion-label>
+  </ion-item> 
+  
+  <ion-item routerLink="../../call-us">
+    <ion-img src="./assets/images/headphone.png" class="img-btn"></ion-img>
+    <ion-label class="ion-text-nowrap">
+      <p>Hubungi Kami</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-text>
+      <p style="font-size: 12px;">Other</p>
+    </ion-text>
+   </ion-item>
+
+   <ion-item routerLink="../../privacy-policy">
+    <ion-img src="./assets/images/transaction-minus.png" class="img-btn"></ion-img>
+    <ion-label class="ion-text-nowrap">
+      <p>Kebijakan Privasi</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item routerLink="../../terms">
+    <ion-img src="./assets/images/share.png" class="img-btn"></ion-img> 
+    <ion-label class="ion-text-nowrap">
+      <p>Syarat & Ketentuan</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item lines="none" (click)="logout()">
+    <ion-text>
+      <p style="font-size: 12px;">Log out <img class="avatars" src="./assets/images/arrow-circle-right.png">
+      </p>
+    </ion-text>
+   </ion-item>
+
+   <ion-item lines="none">
+    <ion-text>
+      <p style="font-size: 12px;">Version</p>
+    </ion-text>
+   </ion-item>
+  
 
 </ion-content>
