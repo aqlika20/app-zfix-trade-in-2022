@@ -270,7 +270,7 @@ module.exports = webpackAsyncContext;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-app>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\r\n  <ion-router-outlet></ion-router-outlet>\r\n</ion-app>\r\n");
 
 /***/ }),
 
@@ -283,7 +283,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-list>\n  <ion-list-header> ZFix Trade In </ion-list-header>\n\n  <ion-item *ngFor=\"let item of notification\">\n    <ion-label class=\"ion-text-wrap\">\n      <h3>{{item.type}}</h3>\n      <p>{{item.description}}</p>\n    </ion-label>\n  </ion-item>\n\n</ion-list>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-list>\r\n  <ion-list-header> ZFix Trade In </ion-list-header>\r\n\r\n  <ion-item *ngFor=\"let item of notification\">\r\n    <ion-label class=\"ion-text-wrap\">\r\n      <h3>{{item.type}}</h3>\r\n      <p>{{item.description}}</p>\r\n    </ion-label>\r\n  </ion-item>\r\n\r\n</ion-list>");
 
 /***/ }),
 
@@ -526,6 +526,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @techiediaries/ngx-qrcode */ "./node_modules/@techiediaries/ngx-qrcode/__ivy_ngcc__/fesm2015/techiediaries-ngx-qrcode.js");
 /* harmony import */ var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @ionic-native/onesignal/ngx */ "./node_modules/@ionic-native/onesignal/__ivy_ngcc__/ngx/index.js");
 /* harmony import */ var src_app_pages_landing_popover_popover_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! src/app/pages/landing/popover/popover.component */ "./src/app/pages/landing/popover/popover.component.ts");
+/* harmony import */ var _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @ionic-native/launch-navigator/ngx */ "./node_modules/@ionic-native/launch-navigator/__ivy_ngcc__/ngx/index.js");
+
 
 
 
@@ -605,6 +607,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _ionic_native_native_audio_ngx__WEBPACK_IMPORTED_MODULE_31__["NativeAudio"],
             _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_32__["FingerprintAIO"],
             _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_34__["OneSignal"],
+            _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_36__["LaunchNavigator"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
@@ -1154,7 +1157,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\ardim\Desktop\hampir selesai\New folder\myTrade_V3.0\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\zfix-trade-in-2022\src\main.ts */"./src/main.ts");
 
 
 /***/ })

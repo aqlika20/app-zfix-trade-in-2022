@@ -1,6 +1,6 @@
 .header {
   background-color: #395398;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   left: 0;
   right: 0;
@@ -20,22 +20,92 @@
     
 }
 
-  .main-menu{
-    display: flex;
-    flex-direction: column;
-    margin-top: 40%;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    height: 100%;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+.grid{
+  width: 100%;
+  height: 100%;
+}
 
-  }
+.cardgrid{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 
-  ion-card-subtitle {
-    margin-top: 30px;
-    margin-left: 20px;
-    font-size: 20px;
-    color: black;
-    font-family: 'Plus Jakarta Sans';
-  }
+.img_kanan{
+  margin-right: 0 !important;
+  float:right;
+}
+
+.title{
+  margin-top: 50px;
+  margin-left: 20px;
+  font-family: Plus Jakarta Sans;
+  color: #fff; 
+}
+
+.main_title{
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  font-family: Plus Jakarta Sans Extra;
+  line-height: 40px;
+}
+
+.subtitle{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.main-menu{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  height: max-content;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+}
+
+ion-card-subtitle {
+  margin-top: 30px;
+  margin-left: 20px;
+  font-size: 20px;
+  color: black;
+  font-family: Plus Jakarta Sans Extra;
+}
+
+.garis{
+  width: 86%;
+  height: 12%;
+  
+  display: flex;
+  justify-content: center;
+  padding-top: 6%;
+  padding-bottom: 6%;
+
+  border: 3px dashed #EBEBEB;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.font{
+  font-family: Plus Jakarta Sans Extra;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+
+  margin-top: 30px;
+}

@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\" mode=\"md\">\n  <ion-toolbar class=\"toolbar-color\">\n    <ion-buttons slot=\"start\" style=\"color: white;\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n    <ion-title style=\"color: white;\">Lokasi Tukar Tambah</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <img class=\"bg-image\" src=\"../../../../assets/images/home/bg_home.png\" alt=\"\">\n\n  <div class=\"div-h1\">\n    <div class=\"vl\" style=\"font-family: 'Arial' !important; margin-left: 10px;\">\n        <h2>Lokasi Tukar Tambah</h2>\n    </div>\n    <ion-text>\n      <p>Kami telah memiliki lokasi tukar tambah barang elektronik anda.</p>\n    </ion-text>\n\n    <ion-card *ngFor=\"let item of stores\">\n      <ion-card-header>\n        <ion-card-title>{{item.name}}</ion-card-title>\n      </ion-card-header>\n\n      <ion-card-content>\n       {{item.address}}\n      </ion-card-content>\n    </ion-card>\n\n    \n  </div>\n</ion-content>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\" mode=\"md\">\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\" style=\"color: black;\">\r\n      <ion-back-button></ion-back-button>\r\n    </ion-buttons>\r\n    <ion-title style=\"color: black;\">Lokasi Toko</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n  <ion-card class=\"info\">\r\n    <ion-card-header>\r\n      <ion-card-subtitle>\r\n        <ion-grid>\r\n          <ion-row>\r\n            <ion-col size=\"1\" size-sm=\"1\">\r\n              <img src=\"./assets/images/info-circle.png\" />\r\n            </ion-col>\r\n            <ion-col >\r\n              Kami telah memiliki lokasi tukar tambah barang elektronik anda\r\n            </ion-col>\r\n          </ion-row>\r\n        </ion-grid> \r\n      </ion-card-subtitle>\r\n    </ion-card-header>\r\n  </ion-card>\r\n\r\n  <ion-list *ngFor=\"let item of stores\">\r\n    <ion-item>\r\n      <ion-label>\r\n        <h2>{{item.name}}</h2>\r\n        <p>{{item.address}}</p>\r\n        <h3 (click)=\"navigate(item.address)\" style=\"color: blue;\">Open Map<img src=\"./assets/images/ico_external_link_minor.png\" />\r\n        </h3>\r\n      </ion-label>\r\n    </ion-item>\r\n  </ion-list>\r\n\r\n</ion-content>\r\n\r\n");
 
 /***/ }),
 
@@ -101,7 +101,7 @@ OutletPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".div-h1 {\n  position: absolute;\n}\n\n.bg-image {\n  width: 100vw;\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n}\n\n.bg-image.top {\n  top: 0px;\n  transform: translateY(-30px);\n}\n\n.bg-image.bottom {\n  bottom: 0px;\n}\n\nion-content {\n  justify-content: center;\n  --padding-top: 20px;\n}\n\n.vl {\n  border-left: 6px solid blue;\n  height: 33px;\n}\n\nh2 {\n  padding-left: 10px;\n}\n\np {\n  padding-left: 10px;\n  font-size: 13px;\n}\n\nion-searchbar {\n  --background: #FFF !important;\n  --border-radius: 10px !important;\n  transform: scale(1.1);\n  margin: 0 auto;\n  width: 90%;\n  padding-top: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFuZGluZy9zZXR0aW5ncy9vdXRsZXQvQzpcXFVzZXJzXFxhcmRpbVxcRGVza3RvcFxcaGFtcGlyIHNlbGVzYWlcXE5ldyBmb2xkZXJcXG15VHJhZGVfVjMuMC9zcmNcXGFwcFxccGFnZXNcXGxhbmRpbmdcXHNldHRpbmdzXFxvdXRsZXRcXG91dGxldC5wYWdlLnNjc3MiLCJzcmMvYXBwL3BhZ2VzL2xhbmRpbmcvc2V0dGluZ3Mvb3V0bGV0L291dGxldC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBQTtBQ0NKOztBREVFO0VBQ0UsWUFBQTtFQUNBLGVBQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLE1BQUE7RUFDQSxTQUFBO0FDQ0o7O0FEQ0k7RUFDQSxRQUFBO0VBQ0EsNEJBQUE7QUNDSjs7QURHSTtFQUNBLFdBQUE7QUNESjs7QURNRTtFQUNFLHVCQUFBO0VBQ0EsbUJBQUE7QUNISjs7QURNRTtFQUNFLDJCQUFBO0VBQ0EsWUFBQTtBQ0hKOztBRE1FO0VBQ0Usa0JBQUE7QUNISjs7QURNRTtFQUNJLGtCQUFBO0VBQ0EsZUFBQTtBQ0hOOztBRE1FO0VBQ0UsNkJBQUE7RUFDQSxnQ0FBQTtFQUNBLHFCQUFBO0VBQ0EsY0FBQTtFQUNBLFVBQUE7RUFDQSxpQkFBQTtBQ0hKIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbGFuZGluZy9zZXR0aW5ncy9vdXRsZXQvb3V0bGV0LnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kaXYtaDF7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgfVxyXG5cclxuICAuYmctaW1hZ2Uge1xyXG4gICAgd2lkdGg6IDEwMHZ3O1xyXG4gICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgbGVmdDogMDtcclxuICAgIHJpZ2h0OiAwO1xyXG4gICAgdG9wOiAwO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gIFxyXG4gICAgJi50b3Age1xyXG4gICAgdG9wOiAgMHB4O1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0zMHB4KTtcclxuICBcclxuICAgIH1cclxuICBcclxuICAgICYuYm90dG9tIHtcclxuICAgIGJvdHRvbTogMHB4O1xyXG4gIFxyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgaW9uLWNvbnRlbnR7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIC0tcGFkZGluZy10b3A6IDIwcHg7XHJcbiAgfVxyXG5cclxuICAudmwge1xyXG4gICAgYm9yZGVyLWxlZnQ6IDZweCBzb2xpZCBibHVlO1xyXG4gICAgaGVpZ2h0OiAzM3B4O1xyXG4gIH1cclxuXHJcbiAgaDIge1xyXG4gICAgcGFkZGluZy1sZWZ0OiAxMHB4O1xyXG4gIH1cclxuICBcclxuICBwe1xyXG4gICAgICBwYWRkaW5nLWxlZnQ6IDEwcHg7XHJcbiAgICAgIGZvbnQtc2l6ZTogMTNweDtcclxuICB9XHJcblxyXG4gIGlvbi1zZWFyY2hiYXJ7XHJcbiAgICAtLWJhY2tncm91bmQ6ICNGRkYgIWltcG9ydGFudDtcclxuICAgIC0tYm9yZGVyLXJhZGl1czogMTBweCAhaW1wb3J0YW50O1xyXG4gICAgdHJhbnNmb3JtOiBzY2FsZSgxLjEpO1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICB3aWR0aDogOTAlOyBcclxuICAgIHBhZGRpbmctdG9wOiAxMHB4O1xyXG4gIH0iLCIuZGl2LWgxIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xufVxuXG4uYmctaW1hZ2Uge1xuICB3aWR0aDogMTAwdnc7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIHRvcDogMDtcbiAgYm90dG9tOiAwO1xufVxuLmJnLWltYWdlLnRvcCB7XG4gIHRvcDogMHB4O1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTMwcHgpO1xufVxuLmJnLWltYWdlLmJvdHRvbSB7XG4gIGJvdHRvbTogMHB4O1xufVxuXG5pb24tY29udGVudCB7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAtLXBhZGRpbmctdG9wOiAyMHB4O1xufVxuXG4udmwge1xuICBib3JkZXItbGVmdDogNnB4IHNvbGlkIGJsdWU7XG4gIGhlaWdodDogMzNweDtcbn1cblxuaDIge1xuICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG59XG5cbnAge1xuICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG4gIGZvbnQtc2l6ZTogMTNweDtcbn1cblxuaW9uLXNlYXJjaGJhciB7XG4gIC0tYmFja2dyb3VuZDogI0ZGRiAhaW1wb3J0YW50O1xuICAtLWJvcmRlci1yYWRpdXM6IDEwcHggIWltcG9ydGFudDtcbiAgdHJhbnNmb3JtOiBzY2FsZSgxLjEpO1xuICBtYXJnaW46IDAgYXV0bztcbiAgd2lkdGg6IDkwJTtcbiAgcGFkZGluZy10b3A6IDEwcHg7XG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".info {\n  margin-top: 30px;\n  height: 12%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFuZGluZy9zZXR0aW5ncy9vdXRsZXQvRDpcXHpmaXgtdHJhZGUtaW4tMjAyMi9zcmNcXGFwcFxccGFnZXNcXGxhbmRpbmdcXHNldHRpbmdzXFxvdXRsZXRcXG91dGxldC5wYWdlLnNjc3MiLCJzcmMvYXBwL3BhZ2VzL2xhbmRpbmcvc2V0dGluZ3Mvb3V0bGV0L291dGxldC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUM7RUFDSSxnQkFBZ0I7RUFDaEIsV0FBVztBQ0NoQiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2xhbmRpbmcvc2V0dGluZ3Mvb3V0bGV0L291dGxldC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgLmluZm8ge1xyXG4gICAgIG1hcmdpbi10b3A6IDMwcHg7XHJcbiAgICAgaGVpZ2h0OiAxMiU7XHJcbiB9IiwiLmluZm8ge1xuICBtYXJnaW4tdG9wOiAzMHB4O1xuICBoZWlnaHQ6IDEyJTtcbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -121,6 +121,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../config/api */ "./src/app/config/api.js");
 /* harmony import */ var _services_api_selling_api_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../../services/api/selling-api.service */ "./src/app/services/api/selling-api.service.ts");
 /* harmony import */ var _services_utilities_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../services/utilities.service */ "./src/app/services/utilities.service.ts");
+/* harmony import */ var _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/launch-navigator/ngx */ "./node_modules/@ionic-native/launch-navigator/__ivy_ngcc__/ngx/index.js");
+
 
 
 
@@ -128,11 +130,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let OutletPage = class OutletPage {
-    constructor(storage, sellingApiService, utilsService) {
+    constructor(storage, sellingApiService, utilsService, launchNavigator) {
         this.storage = storage;
         this.sellingApiService = sellingApiService;
         this.utilsService = utilsService;
+        this.launchNavigator = launchNavigator;
         this.stores = [];
+        this.start = "";
     }
     ngOnInit() {
     }
@@ -143,6 +147,7 @@ let OutletPage = class OutletPage {
         this.storage.get(_config_api__WEBPACK_IMPORTED_MODULE_3__["tokenKey"]).then((token) => {
             this.sellingApiService.getStore(token).subscribe((response) => {
                 this.stores = response.data.store;
+                this.destinations = this.stores;
                 console.log(this.stores);
             }, (err) => {
                 this.stores = [];
@@ -150,11 +155,19 @@ let OutletPage = class OutletPage {
             });
         });
     }
+    navigate(address) {
+        let options = {
+            start: this.start
+        };
+        this.launchNavigator.navigate(address, options)
+            .then(success => alert('Launched navigator'), error => alert('Error launching navigator: ' + error));
+    }
 };
 OutletPage.ctorParameters = () => [
     { type: _ionic_storage__WEBPACK_IMPORTED_MODULE_2__["Storage"] },
     { type: _services_api_selling_api_service__WEBPACK_IMPORTED_MODULE_4__["SellingApiService"] },
-    { type: _services_utilities_service__WEBPACK_IMPORTED_MODULE_5__["UtilitiesService"] }
+    { type: _services_utilities_service__WEBPACK_IMPORTED_MODULE_5__["UtilitiesService"] },
+    { type: _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_6__["LaunchNavigator"] }
 ];
 OutletPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
