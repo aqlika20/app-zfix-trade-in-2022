@@ -3,7 +3,7 @@ import { SellingApiService } from './../../../../services/api/selling-api.servic
 import { HelperService } from '../../../../services/helper.service';
 import { Device } from "@ionic-native/device/ngx";
 import { UtilitiesService } from '../../../../services/utilities.service';
-import { NavController } from '@ionic/angular';
+import { ModalController, NavController, PopoverController } from '@ionic/angular';
 import { NavigationExtras } from '@angular/router';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from "@angular/router";
@@ -14,6 +14,7 @@ import { Storage } from "@ionic/storage";
 import { tokenKey } from "../../../../config/api";
 import { MembershipApiService } from "../../../../services/api/membership-api.service";
 import { AlertController } from '@ionic/angular';
+import { PsBrandModalComponent } from '../../modal/ps-brand-modal/ps-brand-modal.component';
 
 declare var cordova: any;
 type Stores = {id: number, name: string};
@@ -44,6 +45,16 @@ export class PsBrandPage implements OnInit {
   data_storages:any = [];
   data_jenis:any = [];
 
+  selected_varian:string;
+  selected_model:string;
+  selected_storage:string;
+  selected_stick:string;
+
+  kondisiPlaystation: boolean = false;
+  addOnGame: boolean = false;
+  stickNormal: boolean = false;
+  usbNormal: boolean = false;
+
   searchStore;
   
   constructor(
@@ -58,6 +69,8 @@ export class PsBrandPage implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     public alertController: AlertController,
+    private modalCtrl: ModalController,
+    private popoverCtrl: PopoverController,
 
   ) { }
 
@@ -70,6 +83,56 @@ export class PsBrandPage implements OnInit {
     this.selling.removeSelling();
 
   }
+
+  customPopoverOptions: any = {
+    header: 'Pilih Tempat Trade In',
+    message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.'
+  };
+
+  selectVarian(val){
+    this.selected_varian = val;
+    
+    document.querySelectorAll('.ps-varian-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+  
+  selectModel(val){
+    this.selected_model = val;
+    
+    document.querySelectorAll('.ps-model-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectStorage(val){
+    this.selected_storage = val;
+    
+    document.querySelectorAll('.ps-storage-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectStick(val){
+    this.selected_stick = val;
+    
+    document.querySelectorAll('.ps-stick-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
   getStore(){
     this.storage.get(tokenKey).then((token) => {
       this.sellingApiService.getStore(token).subscribe(
@@ -115,6 +178,15 @@ export class PsBrandPage implements OnInit {
     
     }
   } 
+
+  // async openModal(event){
+  //   const modal = await this.modalCtrl.create({
+  //     component: PsBrandModalComponent,
+  //     cssClass: 'small-modal'
+  //   });
+
+  //   await modal.present();
+  // }
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({

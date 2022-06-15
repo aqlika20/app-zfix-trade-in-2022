@@ -31,10 +31,18 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.card-backgroud{
+  position: relative;
+  text-align: right;
+  margin: 0 !important;
+  padding: 0 !important;
 
-.img_kanan{
-  margin-right: 0 !important;
-  float:right;
+  .img_kanan{
+    position: absolute;
+    top: 23%;
+    left: 60%;
+    width: max-content;
+  }
 }
 
 .title{
