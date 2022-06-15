@@ -113,6 +113,9 @@
       "GOOGLE_API_KEY_FOR_ANDROID": "AIzaSyDx5sW1TWi32xMVsviKM6nlj1_ncSD7fUg",
       "OKHTTP_VERSION": "3.12.0",
       "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-email-composer": {
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
     }
   },
   "dependent_plugins": {

@@ -21,6 +21,12 @@
                 "android:supportsRtl": "true"
               }
             }
+          ],
+          "/manifest/queries": [
+            {
+              "xml": "<intent><action android:name=\"android.intent.action.SENDTO\" /><data android:scheme=\"mailto\" /></intent>",
+              "count": 1
+            }
           ]
         }
       },
@@ -314,6 +320,10 @@
             {
               "xml": "<activity android:exported=\"true\" android:name=\"de.niklasmerz.cordova.biometric.BiometricActivity\" android:theme=\"@style/TransparentTheme\" />",
               "count": 1
+            },
+            {
+              "xml": "<provider android:authorities=\"${applicationId}.emailcomposer.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"de.appplant.cordova.emailcomposer.Provider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/emailcomposer_provider_paths\" /></provider>",
+              "count": 1
             }
           ],
           "/*/application": [
@@ -393,6 +403,14 @@
             },
             {
               "xml": "<feature name=\"Diagnostic_External_Storage\"><param name=\"android-package\" value=\"cordova.plugins.Diagnostic_External_Storage\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"EmailComposer\"><param name=\"android-package\" value=\"de.appplant.cordova.emailcomposer.EmailComposer\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"AndroidXEnabled\" value=\"true\" />",
               "count": 1
             }
           ]
@@ -521,6 +539,9 @@
     "uk.co.workingedge.phonegap.plugin.launchnavigator": {
       "GOOGLE_API_KEY_FOR_ANDROID": "AIzaSyDx5sW1TWi32xMVsviKM6nlj1_ncSD7fUg",
       "OKHTTP_VERSION": "3.12.0",
+      "PACKAGE_NAME": "com.mta.zfix.tradein"
+    },
+    "cordova-plugin-email-composer": {
       "PACKAGE_NAME": "com.mta.zfix.tradein"
     }
   },
@@ -1162,6 +1183,14 @@
       "merges": [
         "launchnavigator"
       ]
+    },
+    {
+      "id": "cordova-plugin-email-composer.EmailComposer",
+      "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
+      "pluginId": "cordova-plugin-email-composer",
+      "clobbers": [
+        "cordova.plugins.email"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -1202,6 +1231,7 @@
     "phonegap-plugin-local-notification": "1.0.1",
     "cordova-plugin-actionsheet": "2.3.3",
     "cordova-plugin-dialogs": "2.0.2",
-    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.6"
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.6",
+    "cordova-plugin-email-composer": "0.10.0"
   }
 }

@@ -191,6 +191,10 @@
             {
               "xml": "<feature name=\"LaunchNavigator\"><param name=\"ios-package\" value=\"LaunchNavigatorPlugin\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"EmailComposer\"><param name=\"ios-package\" value=\"APPEmailComposer\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -298,6 +302,10 @@
           "LSApplicationQueriesSchemes": [
             {
               "xml": "<array><string>citymapper</string><string>comgooglemaps</string><string>navigon</string><string>transit</string><string>waze</string><string>yandexnavi</string><string>uber</string><string>tomtomhome</string><string>com.sygic.aura</string><string>here-route</string><string>moovit</string><string>lyft</string><string>mapsme</string><string>cabify</string><string>baidumap</string><string>taxis99</string><string>iosamap</string></array>",
+              "count": 1
+            },
+            {
+              "xml": "<array><string>mailto</string></array>",
               "count": 1
             }
           ]
@@ -442,6 +450,9 @@
     },
     "uk.co.workingedge.phonegap.plugin.launchnavigator": {
       "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes",
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    },
+    "cordova-plugin-email-composer": {
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     }
   },
@@ -1091,6 +1102,14 @@
       "merges": [
         "launchnavigator"
       ]
+    },
+    {
+      "id": "cordova-plugin-email-composer.EmailComposer",
+      "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
+      "pluginId": "cordova-plugin-email-composer",
+      "clobbers": [
+        "cordova.plugins.email"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -1131,6 +1150,7 @@
     "cordova-plugin-app-review": "2.0.3",
     "cordova-plugin-actionsheet": "2.3.3",
     "cordova-plugin-dialogs": "2.0.2",
-    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.6"
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.6",
+    "cordova-plugin-email-composer": "0.10.0"
   }
 }

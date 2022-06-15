@@ -37,6 +37,7 @@
     "@ionic-native/core": "^5.36.0",
     "@ionic-native/device": "^5.36.0",
     "@ionic-native/diagnostic": "^5.36.0",
+    "@ionic-native/email-composer": "^5.36.0",
     "@ionic-native/extended-device-information": "^5.36.0",
     "@ionic-native/file": "^5.28.0",
     "@ionic-native/fingerprint-aio": "^5.36.0",
@@ -125,6 +126,7 @@
     "cordova-plugin-camera-preview": "^0.12.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-dialogs": "*",
+    "cordova-plugin-email-composer": "^0.10.0",
     "cordova-plugin-extended-device-information": "^2.2.0",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.2.1",
@@ -192,7 +194,8 @@
       "cordova-plugin-app-review": {
         "ANDROID_PLAY_CORE_VERSION": "1.8.+"
       },
-      "uk.co.workingedge.phonegap.plugin.launchnavigator": {}
+      "uk.co.workingedge.phonegap.plugin.launchnavigator": {},
+      "cordova-plugin-email-composer": {}
     },
     "platforms": [
       "ios",

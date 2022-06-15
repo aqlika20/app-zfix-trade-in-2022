@@ -12,7 +12,7 @@
     "WebKit.framework": 1,
     "UserNotifications.framework": 2,
     "Social.framework": 1,
-    "MessageUI.framework": 1,
+    "MessageUI.framework": 2,
     "CoreTelephony.framework": 1,
     "CoreBluetooth.framework": 1,
     "Photos.framework": 1,

@@ -644,6 +644,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "merges": [
         "launchnavigator"
       ]
+    },
+    {
+      "id": "cordova-plugin-email-composer.EmailComposer",
+      "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
+      "pluginId": "cordova-plugin-email-composer",
+      "clobbers": [
+        "cordova.plugins.email"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -684,6 +692,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-app-review": "2.0.3",
     "cordova-plugin-actionsheet": "2.3.3",
     "cordova-plugin-dialogs": "2.0.2",
-    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.6"
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.6",
+    "cordova-plugin-email-composer": "0.10.0"
   };
 });
