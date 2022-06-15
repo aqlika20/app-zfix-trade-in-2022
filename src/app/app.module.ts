@@ -37,11 +37,14 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
 import { PopoverComponent } from 'src/app/pages/landing/popover/popover.component';
 import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
+import { ModalQrComponent } from 'src/app/pages/landing/modal/modal-qr/modal-qr.component';
+import { EmailComposer } from '@ionic-native/email-composer/ngx/index';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PopoverComponent],
+    PopoverComponent,
+    ModalQrComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -80,6 +83,7 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
     FingerprintAIO,
     OneSignal,
     LaunchNavigator,
+    EmailComposer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     
   ],

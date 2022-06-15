@@ -250,4 +250,7 @@
     <feature name="LaunchNavigator">
         <param name="ios-package" value="LaunchNavigatorPlugin" />
     </feature>
+    <feature name="EmailComposer">
+        <param name="ios-package" value="APPEmailComposer" />
+    </feature>
 </widget>

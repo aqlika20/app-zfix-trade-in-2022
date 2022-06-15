@@ -118,6 +118,8 @@
 		4CC8E3E009CE4C4D94F56971 /* LN_Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 886F01FBFB60418E9BCAA617 /* LN_Reachability.m */; };
 		5E8D1077C3784641BAD9A9D7 /* WE_Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2777DEECF2AE4166A1B6053C /* WE_Logger.m */; };
 		5FF2542AD5154956AA782EBF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FEC9B4D6AA14D01BAB248EC /* MapKit.framework */; };
+		5D22142E53CD421991C86B91 /* APPEmailComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = C22F0F61E1B64A5AAE1C6CD7 /* APPEmailComposer.m */; };
+		20DCBE4772C340BAB5891E85 /* APPEmailComposerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 680D031D85E446E79ED2ECF7 /* APPEmailComposerImpl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -348,6 +350,10 @@
 		454A00EA94A44D98BB6DE5C5 /* LN_Reachability.h */ = {isa = PBXFileReference; name = "LN_Reachability.h"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LN_Reachability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		CE7177202D20450DA09CDFFF /* WE_Logger.h */ = {isa = PBXFileReference; name = "WE_Logger.h"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/WE_Logger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		7FEC9B4D6AA14D01BAB248EC /* MapKit.framework */ = {isa = PBXFileReference; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		C22F0F61E1B64A5AAE1C6CD7 /* APPEmailComposer.m */ = {isa = PBXFileReference; name = "APPEmailComposer.m"; path = "cordova-plugin-email-composer/APPEmailComposer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		680D031D85E446E79ED2ECF7 /* APPEmailComposerImpl.m */ = {isa = PBXFileReference; name = "APPEmailComposerImpl.m"; path = "cordova-plugin-email-composer/APPEmailComposerImpl.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		01673B6E72514CA59903C59B /* APPEmailComposer.h */ = {isa = PBXFileReference; name = "APPEmailComposer.h"; path = "cordova-plugin-email-composer/APPEmailComposer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		8034D263C4A4444FAE4E6531 /* APPEmailComposerImpl.h */ = {isa = PBXFileReference; name = "APPEmailComposerImpl.h"; path = "cordova-plugin-email-composer/APPEmailComposerImpl.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -660,6 +666,10 @@
 				204FF92E27304F2C83AC8911 /* LN_LaunchNavigator.h */,
 				454A00EA94A44D98BB6DE5C5 /* LN_Reachability.h */,
 				CE7177202D20450DA09CDFFF /* WE_Logger.h */,
+				C22F0F61E1B64A5AAE1C6CD7 /* APPEmailComposer.m */,
+				680D031D85E446E79ED2ECF7 /* APPEmailComposerImpl.m */,
+				01673B6E72514CA59903C59B /* APPEmailComposer.h */,
+				8034D263C4A4444FAE4E6531 /* APPEmailComposerImpl.h */,
 			);
 			name = Plugins;
 			path = "ZFix/Plugins";
@@ -863,6 +873,8 @@
 				9DB1BFB121844FFBBDDEAC2D /* LN_LaunchNavigator.m in Sources */,
 				4CC8E3E009CE4C4D94F56971 /* LN_Reachability.m in Sources */,
 				5E8D1077C3784641BAD9A9D7 /* WE_Logger.m in Sources */,
+				5D22142E53CD421991C86B91 /* APPEmailComposer.m in Sources */,
+				20DCBE4772C340BAB5891E85 /* APPEmailComposerImpl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

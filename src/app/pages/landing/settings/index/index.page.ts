@@ -4,6 +4,7 @@ import { tokenKey } from "../../../../config/api";
 import { UserApiService } from "../../../../services/api/user-api.service";
 import { AuthenticationService } from "../../../../services/authentication.service";
 import { UtilitiesService } from "../../../../services/utilities.service";
+import { AppVersion } from '@ionic-native/app-version/ngx';
 
 @Component({
   selector: 'app-index',
@@ -12,13 +13,23 @@ import { UtilitiesService } from "../../../../services/utilities.service";
 })
 export class IndexPage implements OnInit {
   user: any = {};
+  VersionNumber:string;
 
   constructor(
     private authService: AuthenticationService,
     private storage: Storage,
     private userApiService: UserApiService,
-    public utilsService: UtilitiesService
-  ) { }
+    public utilsService: UtilitiesService,
+    private appVersion: AppVersion
+  ) { 
+
+    this.appVersion.getVersionNumber().then(value => {
+      this.VersionNumber = value;
+    }).catch(err => {
+      alert(err);
+    });
+
+  }
 
   ngOnInit() {
   }

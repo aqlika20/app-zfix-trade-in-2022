@@ -4,6 +4,11 @@ import { Storage } from "@ionic/storage";
 import { tokenKey } from "../../../config/api";
 import { SellingApiService } from './../../../services/api/selling-api.service';
 import { UtilitiesService } from './../../../services/utilities.service';
+import { PopoverController } from '@ionic/angular';
+import { ModalFaqComponent } from 'src/app/pages/landing/modal/modal-faq/modal-faq.component';
+import { ModalController } from '@ionic/angular';
+import { ModalQrComponent } from 'src/app/pages/landing/modal/modal-qr/modal-qr.component';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator/ngx';
 
 @Component({
   selector: 'app-my-qr',
@@ -32,7 +37,9 @@ export class MyQrPage implements OnInit {
   trMesinCuci: any = [];    
   stores: any = [];
   vouchers: any = [];
-
+  destination:string;
+  destinations:string;
+  start:string;
 
 
   encoded = '1';
@@ -41,8 +48,13 @@ export class MyQrPage implements OnInit {
     private storage: Storage,
     private sellingApiService: SellingApiService,
     public utilsService: UtilitiesService, 
+    public popoverController: PopoverController,
+    public modalController: ModalController,
+    private launchNavigator: LaunchNavigator,
 
-    ) { }
+    ) { 
+      this.start = "";
+    }
 
   ngOnInit() {
   }
@@ -103,5 +115,41 @@ export class MyQrPage implements OnInit {
       this.segment = selectedIndex;
     })
   }
+
+  async openMyModal(event) {
+    const myModal = await this.modalController.create({
+      component: ModalFaqComponent,
+      cssClass: 'my-custom-modal-css',
+      backdropDismiss: false,
+      id: 'my-modal-id'
+    });
+    return await myModal.present();
+  }
+
+  async openMyModalQR(voucher_key, id) {
+    const myModal = await this.modalController.create({
+      component: ModalQrComponent,
+      componentProps: { 
+        voucher_key: voucher_key,
+        id: id
+      },
+      cssClass: 'my-custom-modal-qr-css',
+      backdropDismiss: false,
+      id: 'my-modal-qr-id'
+    });
+    return await myModal.present();
+  }
+
+  navigate(address){
+    let options: LaunchNavigatorOptions = {
+        start: this.start
+    };
+
+    this.launchNavigator.navigate(address, options)
+        .then(
+            success => alert('Launched navigator'),
+            error => alert('Error launching navigator: ' + error)
+        );
+}
 
 }
