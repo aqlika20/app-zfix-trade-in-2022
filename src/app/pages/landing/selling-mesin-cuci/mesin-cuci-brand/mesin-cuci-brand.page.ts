@@ -38,6 +38,19 @@ export class MesinCuciBrandPage implements OnInit {
   lokasi_trade: string;
   stores: any = [];
 
+  selected_merk:string;
+  selected_tipe:string;
+  selected_model:string;
+  selected_fisik:string;
+
+  kondisiMesinCuci: boolean = false;
+  kondisiRubber: boolean = false;
+  kondisiTombol: boolean = false;
+  kondisiPembuangan: boolean = false;
+  kondisiPengering: boolean = false;
+  kondisiAirOtomatis: boolean = false;
+  kondisiPemanas: boolean = false;
+
   constructor(
     private membershipApiService: MembershipApiService,
     private storage: Storage,
@@ -59,6 +72,55 @@ export class MesinCuciBrandPage implements OnInit {
     this.getStore();
     this.getBrand();
     this.selling.removeSelling();
+  }
+
+  customPopoverOptions: any = {
+    header: 'Pilih Tempat Trade In',
+    message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.'
+  };
+
+  selectMerk(val){
+    this.selected_merk = val;
+    
+    document.querySelectorAll('.cuci-merk-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  } 
+  
+  selectTipe(val){
+    this.selected_tipe = val;
+    
+    document.querySelectorAll('.cuci-tipe-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectModel(val){
+    this.selected_model = val;
+    
+    document.querySelectorAll('.cuci-model-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectFisik(val){
+    this.selected_fisik = val;
+    
+    document.querySelectorAll('.cuci-fisik-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
   }
 
   getStore(){

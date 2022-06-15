@@ -1,7 +1,7 @@
 <ion-content>
   <div class="header">
     <div class="card-backgroud">
-      <img src="../../../../assets/images/header/ps/rectangle.png" alt="">
+      <img src="../../../../assets/images/header/ps.png" alt="">
       <div class="img_kanan">
         <img src="../../../../assets/images/baru/form-psxhdpi.png" alt="">
       </div>
@@ -29,19 +29,19 @@
 
         <ion-grid>
           <ion-row>
-            <ion-col size-md="3">
+            <ion-col size-md="4">
               <ion-card id="ps5" class="ps-varian-select" (click)="selectVarian('ps5')">
                 <img src="../../../../assets/images/baru/ps5xxhdpi.png" alt="">
                 <ion-label style="margin-bottom: 15%;">PS5</ion-label>
               </ion-card>
             </ion-col>
-            <ion-col size-md="3">
+            <ion-col size-md="4">
               <ion-card id="ps4" class="ps-varian-select" (click)="selectVarian('ps4')">
                 <img src="../../../../assets/images/baru/ps3xxhdpi.png" alt="">
                 <ion-label style="margin-bottom: 15%;">PS4</ion-label>
               </ion-card>
             </ion-col>
-            <ion-col size-md="3" offset-md="3">
+            <ion-col size-md="4" offset-md="3">
               <ion-card id="ps3" class="ps-varian-select" (click)="selectVarian('ps3')">
                 <img src="../../../../assets/images/baru/ps4xxhdpi.png" alt="">
                 <ion-label style="margin-bottom: 15%;">PS3</ion-label>
@@ -182,26 +182,8 @@
         </ion-radio-group>
         <ion-button class="btn" shape="round" (click)="submit()">Submit</ion-button>
 
-
-        <!-- <div class="row text-center" style="margin-top: 30px; margin-bottom: 50px;">
-          <div class="col">
-            <ion-button shape="round" fill="outline" style=" --background:#BCCCF4; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" routerLink="/landing/type">Cancel</ion-button>
-          </div>
-          <div class="col">
-            <ion-button shape="round" style="--background:white; color: #3053A4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" (click)="submit()">Agree</ion-button>
-          </div>
-        </div> -->
-
       </div>
     </ion-card>
   </div>
     
 </ion-content>
-
-<script>
-  const select = document.querySelector('ion-select');
-
-  select.interfaceOptions = {
-    cssClass: 'custom-popover'
-  }
-</script>

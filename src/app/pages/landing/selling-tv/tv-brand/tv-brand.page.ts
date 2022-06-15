@@ -42,6 +42,14 @@ export class TvBrandPage implements OnInit {
   wifiSelected:string;
   suaraSelected:string;
 
+  selected_merk:string;
+  selected_jenis:string;
+  selected_ukuran:string;
+  selected_suara:string;
+
+  kondisiLayarGores: boolean = false;
+  kondisiNormal: boolean = false;
+
   constructor(
     private membershipApiService: MembershipApiService,
     private storage: Storage,
@@ -66,6 +74,55 @@ export class TvBrandPage implements OnInit {
     this.getStore();
     this.getBrand();
     this.selling.removeSelling();
+  }
+
+  customPopoverOptions: any = {
+    header: 'Pilih Tempat Trade In',
+    message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.'
+  };
+
+  selectMerk(val){
+    this.selected_merk = val;
+    
+    document.querySelectorAll('.tv-merk-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+  
+  selectJenis(val){
+    this.selected_jenis = val;
+    
+    document.querySelectorAll('.tv-jenis-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectUkuran(val){
+    this.selected_ukuran = val;
+    
+    document.querySelectorAll('.tv-ukuran-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectSuara(val){
+    this.selected_suara = val;
+    
+    document.querySelectorAll('.tv-suara-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
   }
 
   getStore(){

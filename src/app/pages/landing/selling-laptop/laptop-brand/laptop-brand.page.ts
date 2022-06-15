@@ -59,6 +59,26 @@ export class LaptopBrandPage implements OnInit {
   data_ukuran_laptop:any = ['10" - 12"inch', '13" - 15"inch']
   data_os:any = ['Windows', 'MacOs', 'Non Operating System']
 
+  selected_merk:string;
+  selected_jenis:string;
+  selected_suara:string;
+  selected_ukuran:string;
+  selected_os:string;
+  selected_ram:string;
+  selected_fisik:string;
+  selected_baterai:string;
+  selected_kelengkapan:string;
+
+  kondisiLaptop: boolean = false;
+  kondisiTouch: boolean = false;
+  kondisiLcd: boolean = false;
+  kondisiLayarLuar: boolean = false;
+  kondisiKeyboard: boolean = false;
+  kondisiTrackpad: boolean = false;
+  kondisiPort: boolean = false;
+  kondisiBluetooth: boolean = false;
+  kondisiSpeaker: boolean = false;
+
   searchStore;
   constructor(
     private membershipApiService: MembershipApiService,
@@ -83,6 +103,104 @@ export class LaptopBrandPage implements OnInit {
     this.getStore();
     this.selling.removeSelling();
     this.getBrand();
+  }
+  
+  customPopoverOptions: any = {
+    header: 'Pilih Tempat Trade In',
+    message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.'
+  };
+
+  customPopoverProcessor: any = {
+    header: 'Pilih Processor',
+    message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.'
+  };
+
+  selectMerk(val){
+    this.selected_merk = val;
+    
+    document.querySelectorAll('.laptop-merk-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+  
+  selectJenis(val){
+    this.selected_jenis = val;
+    
+    document.querySelectorAll('.laptop-jenis-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectUkuran(val){
+    this.selected_ukuran = val;
+    
+    document.querySelectorAll('.laptop-ukuran-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectOs(val){
+    this.selected_os = val;
+    
+    document.querySelectorAll('.laptop-os-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectRam(val){
+    this.selected_ram = val;
+    
+    document.querySelectorAll('.laptop-ram-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectFisik(val){
+    this.selected_fisik = val;
+    
+    document.querySelectorAll('.laptop-fisik-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectBaterai(val){
+    this.selected_baterai = val;
+    
+    document.querySelectorAll('.laptop-baterai-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectKelengkapan(val){
+    this.selected_kelengkapan = val;
+    
+    document.querySelectorAll('.laptop-kelengkapan-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
   }
 
   getStore(){

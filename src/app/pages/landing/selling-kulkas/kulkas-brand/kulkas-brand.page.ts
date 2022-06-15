@@ -37,6 +37,17 @@ export class KulkasBrandPage implements OnInit {
   lokasi_trade: string;
   stores: any = [];
 
+  selected_merk:string;
+  selected_tipe:string;
+  selected_model:string;
+  selected_fisik:string;
+
+  kondisiKulkas: boolean = false;
+  kondisiRubber: boolean = false;
+  kondisiTutupFreezer: boolean = false;
+  kondisiTray: boolean = false;
+  kondisiFreezer: boolean = false;
+
   constructor(
     private membershipApiService: MembershipApiService,
     private storage: Storage,
@@ -59,6 +70,56 @@ export class KulkasBrandPage implements OnInit {
     this.getBrand();
     this.selling.removeSelling();
   }
+
+  customPopoverOptions: any = {
+    header: 'Pilih Tempat Trade In',
+    message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.'
+  };
+
+  selectMerk(val){
+    this.selected_merk = val;
+    
+    document.querySelectorAll('.kulkas-merk-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+  
+  selectTipe(val){
+    this.selected_tipe = val;
+    
+    document.querySelectorAll('.kulkas-tipe-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectModel(val){
+    this.selected_model = val;
+    
+    document.querySelectorAll('.kulkas-model-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
+  selectFisik(val){
+    this.selected_fisik = val;
+    
+    document.querySelectorAll('.kulkas-fisik-select').forEach(element => {
+      element.classList.remove("selected");
+    });
+    
+    var element = document.getElementById(val);
+    element.classList.add("selected");
+  }
+
 
   getStore(){
     this.storage.get(tokenKey).then((token) => {
