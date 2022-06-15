@@ -8,7 +8,6 @@
 <ion-content class="background">
  
   <ion-card>
-    <img src="../../../assets/images/zfix_logo.png" alt="" class="zfix">
     <ion-card-header>
        <ion-card-title>
          Sign Up
@@ -33,21 +32,15 @@
       <ion-item>
         <ion-input placeholder="Address"  name="address" type="text" [(ngModel)]="credential.address" pattern="^\w+( +\w+)*$" required></ion-input>
       </ion-item>
-      <input type="checkbox" id="option"/>
-      <ion-label for="option"> <span></span> I Agree to The Term and Condition </ion-label><br>
+      <input type="checkbox" id="option" style="margin-top: 20px;"/>
+      <ion-label for="option"> <span class="font-family: Plus Jakarta Sans; pading-left: 5px;"> Saya setuju dengan Syarat dan Ketentuan</span> </ion-label><br>
       <div class="botton-section">
         <ion-button (click)="register()">Sign Up</ion-button>
       </div>
+      <div style="margin-top: 20px; text-align: center;">
+        <p style="font-family: Plus Jakarta Sans;">Suda punya akum? <a class="forgot" routerLink="/login">Login</a></p>
+      </div>
     </ion-card-content>
   </ion-card>
-  <div class="shape"><img src="../../../assets/images/Lebar_bawah.svg" alt=""></div>
- 
  
 </ion-content>
-
-
-<ion-footer>
-  <ion-toolbar >
-   <a href="#" class="condition"> Already a Member? Sign in</a>
-  </ion-toolbar>
-</ion-footer>

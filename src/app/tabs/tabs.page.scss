@@ -1,0 +1,95 @@
+// .achome{
+//     position: relative !important;
+//     top: 0;
+//     height: 50%;
+//     width: 100%;
+// }
+// .acqr{
+//     position: relative !important;
+//     top: 0;
+//     height: 50%;
+//     width: 100%;
+// }
+// .acsetting{
+//     position: relative !important;
+//     top: 0;
+//     height: 50%;
+//     width: 100%;
+// }
+ion-tab-bar{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    --background: rgb(255, 255, 255);
+    align-self: center;
+    border-radius: 40px;
+    margin-bottom: 20px;
+ 
+    // .home{
+    //     content: "";
+    //     background: url('~/assets/icon/homemdpi.png') no-repeat;
+    //     position: absolute;
+    //     width: 50%;
+    //     height: 100%;
+    //     top: 50%;
+    //     left: 65%;
+    //     transform: translate(-50%, -50%);
+    //  }
+    // .qr{
+    //     content: "";
+    //     background: url('~/assets/icon/scan-barcodemdpi.png') no-repeat;
+    //     position: absolute;
+    //     width: 50%;
+    //     height: 100%;
+    //     top: 50%;
+    //     left: 65%;
+    //     transform: translate(-50%, -50%);
+    //  }
+    // .setting{
+    //     content: "";
+    //     background: url('~/assets/icon/setting-2mdpi.png') no-repeat;
+    //     position: absolute;
+    //     width: 50%;
+    //     height: 100%;
+    //     top: 50%;
+    //     left: 65%;
+    //     transform: translate(-50%, -50%);
+    //  }
+    ion-tab-button{
+        --color-selected: black;
+        // .home:hover{
+        //     content: "";
+        //     background: url('~/assets/icon/home-activemdpi.png') no-repeat;
+        //     position: absolute;
+        //     width: 50%;
+        //     height: 100%;
+        //     top: 50%;
+        //     left: 65%;
+        //     transform: translate(-50%, -50%);
+        //  }
+        // .qr:hover{
+        //     content: "";
+        //     background: url('~/assets/icon/scan-barcode-activemdpi.png') no-repeat;
+        //     position: absolute;
+        //     width: 50%;
+        //     height: 100%;
+        //     top: 50%;
+        //     left: 65%;
+        //     transform: translate(-50%, -50%);
+        //  }
+        // .setting:hover{
+        //     content: "";
+        //     background: url('~/assets/icon/setting-activemdpi.png') no-repeat;
+        //     position: absolute;
+        //     width: 50%;
+        //     height: 100%;
+        //     top: 50%;
+        //     left: 65%;
+        //     transform: translate(-50%, -50%);
+        //  }
+    }
+}
+
+ion-label{
+    font-family: Plus Jakarta Sans;
+}

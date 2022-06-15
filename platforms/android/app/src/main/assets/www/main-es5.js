@@ -132,7 +132,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-app>\n";
+    __webpack_exports__["default"] = "<ion-app>\r\n  <ion-router-outlet></ion-router-outlet>\r\n</ion-app>\r\n";
     /***/
   },
 
@@ -152,7 +152,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-list>\n  <ion-list-header> ZFix Trade In </ion-list-header>\n\n  <ion-item *ngFor=\"let item of notification\">\n    <ion-label class=\"ion-text-wrap\">\n      <h3>{{item.type}}</h3>\n      <p>{{item.description}}</p>\n    </ion-label>\n  </ion-item>\n\n</ion-list>";
+    __webpack_exports__["default"] = "<ion-list>\r\n  <ion-list-header> ZFix Trade In </ion-list-header>\r\n\r\n  <ion-item *ngFor=\"let item of notification\">\r\n    <ion-label class=\"ion-text-wrap\">\r\n      <h3>{{item.type}}</h3>\r\n      <p>{{item.description}}</p>\r\n    </ion-label>\r\n  </ion-item>\r\n\r\n</ion-list>";
     /***/
   },
 
@@ -770,6 +770,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_pages_landing_popover_popover_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
     /*! src/app/pages/landing/popover/popover.component */
     "./src/app/pages/landing/popover/popover.component.ts");
+    /* harmony import */
+
+
+    var _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(
+    /*! @ionic-native/launch-navigator/ngx */
+    "./node_modules/@ionic-native/launch-navigator/__ivy_ngcc__/ngx/index.js");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -779,7 +785,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], src_app_pages_landing_popover_popover_component__WEBPACK_IMPORTED_MODULE_35__["PopoverComponent"]],
       entryComponents: [],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _ionic_storage__WEBPACK_IMPORTED_MODULE_14__["IonicStorageModule"].forRoot(), _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__["NgbModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_26__["BrowserAnimationsModule"], _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_33__["NgxQRCodeModule"]],
-      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_unique_device_id_ngx__WEBPACK_IMPORTED_MODULE_9__["UniqueDeviceID"], _ionic_native_uid_ngx__WEBPACK_IMPORTED_MODULE_10__["Uid"], _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_12__["AndroidPermissions"], _ionic_native_extended_device_information_ngx__WEBPACK_IMPORTED_MODULE_11__["ExtendedDeviceInformation"], _ionic_native_device_ngx__WEBPACK_IMPORTED_MODULE_13__["Device"], _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_17__["File"], _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_16__["Camera"], _ionic_native_camera_preview_ngx__WEBPACK_IMPORTED_MODULE_18__["CameraPreview"], _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_19__["SocialSharing"], _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_20__["Clipboard"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_21__["Keyboard"], _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_22__["LocalNotifications"], _ionic_native_phonegap_local_notification_ngx__WEBPACK_IMPORTED_MODULE_23__["PhonegapLocalNotification"], _ionic_native_background_mode_ngx__WEBPACK_IMPORTED_MODULE_24__["BackgroundMode"], _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_27__["AppVersion"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_28__["Network"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_29__["Vibration"], _ionic_native_audio_management_ngx__WEBPACK_IMPORTED_MODULE_30__["AudioManagement"], _ionic_native_native_audio_ngx__WEBPACK_IMPORTED_MODULE_31__["NativeAudio"], _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_32__["FingerprintAIO"], _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_34__["OneSignal"], {
+      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_unique_device_id_ngx__WEBPACK_IMPORTED_MODULE_9__["UniqueDeviceID"], _ionic_native_uid_ngx__WEBPACK_IMPORTED_MODULE_10__["Uid"], _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_12__["AndroidPermissions"], _ionic_native_extended_device_information_ngx__WEBPACK_IMPORTED_MODULE_11__["ExtendedDeviceInformation"], _ionic_native_device_ngx__WEBPACK_IMPORTED_MODULE_13__["Device"], _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_17__["File"], _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_16__["Camera"], _ionic_native_camera_preview_ngx__WEBPACK_IMPORTED_MODULE_18__["CameraPreview"], _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_19__["SocialSharing"], _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_20__["Clipboard"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_21__["Keyboard"], _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_22__["LocalNotifications"], _ionic_native_phonegap_local_notification_ngx__WEBPACK_IMPORTED_MODULE_23__["PhonegapLocalNotification"], _ionic_native_background_mode_ngx__WEBPACK_IMPORTED_MODULE_24__["BackgroundMode"], _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_27__["AppVersion"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_28__["Network"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_29__["Vibration"], _ionic_native_audio_management_ngx__WEBPACK_IMPORTED_MODULE_30__["AudioManagement"], _ionic_native_native_audio_ngx__WEBPACK_IMPORTED_MODULE_31__["NativeAudio"], _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_32__["FingerprintAIO"], _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_34__["OneSignal"], _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_36__["LaunchNavigator"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
       }],
@@ -1725,7 +1731,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! C:\Users\ardim\Desktop\hampir selesai\New folder\myTrade_V3.0\src\main.ts */
+    /*! D:\zfix-trade-in-2022\src\main.ts */
     "./src/main.ts");
     /***/
   }
