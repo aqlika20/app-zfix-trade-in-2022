@@ -5,8 +5,10 @@
       <div class="img_kanan">
         <img src="../../../../assets/images/baru/form-mesin-cucixhdpi.png" alt="">
       </div>
-      <div class="img_kiri">
-        <img src="../../../../assets/icon/arrow-leftxxxhdpi.png" alt="">
+      <div class="img_kiri" routerLink="/landing/type">
+        <div class="icon">
+          <ion-icon class="ic_back" name="arrow-back-outline"></ion-icon>
+        </div>
       </div>
       <div class="title">
         Trade Mesin Cuci
@@ -27,7 +29,7 @@
           Pilih Merk
         </div>
 
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
               <ion-card id="lg" class="cuci-merk-select" (click)="selectMerk('lg')">
@@ -70,16 +72,16 @@
             </ion-col>
           </ion-row>
         </ion-grid>
-        <div class="show">
-          <a>Show more brand</a> <ion-icon class="icon" name="caret-down-outline"></ion-icon>
+        <div class="show" style="margin-top: 14px">
+          <a>Show more brand</a> <ion-icon class="ic_drop" name="caret-down-outline"></ion-icon>
         </div>
         <!-- <ion-button class="btn2">Show more brand</ion-button> -->
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Tipe
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
               <ion-card id="inverter" class="cuci-tipe-select" (click)="selectTipe('inverter')">
@@ -94,11 +96,11 @@
           </ion-row>
         </ion-grid>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Model
         </div>
 
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
               <ion-card id="one" class="cuci-model-select" (click)="selectModel('one')">
@@ -113,11 +115,11 @@
           </ion-row>
         </ion-grid>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Kondisi Fisik
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
               <ion-card id="mulus" class="cuci-fisik-select" (click)="selectFisik('mulus')">
@@ -138,43 +140,45 @@
         </ion-grid>
         <hr>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Mesin Cuci Menyala</ion-label>
-          <ion-toggle [(ngModel)]="kondisiMesinCuci"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiMesinCuci"></ion-toggle>
         </ion-item>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Rubber Kaki Mesin Cuci Lengkap</ion-label>
-          <ion-toggle [(ngModel)]="kondisiRubber"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiRubber"></ion-toggle>
         </ion-item>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Tombol Mesin Cuci Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiTombol"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiTombol"></ion-toggle>
         </ion-item>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Pembuangan Air Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiPembuangan"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiPembuangan"></ion-toggle>
         </ion-item>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Pengering Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiPengering"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiPengering"></ion-toggle>
         </ion-item>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Air Otomatis Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiAirOtomatis"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiAirOtomatis"></ion-toggle>
         </ion-item>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Pemanas Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiPemanas"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiPemanas"></ion-toggle>
         </ion-item>
 
-        <ion-button class="btn" shape="round" (click)="submit()">Submit</ion-button>
-
+        <div class="btn">
+          <ion-button style="width: 100%;" shape="round" (click)="openModalSubmit($event)">Submit</ion-button>
+        </div>
+        
       </div>
     </ion-card>
   </div>

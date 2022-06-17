@@ -19,6 +19,10 @@ export class CallUsPage implements OnInit {
   ngOnInit() {
   }
 
+  customPopoverOptions: any = {
+    header: "What's Your Problem"
+  };
+
   sendEmail(){
     let email = {
       to: 'aqlika@macantech.asia',

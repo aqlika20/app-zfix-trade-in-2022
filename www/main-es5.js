@@ -137,6 +137,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/modal/modal-qr/modal-qr.component.html":
+  /*!************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/modal/modal-qr/modal-qr.component.html ***!
+    \************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppPagesLandingModalModalQrModalQrComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ion-content>\r\n  <ion-item>\r\n    <ion-label class=\"title\">Preview</ion-label>\r\n    <ion-icon name=\"close\" (click)=\"dismissModal()\"></ion-icon>\r\n  </ion-item>\r\n  <div class=\"ion-text-center\" style=\"margin-bottom: 0 !important; margin-top: 10%;\">\r\n    <ngx-qrcode \r\n    [width]=240\r\n    [margin]=\"0\"\r\n    value = \"{{id}}\">\r\n    </ngx-qrcode>\r\n  </div>\r\n  <p class=\"t2\" style=\"margin-top: 5%;\">{{voucher_key}}</p> \r\n\r\n  <div class=\"desk ion-text-center\">\r\n    <p class=\"t2\">QR Code ini hanya bisa digunakan di lokasi toko yang telah dipilih diawal, harga diatas adalah harga final setelah pengecekan.</p>\r\n  </div>\r\n</ion-content>\r\n";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/popover/popover.component.html":
   /*!****************************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/popover/popover.component.html ***!
@@ -776,16 +796,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(
     /*! @ionic-native/launch-navigator/ngx */
     "./node_modules/@ionic-native/launch-navigator/__ivy_ngcc__/ngx/index.js");
+    /* harmony import */
+
+
+    var src_app_pages_landing_modal_modal_qr_modal_qr_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(
+    /*! src/app/pages/landing/modal/modal-qr/modal-qr.component */
+    "./src/app/pages/landing/modal/modal-qr/modal-qr.component.ts");
+    /* harmony import */
+
+
+    var _ionic_native_email_composer_ngx_index__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(
+    /*! @ionic-native/email-composer/ngx/index */
+    "./node_modules/@ionic-native/email-composer/ngx/index.js");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
     };
 
     AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], src_app_pages_landing_popover_popover_component__WEBPACK_IMPORTED_MODULE_35__["PopoverComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], src_app_pages_landing_popover_popover_component__WEBPACK_IMPORTED_MODULE_35__["PopoverComponent"], src_app_pages_landing_modal_modal_qr_modal_qr_component__WEBPACK_IMPORTED_MODULE_37__["ModalQrComponent"]],
       entryComponents: [],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _ionic_storage__WEBPACK_IMPORTED_MODULE_14__["IonicStorageModule"].forRoot(), _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_25__["NgbModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_26__["BrowserAnimationsModule"], _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_33__["NgxQRCodeModule"]],
-      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_unique_device_id_ngx__WEBPACK_IMPORTED_MODULE_9__["UniqueDeviceID"], _ionic_native_uid_ngx__WEBPACK_IMPORTED_MODULE_10__["Uid"], _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_12__["AndroidPermissions"], _ionic_native_extended_device_information_ngx__WEBPACK_IMPORTED_MODULE_11__["ExtendedDeviceInformation"], _ionic_native_device_ngx__WEBPACK_IMPORTED_MODULE_13__["Device"], _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_17__["File"], _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_16__["Camera"], _ionic_native_camera_preview_ngx__WEBPACK_IMPORTED_MODULE_18__["CameraPreview"], _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_19__["SocialSharing"], _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_20__["Clipboard"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_21__["Keyboard"], _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_22__["LocalNotifications"], _ionic_native_phonegap_local_notification_ngx__WEBPACK_IMPORTED_MODULE_23__["PhonegapLocalNotification"], _ionic_native_background_mode_ngx__WEBPACK_IMPORTED_MODULE_24__["BackgroundMode"], _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_27__["AppVersion"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_28__["Network"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_29__["Vibration"], _ionic_native_audio_management_ngx__WEBPACK_IMPORTED_MODULE_30__["AudioManagement"], _ionic_native_native_audio_ngx__WEBPACK_IMPORTED_MODULE_31__["NativeAudio"], _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_32__["FingerprintAIO"], _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_34__["OneSignal"], _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_36__["LaunchNavigator"], {
+      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_unique_device_id_ngx__WEBPACK_IMPORTED_MODULE_9__["UniqueDeviceID"], _ionic_native_uid_ngx__WEBPACK_IMPORTED_MODULE_10__["Uid"], _ionic_native_android_permissions_ngx__WEBPACK_IMPORTED_MODULE_12__["AndroidPermissions"], _ionic_native_extended_device_information_ngx__WEBPACK_IMPORTED_MODULE_11__["ExtendedDeviceInformation"], _ionic_native_device_ngx__WEBPACK_IMPORTED_MODULE_13__["Device"], _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_17__["File"], _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_16__["Camera"], _ionic_native_camera_preview_ngx__WEBPACK_IMPORTED_MODULE_18__["CameraPreview"], _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_19__["SocialSharing"], _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_20__["Clipboard"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_21__["Keyboard"], _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_22__["LocalNotifications"], _ionic_native_phonegap_local_notification_ngx__WEBPACK_IMPORTED_MODULE_23__["PhonegapLocalNotification"], _ionic_native_background_mode_ngx__WEBPACK_IMPORTED_MODULE_24__["BackgroundMode"], _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_27__["AppVersion"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_28__["Network"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_29__["Vibration"], _ionic_native_audio_management_ngx__WEBPACK_IMPORTED_MODULE_30__["AudioManagement"], _ionic_native_native_audio_ngx__WEBPACK_IMPORTED_MODULE_31__["NativeAudio"], _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_32__["FingerprintAIO"], _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_34__["OneSignal"], _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_36__["LaunchNavigator"], _ionic_native_email_composer_ngx_index__WEBPACK_IMPORTED_MODULE_38__["EmailComposer"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
       }],
@@ -913,6 +945,113 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     AuthenticationGuard = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
     })], AuthenticationGuard);
+    /***/
+  },
+
+  /***/
+  "./src/app/pages/landing/modal/modal-qr/modal-qr.component.scss":
+  /*!**********************************************************************!*\
+    !*** ./src/app/pages/landing/modal/modal-qr/modal-qr.component.scss ***!
+    \**********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppPagesLandingModalModalQrModalQrComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "ion-icon {\n  background-color: black;\n  color: white;\n  border-radius: 90px;\n}\n\n.desk {\n  padding: 5%;\n}\n\n.title {\n  font-family: Plus Jakarta Sans;\n  font-style: normal;\n  font-weight: 600;\n  font-size: 17px;\n  color: black;\n  text-align: left;\n}\n\n.t1 {\n  font-family: Plus Jakarta Sans;\n  font-style: normal;\n  font-weight: 600;\n  font-size: 17px;\n  color: black;\n  text-align: left;\n}\n\n.t2 {\n  font-family: Plus Jakarta Sans;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 15px;\n  color: black;\n  text-align: center;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFuZGluZy9tb2RhbC9tb2RhbC1xci9EOlxcemZpeC10cmFkZS1pbi0yMDIyL3NyY1xcYXBwXFxwYWdlc1xcbGFuZGluZ1xcbW9kYWxcXG1vZGFsLXFyXFxtb2RhbC1xci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvbGFuZGluZy9tb2RhbC9tb2RhbC1xci9tb2RhbC1xci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHVCQUF1QjtFQUN2QixZQUFZO0VBQ1osbUJBQW1CO0FDQ3ZCOztBREVBO0VBQ0ksV0FBVztBQ0NmOztBREVBO0VBQ0ksOEJBQThCO0VBQzlCLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLFlBQVk7RUFDWixnQkFBZ0I7QUNDcEI7O0FERUE7RUFDSSw4QkFBOEI7RUFDOUIsa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixlQUFlO0VBQ2YsWUFBWTtFQUNaLGdCQUFnQjtBQ0NwQjs7QURFQTtFQUNJLDhCQUE4QjtFQUM5QixrQkFBa0I7RUFDbEIsZ0JBQWdCO0VBQ2hCLGVBQWU7RUFDZixZQUFZO0VBQ1osa0JBQWtCO0FDQ3RCIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbGFuZGluZy9tb2RhbC9tb2RhbC1xci9tb2RhbC1xci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1pY29uIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgYm9yZGVyLXJhZGl1czogOTBweDtcclxufVxyXG5cclxuLmRlc2t7XHJcbiAgICBwYWRkaW5nOiA1JTtcclxufVxyXG5cclxuLnRpdGxle1xyXG4gICAgZm9udC1mYW1pbHk6IFBsdXMgSmFrYXJ0YSBTYW5zO1xyXG4gICAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGZvbnQtc2l6ZTogMTdweDtcclxuICAgIGNvbG9yOiBibGFjaztcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbn1cclxuXHJcbi50MSB7XHJcbiAgICBmb250LWZhbWlseTogUGx1cyBKYWthcnRhIFNhbnM7XHJcbiAgICBmb250LXN0eWxlOiBub3JtYWw7XHJcbiAgICBmb250LXdlaWdodDogNjAwO1xyXG4gICAgZm9udC1zaXplOiAxN3B4O1xyXG4gICAgY29sb3I6IGJsYWNrO1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxufVxyXG5cclxuLnQyIHtcclxuICAgIGZvbnQtZmFtaWx5OiBQbHVzIEpha2FydGEgU2FucztcclxuICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxuICAgIGZvbnQtd2VpZ2h0OiA0MDA7XHJcbiAgICBmb250LXNpemU6IDE1cHg7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn0iLCJpb24taWNvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICBjb2xvcjogd2hpdGU7XG4gIGJvcmRlci1yYWRpdXM6IDkwcHg7XG59XG5cbi5kZXNrIHtcbiAgcGFkZGluZzogNSU7XG59XG5cbi50aXRsZSB7XG4gIGZvbnQtZmFtaWx5OiBQbHVzIEpha2FydGEgU2FucztcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDE3cHg7XG4gIGNvbG9yOiBibGFjaztcbiAgdGV4dC1hbGlnbjogbGVmdDtcbn1cblxuLnQxIHtcbiAgZm9udC1mYW1pbHk6IFBsdXMgSmFrYXJ0YSBTYW5zO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMTdweDtcbiAgY29sb3I6IGJsYWNrO1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xufVxuXG4udDIge1xuICBmb250LWZhbWlseTogUGx1cyBKYWthcnRhIFNhbnM7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgZm9udC1zaXplOiAxNXB4O1xuICBjb2xvcjogYmxhY2s7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbiJdfQ== */";
+    /***/
+  },
+
+  /***/
+  "./src/app/pages/landing/modal/modal-qr/modal-qr.component.ts":
+  /*!********************************************************************!*\
+    !*** ./src/app/pages/landing/modal/modal-qr/modal-qr.component.ts ***!
+    \********************************************************************/
+
+  /*! exports provided: ModalQrComponent */
+
+  /***/
+  function srcAppPagesLandingModalModalQrModalQrComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ModalQrComponent", function () {
+      return ModalQrComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @techiediaries/ngx-qrcode */
+    "./node_modules/@techiediaries/ngx-qrcode/__ivy_ngcc__/fesm2015/techiediaries-ngx-qrcode.js");
+
+    var ModalQrComponent = /*#__PURE__*/function () {
+      function ModalQrComponent(ModalController, NgxQRCodeModule) {
+        _classCallCheck(this, ModalQrComponent);
+
+        this.ModalController = ModalController;
+        this.NgxQRCodeModule = NgxQRCodeModule;
+      }
+
+      _createClass(ModalQrComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "dismissModal",
+        value: function dismissModal() {
+          this.ModalController.dismiss({
+            'dismissed': true
+          });
+        }
+      }]);
+
+      return ModalQrComponent;
+    }();
+
+    ModalQrComponent.ctorParameters = function () {
+      return [{
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+      }, {
+        type: _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_3__["NgxQRCodeModule"]
+      }];
+    };
+
+    ModalQrComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-modal-qr',
+      template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! raw-loader!./modal-qr.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/modal/modal-qr/modal-qr.component.html"))["default"],
+      styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! ./modal-qr.component.scss */
+      "./src/app/pages/landing/modal/modal-qr/modal-qr.component.scss"))["default"]]
+    })], ModalQrComponent);
     /***/
   },
 

@@ -1,24 +1,31 @@
-
-  
-  ion-label p{
-      margin-left: 10px;
-      font-weight: bold;
-  }
-
-
-  .img-btn {
-    max-width: 80px;
-  }
-
-  ion-item {
-    padding-right: 20px !important;
+.text{
+  font-family: Plus Jakarta Sans;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  color: black;
+  text-align: left;
+  margin-left: 3%;
 }
 
- ion-text {
-   padding-top: 20px;
-   display: block;
- }
+ion-item {
+  padding-right: 20px !important;
+}
 
- p span {
+ion-text {
+  padding-top: 20px;
   display: block;
+}
+
+p span {
+  display: block;
+}
+
+.t1{
+  font-family: Plus Jakarta Sans Extra;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  color: black;
+  text-align: left;
 }

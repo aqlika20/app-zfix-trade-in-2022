@@ -1,20 +1,36 @@
-h3 { 
-    margin: 10px !important;
-    font-size: 14px;
-}
-
-p {
- margin-left: 10px;
- font-size: 12px;
-}
-
 ion-icon {
-    margin-left: 80%;
     background-color: black;
     color: white;
     border-radius: 90px;
 }
 
-.desc {
-    margin-top: 20px;
+.desk{
+    padding: 5%;
+}
+
+.title{
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+    text-align: left;
+}
+
+.t1 {
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+    text-align: left;
+}
+
+.t2 {
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+    text-align: justify;
 }

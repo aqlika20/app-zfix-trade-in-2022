@@ -1,34 +1,40 @@
 
 <ion-content [fullscreen]="true" mode="md">
 
-<div class="icon" routerLink="/landing/setting">
-  <ion-icon name="arrow-back-outline"></ion-icon>
-</div>
+  <div class="content">
+    <div class="icon" routerLink="/landing/setting">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </div>
+    
+    <h1>Edit Profile</h1>
+  
+    <ion-item class="border">
+      <ion-label color="primary" position="stacked">Name</ion-label>
+      <ion-input type="text" name="name" [(ngModel)]="user.data?.user.name"></ion-input>
+    </ion-item>
+  
+    <ion-item class="border">
+      <ion-label color="primary" position="stacked">Mobile Phone</ion-label>
+      <ion-input name="contact" [(ngModel)]="user.data?.user.contact"></ion-input>
+    </ion-item>
+  
+    <ion-item class="border">
+      <ion-label color="primary" position="stacked">Address</ion-label>
+      <ion-input name="address" [(ngModel)]="user.data?.user.address"></ion-input>
+    </ion-item>
+  
+    <ion-item class="border">
+      <ion-label color="primary" position="stacked">Email</ion-label>
+      <ion-input type="text" name="email"  [(ngModel)]="user.data?.user.email"></ion-input>
+    </ion-item>
+    
+    <div class="btn">
+      <ion-button class="btn2" shape="round" (click)="submit()">Submit</ion-button>
+    </div>
 
-  <h1>Edit Profile</h1>
-
-  <ion-item style="margin: 10px; border: black solid 0.5px; border-radius: 10px;">
-    <ion-label position="stacked">Name</ion-label>
-    <ion-input type="text" name="name" [(ngModel)]="user.data?.user.name"></ion-input>
-  </ion-item>
-
-  <ion-item style="margin: 10px; border: black solid 0.5px; border-radius: 10px;">
-    <ion-label position="stacked">Mobile Phone</ion-label>
-    <ion-input name="contact" [(ngModel)]="user.data?.user.contact"></ion-input>
-  </ion-item>
-
-  <ion-item style="margin: 10px; border: black solid 0.5px; border-radius: 10px;">
-    <ion-label position="stacked">Address</ion-label>
-    <ion-input name="address" [(ngModel)]="user.data?.user.address"></ion-input>
-  </ion-item>
-
-  <ion-item style="margin: 10px; border: black solid 0.5px; border-radius: 10px;">
-    <ion-label position="stacked">Email</ion-label>
-    <ion-input type="text" name="email"  [(ngModel)]="user.data?.user.email"></ion-input>
-  </ion-item>
-
-  <section>
-    <ion-button expand="block" (click)="submit()">Submit</ion-button>
-  </section>
+    <!-- <section>
+      <ion-button expand="block" (click)="submit()">Submit</ion-button>
+    </section> -->
+  </div>
 
 </ion-content>

@@ -1,17 +1,18 @@
 <ion-content>
-  <div>
-    <h3>Preview <ion-icon name="close" (click)="dismissModal()"></ion-icon></h3>
-  </div>
-  <div class="ion-text-center" style="margin-bottom: 0 !important; margin-top: 10px;">
+  <ion-item>
+    <ion-label class="title">Preview</ion-label>
+    <ion-icon name="close" (click)="dismissModal()"></ion-icon>
+  </ion-item>
+  <div class="ion-text-center" style="margin-bottom: 0 !important; margin-top: 10%;">
     <ngx-qrcode 
     [width]=240
     [margin]="0"
     value = "{{id}}">
     </ngx-qrcode>
-    <p>{{voucher_key}}</p>
   </div>
+  <p class="t2" style="margin-top: 5%;">{{voucher_key}}</p> 
 
-  <div class="ion-text-center">
-    <p style="font-size: 12px;">QR Code ini hanya bisa digunakan di lokasi toko yang telah dipilih diawal, harga diatas adalah harga final setelah pengecekan.</p>
+  <div class="desk ion-text-center">
+    <p class="t2">QR Code ini hanya bisa digunakan di lokasi toko yang telah dipilih diawal, harga diatas adalah harga final setelah pengecekan.</p>
   </div>
 </ion-content>

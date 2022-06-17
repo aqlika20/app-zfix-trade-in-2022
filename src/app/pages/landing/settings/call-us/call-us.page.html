@@ -1,29 +1,31 @@
 
 <ion-content [fullscreen]="true" mode="md">
-
-  <div class="icon" routerLink="/landing/setting">
-    <ion-icon name="arrow-back-outline"></ion-icon>
-  </div>
   
+  <div class="content">
+    <div class="icon" routerLink="/landing/setting">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </div>
+    
     <h1>Contact US</h1>
 
     <div class="itemBorder">
-      <ion-select placeholder="What's your problem" okText="Okay" cancelText="Dismiss">
+      <ion-select [interfaceOptions]="customPopoverOptions" placeholder="What's your problem" okText="Okay" cancelText="Dismiss">
         <ion-select-option value="1">1</ion-select-option>
       </ion-select>
     </div>
   
-    <ion-item style="margin: 10px; border: black solid 0.5px; border-radius: 10px;">
+    <ion-item class="border">
       <ion-input type="text"  placeholder="Your Reason"></ion-input>
     </ion-item>
   
-    <ion-item style="margin: 10px; border: black solid 0.5px; border-radius: 10px;">
+    <ion-item class="border">
       <ion-textarea type="text"  placeholder="Description" style="height: 200px;"></ion-textarea>
     </ion-item>
   
-    <section>
-      <ion-button expand="block" (click)="sendEmail()">Submit</ion-button>
-    </section>
+    <div class="btn">
+      <ion-button class="btn2" shape="round" (click)="submit()">Submit</ion-button>
+    </div>
+  </div>
   
-  </ion-content>
+</ion-content>
   

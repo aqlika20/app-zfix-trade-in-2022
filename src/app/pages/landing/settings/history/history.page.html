@@ -8,172 +8,198 @@
 </ion-header>
 
 <ion-content fullscreen>
-
-<div *ngFor="let item of trLaptop">
-  <ion-card *ngIf = "item.jenis_layanan == 2">
-    <ion-card-header>
+  <div *ngFor="let item of trLaptop">
+    <ion-card *ngIf = "item.jenis_layanan == 2">
       <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Barang</ion-card-subtitle>
-            <ion-card-title>Laptop {{item.brand}}</ion-card-title>
+          <ion-col style="padding-left: 5%;">
+            <div class="t1">
+              Barang
+            </div>     
+            <div class="t2">
+              TV {{item.brand}}
+            </div>
           </ion-col>
-          <ion-col style="padding-right: 50px;">
+          <ion-col style="padding-right: 5%;">
             <p class="status">status</p>
           </ion-col>
         </ion-row>
-        </ion-grid>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Tipe</ion-card-subtitle>
-            <ion-card-title>Ram : {{item.memory}} GB</ion-card-title>
-            <ion-card-title>Storage : {{item.storages}} GB</ion-card-title>
-
+          <ion-col style="padding-left: 5%;">
+            <div class="t1">
+              Tipe
+            </div>
+            <div class="t2">
+              {{item.jenis_tv}}, {{item.inch}}
+            </div>
           </ion-col>
-          <ion-col>
-            <ion-card-subtitle>price</ion-card-subtitle>
-            <ion-card-title>Rp.{{item.price | number}}</ion-card-title>
+          <ion-col style="padding-right: 5%;">
+            <div class="t1">
+              Harga
+            </div>
+            <div class="t3">
+              Rp.{{item.price | number}}
+            </div>
           </ion-col>
         </ion-row>
-        </ion-grid>
-    </ion-card-content>
-  </ion-card>
-</div>
+      </ion-grid>
+    </ion-card>
+  </div>
 
-<div *ngFor="let item of trTV">
-  <ion-card *ngIf = "item.jenis_layanan == 3">
-    <ion-card-header>
+  <div *ngFor="let item of trTV">
+    <ion-card *ngIf = "item.jenis_layanan == 3">
       <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Barang</ion-card-subtitle>
-            <ion-card-title>TV {{item.brand}}</ion-card-title>
+          <ion-col style="padding-left: 5%;">
+            <div class="t1">
+              Barang
+            </div>     
+            <div class="t2">
+              Laptop {{item.brand}}
+            </div>
           </ion-col>
-          <ion-col style="padding-right: 50px;">
+          <ion-col style="padding-right: 5%;">
             <p class="status">status</p>
           </ion-col>
         </ion-row>
-        </ion-grid>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Tipe</ion-card-subtitle>
-            <ion-card-title>{{item.jenis_tv}}, {{item.inch}}</ion-card-title>
-
+          <ion-col style="padding-left: 5%;">
+            <div class="t1">
+              Tipe
+            </div>
+            <div class="t2">
+              Ram : {{item.memory}} GB
+            </div>
+            <div class="t2">
+              Storage : {{item.storages}} GB
+            </div>
           </ion-col>
-          <ion-col>
-            <ion-card-subtitle>price</ion-card-subtitle>
-            <ion-card-title>Rp.{{item.price | number}}</ion-card-title>
+          <ion-col style="padding-right: 5%;">
+            <div class="t1">
+              Harga
+            </div>
+            <div class="t3">
+              Rp.{{item.price | number}}
+            </div>
           </ion-col>
         </ion-row>
-        </ion-grid>
-    </ion-card-content>
-  </ion-card>
-</div>
+      </ion-grid>
+    </ion-card>
+  </div>
 
-<div *ngFor="let item of trPS">
-  <ion-card *ngIf = "item.jenis_layanan == 4">
-    <ion-card-header>
+  <div *ngFor="let item of trPS">
+    <ion-card *ngIf = "item.jenis_layanan == 4">
       <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Barang</ion-card-subtitle>
-            <ion-card-title>{{item.jenis_ps}}</ion-card-title>
+          <ion-col style="padding-left: 5%;">
+            <div class="t1">
+              Barang
+            </div>     
+            <div class="t2">
+              {{item.jenis_ps}}
+            </div>
           </ion-col>
-          <ion-col style="padding-right: 50px;">
+          <ion-col style="padding-right: 5%;">
             <p class="status">status</p>
           </ion-col>
         </ion-row>
-        </ion-grid>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Tipe</ion-card-subtitle>
-            <ion-card-title>{{item.type}}, {{item.storages}} GB</ion-card-title>
-
+          <ion-col style="padding-left: 5%;">
+            <div class="t1">
+              Tipe
+            </div>
+            <div class="t2">
+              {{item.type}}, {{item.storages}} GB
+            </div>
           </ion-col>
-          <ion-col>
-            <ion-card-subtitle>price</ion-card-subtitle>
-            <ion-card-title>Rp.{{item.price | number}}</ion-card-title>
+          <ion-col style="padding-right: 5%;">
+            <div class="t1">
+              Harga
+            </div>
+            <div class="t3">
+              Rp.{{item.price | number}}
+            </div>
           </ion-col>
         </ion-row>
-        </ion-grid>
-    </ion-card-content>
-  </ion-card>
-</div>
+      </ion-grid>
+    </ion-card>
+  </div>
 
-<div *ngFor="let item of trKulkas">
-  <ion-card *ngIf = "item.jenis_layanan == 5">
-    <ion-card-header>
+  <div *ngFor="let item of trKulkas">
+    <ion-card *ngIf = "item.jenis_layanan == 5">
       <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Barang</ion-card-subtitle>
-            <ion-card-title>Kulkas {{item.brand}}</ion-card-title>
+          <ion-col style="padding-left: 5%;">
+            <div class="t1">
+              Barang
+            </div>     
+            <div class="t2">
+              Kulkas {{item.brand}}
+            </div>
           </ion-col>
-          <ion-col style="padding-right: 50px;">
+          <ion-col style="padding-right: 5%;">
             <p class="status">status</p>
           </ion-col>
         </ion-row>
-        </ion-grid>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Tipe</ion-card-subtitle>
-            <ion-card-title>{{item.model}}, {{item.type}}</ion-card-title>
-
+          <ion-col style="padding-left: 5%;">
+            <div class="t1">
+              Tipe
+            </div>
+            <div class="t2">
+              {{item.model}}, {{item.type}}
+            </div>
           </ion-col>
-          <ion-col>
-            <ion-card-subtitle>price</ion-card-subtitle>
-            <ion-card-title>Rp.{{item.price | number}}</ion-card-title>
+          <ion-col style="padding-right: 5%;">
+            <div class="t1">
+              Harga
+            </div>
+            <div class="t3">
+              Rp.{{item.price | number}}
+            </div>
           </ion-col>
         </ion-row>
-        </ion-grid>
-    </ion-card-content>
-  </ion-card>
-</div>
-
-<div *ngFor="let item of trMesinCuci">
-  <ion-card *ngIf = "item.jenis_layanan == 6">
-    <ion-card-header>
+      </ion-grid>
+    </ion-card>
+  </div>
+  
+  <div *ngFor="let item of trMesinCuci">
+    <ion-card *ngIf = "item.jenis_layanan == 6">
       <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Barang</ion-card-subtitle>
-            <ion-card-title>TV {{item.brand}}</ion-card-title>
+          <ion-col style="padding-left: 5%;">
+            <div class="t1">
+              Barang
+            </div>     
+            <div class="t2">
+              Mesin Cuci {{item.brand}}
+            </div>
           </ion-col>
-          <ion-col style="padding-right: 50px;"> 
+          <ion-col style="padding-right: 5%;">
             <p class="status">status</p>
           </ion-col>
         </ion-row>
-        </ion-grid>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-grid>
         <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Tipe</ion-card-subtitle>
-            <ion-card-title>{{item.type}}</ion-card-title>
-
+          <ion-col style="padding-left: 5%;">
+            <div class="t1">
+              Tipe
+            </div>
+            <div class="t2">
+              {{item.type}}
+            </div>
           </ion-col>
-          <ion-col>
-            <ion-card-subtitle>price</ion-card-subtitle>
-            <ion-card-title>Rp.{{item.price | number}}</ion-card-title>
+          <ion-col style="padding-right: 5%;">
+            <div class="t1">
+              Harga
+            </div>
+            <div class="t3">
+              Rp.{{item.price | number}}
+            </div>
           </ion-col>
         </ion-row>
-        </ion-grid>
-    </ion-card-content>
-  </ion-card>
-</div>
+      </ion-grid>
+    </ion-card>
+  </div>
 
 </ion-content>
 

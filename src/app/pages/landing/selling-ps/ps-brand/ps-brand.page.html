@@ -5,8 +5,10 @@
       <div class="img_kanan">
         <img src="../../../../assets/images/baru/form-psxhdpi.png" alt="">
       </div>
-      <div class="img_kiri">
-        <img src="../../../../assets/icon/arrow-leftxxxhdpi.png" alt="">
+      <div class="img_kiri" routerLink="/landing/type">
+        <div class="icon">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </div>
       </div>
       <div class="title">
         Trade Playstation
@@ -27,34 +29,37 @@
           Pilih varian
         </div>
 
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
               <ion-card id="ps5" class="ps-varian-select" (click)="selectVarian('ps5')">
                 <img src="../../../../assets/images/baru/ps5xxhdpi.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">PS5</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
               <ion-card id="ps4" class="ps-varian-select" (click)="selectVarian('ps4')">
                 <img src="../../../../assets/images/baru/ps3xxhdpi.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">PS4</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4" offset-md="3">
               <ion-card id="ps3" class="ps-varian-select" (click)="selectVarian('ps3')">
                 <img src="../../../../assets/images/baru/ps4xxhdpi.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">PS3</ion-label>
               </ion-card>
             </ion-col>
           </ion-row>
         </ion-grid>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Model
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
               <ion-card id="digital" class="ps-model-select" (click)="selectModel('digital')">
@@ -69,11 +74,11 @@
           </ion-row>
         </ion-grid>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Storage
         </div>
 
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="3">
               <ion-card id="120" class="ps-storage-select" (click)="selectStorage('120')">
@@ -112,14 +117,14 @@
 
         <ion-item class="toggle" lines="none">
           <ion-label class="t2">Kondisi Playstation Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiPlaystation"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiPlaystation"></ion-toggle>
         </ion-item>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Kondisi Stick/Console PS
         </div>
 
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="3">
               <ion-card id="mulus" class="ps-stick-select" (click)="selectStick('mulus')">
@@ -141,30 +146,30 @@
                   
         <ion-item class="toggle" lines="none">
           <ion-label class="t2">Ada Add On Games</ion-label>
-          <ion-toggle [(ngModel)]="addOnGame"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="addOnGame"></ion-toggle>
         </ion-item>
         <hr>
 
-        <div class="t1" style="margin-top: 30px;">
+        <div class="t1" style="margin-top: 25px;">
           Fungsi Console PS
         </div>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Stick/Console PS Normal</ion-label>
-          <ion-toggle [(ngModel)]="stickNormal"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="stickNormal"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Port USB Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="usbNormal"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="usbNormal"></ion-toggle>
         </ion-item>
         <hr>
 
-        <div class="t1" style="margin-top: 30px;">
+        <div class="t1" style="margin-top: 25px;">
           Kondisi Stick/Console PS
         </div>
         
-        <ion-radio-group>
+        <ion-radio-group style="margin-top: 14px">
           <ion-item class="radio head" lines="none">
             <ion-label class="t2">Fullset (Stick,kabel power,HDMI)</ion-label>
             <ion-radio slot="end" color="primary" value="Fullset (Stick,kabel power,HDMI)"></ion-radio>
@@ -180,7 +185,10 @@
             <ion-radio slot="end" color="primary" value="Unit Only + Kabel Power (Tanpa Stick)"></ion-radio>
           </ion-item>
         </ion-radio-group>
-        <ion-button class="btn" shape="round" (click)="submit()">Submit</ion-button>
+        
+        <div class="btn">
+          <ion-button style="width: 100%;" shape="round" (click)="openModalSubmit($event)">Submit</ion-button>
+        </div>
 
       </div>
     </ion-card>
