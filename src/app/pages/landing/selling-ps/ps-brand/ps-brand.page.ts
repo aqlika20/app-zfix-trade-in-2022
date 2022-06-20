@@ -15,6 +15,7 @@ import { tokenKey } from "../../../../config/api";
 import { MembershipApiService } from "../../../../services/api/membership-api.service";
 import { AlertController } from '@ionic/angular';
 import { PsBrandModalComponent } from '../../modal/ps-brand-modal/ps-brand-modal.component';
+import { ModalPriceComponent } from 'src/app/pages/landing/modal/modal-price/modal-price.component';
 
 declare var cordova: any;
 type Stores = {id: number, name: string};
@@ -71,6 +72,7 @@ export class PsBrandPage implements OnInit {
     public alertController: AlertController,
     private modalCtrl: ModalController,
     private popoverCtrl: PopoverController,
+    public modalController: ModalController,
 
   ) { }
 
@@ -82,6 +84,16 @@ export class PsBrandPage implements OnInit {
     this.getBrand();
     this.selling.removeSelling();
 
+  }
+
+  async openModalSubmit(event) {
+    const modalSubmit = await this.modalController.create({
+      component: ModalPriceComponent,
+      cssClass: 'my-custom-modal-css',
+      backdropDismiss: false,
+      id: 'my-modal-id'
+    });
+    return await modalSubmit.present();
   }
 
   customPopoverOptions: any = {

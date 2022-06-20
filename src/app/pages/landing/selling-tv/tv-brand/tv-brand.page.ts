@@ -14,6 +14,9 @@ import { Storage } from "@ionic/storage";
 import { tokenKey } from "../../../../config/api";
 import { MembershipApiService } from "../../../../services/api/membership-api.service";
 import { AlertController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { ModalPriceComponent } from 'src/app/pages/landing/modal/modal-price/modal-price.component';
+
 
 type Stores = {id: number, name: string};
 @Component({
@@ -62,6 +65,7 @@ export class TvBrandPage implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     public alertController: AlertController,
+    public modalController: ModalController,
  
   ) {
     
@@ -74,6 +78,16 @@ export class TvBrandPage implements OnInit {
     this.getStore();
     this.getBrand();
     this.selling.removeSelling();
+  }
+  
+  async openModalSubmit(event) {
+    const modalSubmit = await this.modalController.create({
+      component: ModalPriceComponent,
+      cssClass: 'my-custom-modal-css',
+      backdropDismiss: false,
+      id: 'my-modal-id'
+    });
+    return await modalSubmit.present();
   }
 
   customPopoverOptions: any = {

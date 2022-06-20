@@ -5,8 +5,10 @@
       <div class="img_kanan">
         <img src="../../../../assets/images/baru/form-kulkasxhdpi.png" alt="">
       </div>
-      <div class="img_kiri">
-        <img src="../../../../assets/icon/arrow-leftxxxhdpi.png" alt="">
+      <div class="img_kiri" routerLink="/landing/type">
+        <div class="icon">
+          <ion-icon class="ic_back" name="arrow-back-outline"></ion-icon>
+        </div>
       </div>
       <div class="title">
         Trade Kulkas
@@ -27,23 +29,26 @@
           Pilih Merk
         </div>
 
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
               <ion-card id="lg" class="kulkas-merk-select" (click)="selectMerk('lg')">
                 <img src="../../../../assets/sponsor/lg_lg.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">LG</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
               <ion-card id="sharp" class="kulkas-merk-select" (click)="selectMerk('sharp')">
                 <img src="../../../../assets/sponsor/sharp.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">Sharp</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
               <ion-card id="sony" class="kulkas-merk-select" (click)="selectMerk('sony')">
                 <img src="../../../../assets/sponsor/sony_lg.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">Sony</ion-label>
               </ion-card>
             </ion-col>
@@ -52,33 +57,36 @@
             <ion-col size-md="4">
               <ion-card id="samsung" class="kulkas-merk-select" (click)="selectMerk('samsung')">
                 <img src="../../../../assets/sponsor/samsung_lg.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">Samsung</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
               <ion-card id="xiaomi" class="kulkas-merk-select" (click)="selectMerk('xiaomi')">
                 <img src="../../../../assets/sponsor/mi.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">Xiaomi</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
               <ion-card id="panasonic" class="kulkas-merk-select" (click)="selectMerk('panasonic')">
                 <img src="../../../../assets/sponsor/panasonic.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">Panasonic</ion-label>
               </ion-card>
             </ion-col>
           </ion-row>
         </ion-grid>
-        <div class="show">
-          <a>Show more brand</a> <ion-icon class="icon" name="caret-down-outline"></ion-icon>
+        <div class="show" style="margin-top: 14px">
+          <a>Show more brand</a> <ion-icon class="ic_drop" name="caret-down-outline"></ion-icon>
         </div>
         <!-- <ion-button class="btn2">Show more brand</ion-button> -->
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Tipe
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
               <ion-card id="inverter" class="kulkas-tipe-select" (click)="selectTipe('inverter')">
@@ -93,11 +101,11 @@
           </ion-row>
         </ion-grid>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Model
         </div>
 
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
               <ion-card id="one" class="kulkas-model-select" (click)="selectModel('one')">
@@ -112,11 +120,11 @@
           </ion-row>
         </ion-grid>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Kondisi Fisik
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
               <ion-card id="mulus" class="kulkas-fisik-select" (click)="selectFisik('mulus')">
@@ -137,33 +145,35 @@
         </ion-grid>
         <hr>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Kulkas Menyala</ion-label>
-          <ion-toggle [(ngModel)]="kondisiKulkas"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiKulkas"></ion-toggle>
         </ion-item>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Rubber Kulkas Berfungsi</ion-label>
-          <ion-toggle [(ngModel)]="kondisiRubber"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiRubber"></ion-toggle>
         </ion-item>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Tutup Freezer Komplit</ion-label>
-          <ion-toggle [(ngModel)]="kondisiTutupFreezer"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiTutupFreezer"></ion-toggle>
         </ion-item>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kelengkapan Tray Kulkas Komplit</ion-label>
-          <ion-toggle [(ngModel)]="kondisiTray"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiTray"></ion-toggle>
         </ion-item>
 
-        <ion-item class="toggle" lines="none">
+        <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Freezer Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiFreezer"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiFreezer"></ion-toggle>
         </ion-item>
 
-        <ion-button class="btn" shape="round" (click)="submit()">Submit</ion-button>
-
+        <div class="btn">
+          <ion-button style="width: 100%;" shape="round" (click)="openModalSubmit($event)">Submit</ion-button>
+        </div>
+        
       </div>
     </ion-card>
   </div>

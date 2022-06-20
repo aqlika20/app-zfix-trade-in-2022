@@ -7,7 +7,9 @@
 <ion-content>
   <ion-item lines="none">
    <ion-text>
-     <h2>Settings</h2>
+     <div class="t1">
+      Settings
+     </div>
    </ion-text>
   </ion-item>
   
@@ -15,8 +17,10 @@
     <ion-avatar>
       <img class="avatars" src="./assets/images/z_logo.png">
     </ion-avatar>
-    <ion-label class="ion-text-nowrap">
-      <p *ngIf="user != {}"><span style="font-size: 18px;">{{ user.data?.user.name }}</span><span style="font-size: 11px;" routerLink="../../profile">edit profile<img class="avatars" src="./assets/images/arrow-circle-right.png"></span></p>
+    <ion-label class="text">
+      <p *ngIf="user != {}">
+        <span style="font-size: 18px;">{{ user.data?.user.name }}</span>
+        <span style="font-size: 11px;" routerLink="../../profile">edit profile<img class="avatars" style="margin-left: 2%;" src="./assets/icon/arrow-circle-rightmdpi.png"></span></p>
 
     </ion-label>
   </ion-item>
@@ -25,61 +29,61 @@
     <ion-text>
       <p style="font-size: 12px;">General</p>
     </ion-text>
-   </ion-item>
+  </ion-item>
 
-   <ion-item routerLink="../../history">
-    <ion-img src="./assets/images/transaction-minus.png" class="img-btn"></ion-img>
-    <ion-label class="ion-text-nowrap">
-      <p>Daftar Transaksi</p>
+  <ion-item routerLink="../../history">
+    <ion-img src="./assets/icon/transaction-minusmdpi-1.png" class="img-btn"></ion-img>
+    <ion-label class="text">
+      Daftar Transaksi
     </ion-label>
   </ion-item>
 
   <ion-item routerLink="../../outlet">
-    <ion-img src="./assets/images/share.png" class="img-btn"></ion-img>
-    <ion-label class="ion-text-nowrap">
-      <p>Service Center Zfix</p>
+    <ion-img src="./assets/icon/sharemdpi-1.png" class="img-btn"></ion-img>
+    <ion-label class="text">
+      Service Center Zfix
     </ion-label>
   </ion-item> 
   
   <ion-item routerLink="../../call-us">
-    <ion-img src="./assets/images/headphone.png" class="img-btn"></ion-img>
-    <ion-label class="ion-text-nowrap">
-      <p>Hubungi Kami</p>
+    <ion-img src="./assets/icon/headphonemdpi.png" class="img-btn"></ion-img>
+    <ion-label class="text">
+      Hubungi Kami
     </ion-label>
   </ion-item>
 
   <ion-item lines="none">
     <ion-text>
-      <p style="font-size: 12px;">Other</p>
+      <p style="font-size: 12px;">Other
     </ion-text>
-   </ion-item>
+  </ion-item>
 
-   <ion-item routerLink="../../privacy-policy">
-    <ion-img src="./assets/images/transaction-minus.png" class="img-btn"></ion-img>
-    <ion-label class="ion-text-nowrap">
-      <p>Kebijakan Privasi</p>
+  <ion-item routerLink="../../privacy-policy">
+    <ion-img src="./assets/icon/transaction-minusmdpi-1.png" class="img-btn"></ion-img>
+    <ion-label class="text">
+      Kebijakan Privasi
     </ion-label>
   </ion-item>
 
   <ion-item routerLink="../../terms">
-    <ion-img src="./assets/images/share.png" class="img-btn"></ion-img> 
-    <ion-label class="ion-text-nowrap">
-      <p>Syarat & Ketentuan</p>
+    <ion-img src="./assets/icon/sharemdpi-1.png" class="img-btn"></ion-img> 
+    <ion-label class="text">
+      Syarat & Ketentuan
     </ion-label>
   </ion-item>
 
   <ion-item lines="none" (click)="logout()">
     <ion-text>
-      <p style="font-size: 12px;">Log out <img class="avatars" src="./assets/images/arrow-circle-right.png">
+      <p style="font-size: 12px;">Log out <img class="avatars" src="./assets/icon/arrow-circle-rightmdpi.png">
       </p>
     </ion-text>
-   </ion-item>
+  </ion-item>
 
-   <ion-item lines="none">
+  <ion-item lines="none">
     <ion-text>
       <p style="font-size: 12px;">Version: {{VersionNumber}}</p>
     </ion-text>
-   </ion-item>
+  </ion-item>
   
 
 </ion-content>

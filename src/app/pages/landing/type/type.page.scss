@@ -22,15 +22,67 @@
 
 .grid{
   width: 100%;
+  height: 150%;
+}
+
+.img_right{
+  position: absolute;
+  top: 0;
+  left: 40%;
   height: 100%;
 }
 
+.text_left{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  height: 100%;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 16px;
+  font-family: Plus Jakarta Sans Extra;
+  color: black;
+}
+
+.text_left2{
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  height: 100%;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 16px;
+  font-family: Plus Jakarta Sans Extra;
+  color: black;
+}
+
 .cardgrid{
+  height: 100px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
+.color-ps{
+  --background: linear-gradient(to left, #DBECFF 30%, #fff 70%);
+}
+.color-hp{
+  --background: linear-gradient(to left, #E0DAEC 30%, #fff 70%);
+}
+.color-laptop{
+  --background: linear-gradient(to left, #FBDAE8 30%, #fff 70%);
+}
+.color-tv{
+  --background: linear-gradient(to left, #FEEDDD 30%, #fff 70%);
+}
+.color-kulkas{
+  --background: linear-gradient(to left, #e1ffdb 30%, #fff 70%);
+}
+.color-cuci{
+  --background: linear-gradient(to left, #e4f6fd 30%, #fff 70%);
+}
+
 .card-backgroud{
   position: relative;
   text-align: right;
@@ -81,6 +133,8 @@ ion-card-subtitle {
   margin-top: 30px;
   margin-left: 20px;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
   color: black;
   font-family: Plus Jakarta Sans Extra;
 }
@@ -118,6 +172,7 @@ ion-card-subtitle {
   margin-top: 30px;
 }
 
+<<<<<<< HEAD
 #notifications-badge {
   // color: red;
   background: red;
@@ -125,4 +180,13 @@ ion-card-subtitle {
   top: 15px;
   right: -1px;
   border-radius: 200%;
+=======
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+.col{
+  padding-left: 0;
+  padding-right: 0;
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
 }

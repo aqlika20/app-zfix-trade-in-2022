@@ -23,15 +23,15 @@ const routes = [
     },
     {
         path: 'selling-phone',
-        loadChildren: () => Promise.all(/*! import() | selling-hp-brand2-brand2-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-hp-brand2-brand2-module")]).then(__webpack_require__.bind(null, /*! ./selling-hp/brand2/brand2.module */ "./src/app/pages/landing/selling-hp/brand2/brand2.module.ts")).then(m => m.Brand2PageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | selling-hp-brand2-brand2-module */ "selling-hp-brand2-brand2-module").then(__webpack_require__.bind(null, /*! ./selling-hp/brand2/brand2.module */ "./src/app/pages/landing/selling-hp/brand2/brand2.module.ts")).then(m => m.Brand2PageModule)
     },
     {
         path: 'selling-phone/screen-testing',
-        loadChildren: () => Promise.all(/*! import() | selling-hp-screen-testing-screen-testing-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-hp-screen-testing-screen-testing-module")]).then(__webpack_require__.bind(null, /*! ./selling-hp/screen-testing/screen-testing.module */ "./src/app/pages/landing/selling-hp/screen-testing/screen-testing.module.ts")).then(m => m.ScreenTestingPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | selling-hp-screen-testing-screen-testing-module */ "selling-hp-screen-testing-screen-testing-module").then(__webpack_require__.bind(null, /*! ./selling-hp/screen-testing/screen-testing.module */ "./src/app/pages/landing/selling-hp/screen-testing/screen-testing.module.ts")).then(m => m.ScreenTestingPageModule)
     },
     {
         path: 'selling-phone/screen-testing/camera',
-        loadChildren: () => Promise.all(/*! import() | selling-hp-camera-camera-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-hp-camera-camera-module")]).then(__webpack_require__.bind(null, /*! ./selling-hp/camera/camera.module */ "./src/app/pages/landing/selling-hp/camera/camera.module.ts")).then(m => m.CameraPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | selling-hp-camera-camera-module */ "selling-hp-camera-camera-module").then(__webpack_require__.bind(null, /*! ./selling-hp/camera/camera.module */ "./src/app/pages/landing/selling-hp/camera/camera.module.ts")).then(m => m.CameraPageModule)
     },
     {
         path: 'selling-phone/screen-testing/camera/wifi-detect',
@@ -47,51 +47,51 @@ const routes = [
     },
     {
         path: 'selling-phone/screen-testing/camera/wifi-detect/vibration/fingerprint/allbutton',
-        loadChildren: () => Promise.all(/*! import() | selling-hp-allbuntton-allbuntton-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-hp-allbuntton-allbuntton-module")]).then(__webpack_require__.bind(null, /*! ./selling-hp/allbuntton/allbuntton.module */ "./src/app/pages/landing/selling-hp/allbuntton/allbuntton.module.ts")).then(m => m.AllbunttonPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | selling-hp-allbuntton-allbuntton-module */ "selling-hp-allbuntton-allbuntton-module").then(__webpack_require__.bind(null, /*! ./selling-hp/allbuntton/allbuntton.module */ "./src/app/pages/landing/selling-hp/allbuntton/allbuntton.module.ts")).then(m => m.AllbunttonPageModule)
     },
     {
         path: 'selling-phone/screen-testing/camera/wifi-detect/vibration/fingerprint/allbutton/detail',
-        loadChildren: () => Promise.all(/*! import() | selling-hp-detail-detail-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-hp-detail-detail-module")]).then(__webpack_require__.bind(null, /*! ./selling-hp/detail/detail.module */ "./src/app/pages/landing/selling-hp/detail/detail.module.ts")).then(m => m.DetailPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | selling-hp-detail-detail-module */ "selling-hp-detail-detail-module").then(__webpack_require__.bind(null, /*! ./selling-hp/detail/detail.module */ "./src/app/pages/landing/selling-hp/detail/detail.module.ts")).then(m => m.DetailPageModule)
     },
     {
         path: 'laptop-brand',
-        loadChildren: () => Promise.all(/*! import() | selling-laptop-laptop-brand-laptop-brand-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-laptop-laptop-brand-laptop-brand-module")]).then(__webpack_require__.bind(null, /*! ./selling-laptop/laptop-brand/laptop-brand.module */ "./src/app/pages/landing/selling-laptop/laptop-brand/laptop-brand.module.ts")).then(m => m.LaptopBrandPageModule)
+        loadChildren: () => Promise.all(/*! import() | selling-laptop-laptop-brand-laptop-brand-module */[__webpack_require__.e("default~selling-kulkas-kulkas-brand-kulkas-brand-module~selling-laptop-laptop-brand-laptop-brand-mod~2618a642"), __webpack_require__.e("selling-laptop-laptop-brand-laptop-brand-module")]).then(__webpack_require__.bind(null, /*! ./selling-laptop/laptop-brand/laptop-brand.module */ "./src/app/pages/landing/selling-laptop/laptop-brand/laptop-brand.module.ts")).then(m => m.LaptopBrandPageModule)
     },
     {
         path: 'laptop-brand/detail-unit',
-        loadChildren: () => Promise.all(/*! import() | selling-laptop-detail-unit-detail-unit-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-laptop-detail-unit-detail-unit-module")]).then(__webpack_require__.bind(null, /*! ./selling-laptop/detail-unit/detail-unit.module */ "./src/app/pages/landing/selling-laptop/detail-unit/detail-unit.module.ts")).then(m => m.DetailUnitPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | selling-laptop-detail-unit-detail-unit-module */ "selling-laptop-detail-unit-detail-unit-module").then(__webpack_require__.bind(null, /*! ./selling-laptop/detail-unit/detail-unit.module */ "./src/app/pages/landing/selling-laptop/detail-unit/detail-unit.module.ts")).then(m => m.DetailUnitPageModule)
     },
     {
         path: 'ps-brand',
-        loadChildren: () => Promise.all(/*! import() | selling-ps-ps-brand-ps-brand-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-ps-ps-brand-ps-brand-module")]).then(__webpack_require__.bind(null, /*! ./selling-ps/ps-brand/ps-brand.module */ "./src/app/pages/landing/selling-ps/ps-brand/ps-brand.module.ts")).then(m => m.PsBrandPageModule)
+        loadChildren: () => Promise.all(/*! import() | selling-ps-ps-brand-ps-brand-module */[__webpack_require__.e("default~selling-kulkas-kulkas-brand-kulkas-brand-module~selling-laptop-laptop-brand-laptop-brand-mod~2618a642"), __webpack_require__.e("selling-ps-ps-brand-ps-brand-module")]).then(__webpack_require__.bind(null, /*! ./selling-ps/ps-brand/ps-brand.module */ "./src/app/pages/landing/selling-ps/ps-brand/ps-brand.module.ts")).then(m => m.PsBrandPageModule)
     },
     {
         path: 'ps-brand/detail-unit-ps',
-        loadChildren: () => Promise.all(/*! import() | selling-ps-detail-unit-ps-detail-unit-ps-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-ps-detail-unit-ps-detail-unit-ps-module")]).then(__webpack_require__.bind(null, /*! ./selling-ps/detail-unit-ps/detail-unit-ps.module */ "./src/app/pages/landing/selling-ps/detail-unit-ps/detail-unit-ps.module.ts")).then(m => m.DetailUnitPsPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | selling-ps-detail-unit-ps-detail-unit-ps-module */ "selling-ps-detail-unit-ps-detail-unit-ps-module").then(__webpack_require__.bind(null, /*! ./selling-ps/detail-unit-ps/detail-unit-ps.module */ "./src/app/pages/landing/selling-ps/detail-unit-ps/detail-unit-ps.module.ts")).then(m => m.DetailUnitPsPageModule)
     },
     {
         path: 'tv-brand',
-        loadChildren: () => Promise.all(/*! import() | selling-tv-tv-brand-tv-brand-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-tv-tv-brand-tv-brand-module")]).then(__webpack_require__.bind(null, /*! ./selling-tv/tv-brand/tv-brand.module */ "./src/app/pages/landing/selling-tv/tv-brand/tv-brand.module.ts")).then(m => m.TvBrandPageModule)
+        loadChildren: () => Promise.all(/*! import() | selling-tv-tv-brand-tv-brand-module */[__webpack_require__.e("default~selling-kulkas-kulkas-brand-kulkas-brand-module~selling-laptop-laptop-brand-laptop-brand-mod~2618a642"), __webpack_require__.e("selling-tv-tv-brand-tv-brand-module")]).then(__webpack_require__.bind(null, /*! ./selling-tv/tv-brand/tv-brand.module */ "./src/app/pages/landing/selling-tv/tv-brand/tv-brand.module.ts")).then(m => m.TvBrandPageModule)
     },
     {
         path: 'tv-brand/detail-tv',
-        loadChildren: () => Promise.all(/*! import() | selling-tv-detail-tv-detail-tv-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-tv-detail-tv-detail-tv-module")]).then(__webpack_require__.bind(null, /*! ./selling-tv/detail-tv/detail-tv.module */ "./src/app/pages/landing/selling-tv/detail-tv/detail-tv.module.ts")).then(m => m.DetailTvPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | selling-tv-detail-tv-detail-tv-module */ "selling-tv-detail-tv-detail-tv-module").then(__webpack_require__.bind(null, /*! ./selling-tv/detail-tv/detail-tv.module */ "./src/app/pages/landing/selling-tv/detail-tv/detail-tv.module.ts")).then(m => m.DetailTvPageModule)
     },
     {
         path: 'kulkas-brand',
-        loadChildren: () => Promise.all(/*! import() | selling-kulkas-kulkas-brand-kulkas-brand-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-kulkas-kulkas-brand-kulkas-brand-module")]).then(__webpack_require__.bind(null, /*! ./selling-kulkas/kulkas-brand/kulkas-brand.module */ "./src/app/pages/landing/selling-kulkas/kulkas-brand/kulkas-brand.module.ts")).then(m => m.KulkasBrandPageModule)
+        loadChildren: () => Promise.all(/*! import() | selling-kulkas-kulkas-brand-kulkas-brand-module */[__webpack_require__.e("default~selling-kulkas-kulkas-brand-kulkas-brand-module~selling-laptop-laptop-brand-laptop-brand-mod~2618a642"), __webpack_require__.e("selling-kulkas-kulkas-brand-kulkas-brand-module")]).then(__webpack_require__.bind(null, /*! ./selling-kulkas/kulkas-brand/kulkas-brand.module */ "./src/app/pages/landing/selling-kulkas/kulkas-brand/kulkas-brand.module.ts")).then(m => m.KulkasBrandPageModule)
     },
     {
         path: 'kulkas-brand/detail-kulkas',
-        loadChildren: () => Promise.all(/*! import() | selling-kulkas-detail-kulkas-detail-kulkas-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-kulkas-detail-kulkas-detail-kulkas-module")]).then(__webpack_require__.bind(null, /*! ./selling-kulkas/detail-kulkas/detail-kulkas.module */ "./src/app/pages/landing/selling-kulkas/detail-kulkas/detail-kulkas.module.ts")).then(m => m.DetailKulkasPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | selling-kulkas-detail-kulkas-detail-kulkas-module */ "selling-kulkas-detail-kulkas-detail-kulkas-module").then(__webpack_require__.bind(null, /*! ./selling-kulkas/detail-kulkas/detail-kulkas.module */ "./src/app/pages/landing/selling-kulkas/detail-kulkas/detail-kulkas.module.ts")).then(m => m.DetailKulkasPageModule)
     },
     {
         path: 'mesin-cuci-brand',
-        loadChildren: () => Promise.all(/*! import() | selling-mesin-cuci-mesin-cuci-brand-mesin-cuci-brand-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-mesin-cuci-mesin-cuci-brand-mesin-cuci-brand-module")]).then(__webpack_require__.bind(null, /*! ./selling-mesin-cuci/mesin-cuci-brand/mesin-cuci-brand.module */ "./src/app/pages/landing/selling-mesin-cuci/mesin-cuci-brand/mesin-cuci-brand.module.ts")).then(m => m.MesinCuciBrandPageModule)
+        loadChildren: () => Promise.all(/*! import() | selling-mesin-cuci-mesin-cuci-brand-mesin-cuci-brand-module */[__webpack_require__.e("default~selling-kulkas-kulkas-brand-kulkas-brand-module~selling-laptop-laptop-brand-laptop-brand-mod~2618a642"), __webpack_require__.e("selling-mesin-cuci-mesin-cuci-brand-mesin-cuci-brand-module")]).then(__webpack_require__.bind(null, /*! ./selling-mesin-cuci/mesin-cuci-brand/mesin-cuci-brand.module */ "./src/app/pages/landing/selling-mesin-cuci/mesin-cuci-brand/mesin-cuci-brand.module.ts")).then(m => m.MesinCuciBrandPageModule)
     },
     {
         path: 'mesin-cuci-brand/detail-mesin-cuci',
-        loadChildren: () => Promise.all(/*! import() | selling-mesin-cuci-detail-mesin-cuci-detail-mesin-cuci-module */[__webpack_require__.e("common"), __webpack_require__.e("selling-mesin-cuci-detail-mesin-cuci-detail-mesin-cuci-module")]).then(__webpack_require__.bind(null, /*! ./selling-mesin-cuci/detail-mesin-cuci/detail-mesin-cuci.module */ "./src/app/pages/landing/selling-mesin-cuci/detail-mesin-cuci/detail-mesin-cuci.module.ts")).then(m => m.DetailMesinCuciPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | selling-mesin-cuci-detail-mesin-cuci-detail-mesin-cuci-module */ "selling-mesin-cuci-detail-mesin-cuci-detail-mesin-cuci-module").then(__webpack_require__.bind(null, /*! ./selling-mesin-cuci/detail-mesin-cuci/detail-mesin-cuci.module */ "./src/app/pages/landing/selling-mesin-cuci/detail-mesin-cuci/detail-mesin-cuci.module.ts")).then(m => m.DetailMesinCuciPageModule)
     },
     {
         path: 'profile',

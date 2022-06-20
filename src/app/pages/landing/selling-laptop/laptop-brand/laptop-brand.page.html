@@ -5,8 +5,10 @@
       <div class="img_kanan">
         <img src="../../../../assets/images/baru/form-laptopxhdpi.png" alt="">
       </div>
-      <div class="img_kiri">
-        <img src="../../../../assets/icon/arrow-leftxxxhdpi.png" alt="">
+      <div class="img_kiri" routerLink="/landing/type">
+        <div class="icon">
+          <ion-icon class="ic_back" name="arrow-back-outline"></ion-icon>
+        </div>
       </div>
       <div class="title">
         Trade Laptop
@@ -27,23 +29,26 @@
           Pilih Merk
         </div>
 
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
               <ion-card id="asus" class="laptop-merk-select" (click)="selectMerk('asus')">
                 <img src="../../../../assets/sponsor/asus_lg.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">Asus</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
               <ion-card id="lenovo" class="laptop-merk-select" (click)="selectMerk('lenovo')">
                 <img src="../../../../assets/sponsor/lenovo_lg.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">Lenovo</ion-label>
               </ion-card>
             </ion-col>
-            <ion-col size-md="4" offset-md="3">
+            <ion-col size-md="4">
               <ion-card id="acer" class="laptop-merk-select" (click)="selectMerk('acer')">
                 <img src="../../../../assets/sponsor/acer_lg.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">Acer</ion-label>
               </ion-card>
             </ion-col>
@@ -52,33 +57,36 @@
             <ion-col size-md="4">
               <ion-card id="dell" class="laptop-merk-select" (click)="selectMerk('dell')">
                 <img src="../../../../assets/sponsor/dell_lg.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">Dell</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
               <ion-card id="xiaomi" class="laptop-merk-select" (click)="selectMerk('xiaomi')">
                 <img src="../../../../assets/sponsor/mi.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">Xiaomi</ion-label>
               </ion-card>
             </ion-col>
-            <ion-col size-md="4" offset-md="3">
+            <ion-col size-md="4">
               <ion-card id="hp" class="laptop-merk-select" (click)="selectMerk('hp')">
                 <img src="../../../../assets/sponsor/hp_lg.png" alt="">
+                <br>
                 <ion-label style="margin-bottom: 15%;">hp</ion-label>
               </ion-card>
             </ion-col>
           </ion-row>
         </ion-grid>
-        <div class="show">
-          <a>Show more brand</a> <ion-icon class="icon" name="caret-down-outline"></ion-icon>
+        <div class="show" style="margin-top: 14px">
+          <a>Show more brand</a> <ion-icon class="ic_drop" name="caret-down-outline"></ion-icon>
         </div>
         <!-- <ion-button class="btn2">Show more brand</ion-button> -->
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Jenis Storage
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
               <ion-card id="hdd" class="laptop-jenis-select" (click)="selectJenis('hdd')">
@@ -93,11 +101,11 @@
           </ion-row>
         </ion-grid>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           RAM
         </div>
 
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
               <ion-card id="2" class="laptop-ram-select" (click)="selectRam('2')">
@@ -122,17 +130,24 @@
           </ion-row>
         </ion-grid>
 
+<<<<<<< HEAD
         <div class="itemBorder2">
           <ion-select [interfaceOptions]="customPopoverProcessor" placeholder="Pilih Processor" okText="Okay" cancelText="Dismiss" (ionChange) = "this.processor = $event.target.value">
             <ion-select-option *ngFor="let row_processor of data_processor" value="{{row_processor.processor}}">{{row_processor.processor}}</ion-select-option> 
+=======
+        <div class="itemBorder2" style="margin-top: 14px">
+          <ion-select [interfaceOptions]="customPopoverProcessor" placeholder="Pilih Processor" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="1">Intel 7</ion-select-option>
+            <ion-select-option value="2">Ryzen 7000</ion-select-option>
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
           </ion-select>
         </div>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Operating System
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
               <ion-card id="mac" class="laptop-os-select" (click)="selectOs('mac')">
@@ -147,11 +162,11 @@
           </ion-row>
         </ion-grid>
         
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Ukuran Laptop
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
               <ion-card id="1012" class="laptop-ukuran-select" (click)="selectUkuran('1012')">
@@ -166,11 +181,15 @@
           </ion-row>
         </ion-grid>
 
-        <div class="t1" style="margin-top: 30px;">
+        <div class="t1" style="margin-top: 25px;">
           Kondisi Layar Laptop
         </div>
 
+<<<<<<< HEAD
         <ion-radio-group (ionChange)="radioSelect($event)">
+=======
+        <ion-radio-group style="margin-top: 14px">
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
           <ion-item class="radio head" lines="none">
             <ion-label class="t2">Normal</ion-label>
             <ion-radio slot="end" color="primary" value="Normal"></ion-radio>
@@ -195,55 +214,92 @@
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Laptop Menyala</ion-label>
+<<<<<<< HEAD
           <ion-toggle [(ngModel)]="kondisiLaptop" (ionChange)="toggleKondisiLaptop()"></ion-toggle>
+=======
+          <ion-toggle mode="ios" [(ngModel)]="kondisiLaptop"></ion-toggle>
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Touchscreen</ion-label>
+<<<<<<< HEAD
           <ion-toggle [(ngModel)]="kondisiTouch" (ionChange)="toggleTouchscreen()"></ion-toggle>
+=======
+          <ion-toggle mode="ios" [(ngModel)]="kondisiTouch"></ion-toggle>
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">LCD Layar Berfungsi Normal</ion-label>
+<<<<<<< HEAD
           <ion-toggle [(ngModel)]="kondisiLcd" (ionChange)="toggleKondisiLayar()"></ion-toggle>
+=======
+          <ion-toggle mode="ios" [(ngModel)]="kondisiLcd"></ion-toggle>
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Layar Luar Berfungsi Normal</ion-label>
+<<<<<<< HEAD
           <ion-toggle [(ngModel)]="kondisiLayarLuar" (ionChange)="toggleKondisiLayarLuar()"></ion-toggle>
+=======
+          <ion-toggle mode="ios" [(ngModel)]="kondisiLayarLuar"></ion-toggle>
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Keyboard Berfungsi Normal</ion-label>
+<<<<<<< HEAD
           <ion-toggle [(ngModel)]="kondisiKeyboard" (ionChange)="toggleKeyboard()"></ion-toggle>
+=======
+          <ion-toggle mode="ios" [(ngModel)]="kondisiKeyboard"></ion-toggle>
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Trackpad Berfungsi Normal</ion-label>
+<<<<<<< HEAD
           <ion-toggle [(ngModel)]="kondisiTrackpad" (ionChange)="toggleTrackpad()"></ion-toggle>
+=======
+          <ion-toggle mode="ios" [(ngModel)]="kondisiTrackpad"></ion-toggle>
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
         </ion-item>
         
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Port Berfungsi Normal</ion-label>
+<<<<<<< HEAD
           <ion-toggle [(ngModel)]="kondisiPort" (ionChange)="togglePort()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Bluetooth/Wifi Berfungsi Normal</ion-label>
           <ion-toggle [(ngModel)]="kondisiBluetooth" (ionChange)="toggleBluetooth()"></ion-toggle>
+=======
+          <ion-toggle mode="ios" [(ngModel)]="kondisiPort"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="toggle2" lines="none">
+          <ion-label class="t2">Kondisi Bluetooth Berfungsi Normal</ion-label>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiBluetooth"></ion-toggle>
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Speaker Berfungsi Normal</ion-label>
+<<<<<<< HEAD
           <ion-toggle [(ngModel)]="kondisiSpeaker" (ionChange)="toggleSpeaker()"></ion-toggle>
+=======
+          <ion-toggle mode="ios" [(ngModel)]="kondisiSpeaker"></ion-toggle>
+>>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
         </ion-item>
         <hr>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Kondisi Fisik
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
               <ion-card id="mulus" class="laptop-fisik-select" (click)="selectFisik('mulus')">
@@ -263,15 +319,15 @@
           </ion-row>
         </ion-grid>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Kondisi Baterai
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
               <ion-card id="normal" class="laptop-baterai-select" (click)="selectBaterai('normal')">
-                <ion-label>Normal"</ion-label>
+                <ion-label>Normal</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
@@ -287,15 +343,15 @@
           </ion-row>
         </ion-grid>
 
-        <div class="t2">
+        <div class="t2" style="margin-top: 14px">
           Kelengkapan
         </div>
         
-        <ion-grid>
+        <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
               <ion-card id="fullset" class="laptop-kelengkapan-select" (click)="selectKelengkapan('fullset')">
-                <ion-label>Fullset"</ion-label>
+                <ion-label>Fullset</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
@@ -311,7 +367,9 @@
           </ion-row>
         </ion-grid>
 
-        <ion-button class="btn" shape="round" (click)="submit()">Submit</ion-button>
+        <div class="btn">
+          <ion-button style="width: 100%;" shape="round" (click)="openModalSubmit($event)">Submit</ion-button>
+        </div>
 
       </div>
     </ion-card>

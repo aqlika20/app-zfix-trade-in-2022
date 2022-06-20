@@ -580,6 +580,187 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./src/app/pages/landing/selling-hp/brand2/brand2.page.scss"))["default"]]
     })], Brand2Page);
     /***/
+  },
+
+  /***/
+  "./src/app/services/helper.service.ts":
+  /*!********************************************!*\
+    !*** ./src/app/services/helper.service.ts ***!
+    \********************************************/
+
+  /*! exports provided: HelperService */
+
+  /***/
+  function srcAppServicesHelperServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HelperService", function () {
+      return HelperService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+
+    var HelperService = /*#__PURE__*/function () {
+      function HelperService(toastCtrl, alertCtrl) {
+        _classCallCheck(this, HelperService);
+
+        this.toastCtrl = toastCtrl;
+        this.alertCtrl = alertCtrl;
+      }
+
+      _createClass(HelperService, [{
+        key: "alertMessage",
+        value: function alertMessage(type, message) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            var alert;
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return this.alertCtrl.create({
+                      header: type,
+                      message: message,
+                      buttons: ['OK']
+                    });
+
+                  case 2:
+                    alert = _context.sent;
+                    _context.next = 5;
+                    return alert.present();
+
+                  case 5:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
+        }
+      }]);
+
+      return HelperService;
+    }();
+
+    HelperService.ctorParameters = function () {
+      return [{
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"]
+      }];
+    };
+
+    HelperService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    })], HelperService);
+    /***/
+  },
+
+  /***/
+  "./src/app/services/membership.service.ts":
+  /*!************************************************!*\
+    !*** ./src/app/services/membership.service.ts ***!
+    \************************************************/
+
+  /*! exports provided: MembershipService */
+
+  /***/
+  function srcAppServicesMembershipServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MembershipService", function () {
+      return MembershipService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ionic_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @ionic/storage */
+    "./node_modules/@ionic/storage/__ivy_ngcc__/fesm2015/ionic-storage.js");
+    /* harmony import */
+
+
+    var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../config/api */
+    "./src/app/config/api.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+    var MembershipService = /*#__PURE__*/function () {
+      function MembershipService(storage, http) {
+        _classCallCheck(this, MembershipService);
+
+        this.storage = storage;
+        this.http = http;
+      }
+
+      _createClass(MembershipService, [{
+        key: "SetSelling",
+        value: function SetSelling(data) {
+          this.storage.set(_config_api__WEBPACK_IMPORTED_MODULE_3__["ActivationKey"], data);
+        }
+      }, {
+        key: "removeSelling",
+        value: function removeSelling() {
+          this.storage.remove(_config_api__WEBPACK_IMPORTED_MODULE_3__["ActivationKey"]);
+        }
+      }]);
+
+      return MembershipService;
+    }();
+
+    MembershipService.ctorParameters = function () {
+      return [{
+        type: _ionic_storage__WEBPACK_IMPORTED_MODULE_2__["Storage"]
+      }, {
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]
+      }];
+    };
+
+    MembershipService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    })], MembershipService);
+    /***/
   }
 }]);
 //# sourceMappingURL=selling-hp-brand2-brand2-module-es5.js.map

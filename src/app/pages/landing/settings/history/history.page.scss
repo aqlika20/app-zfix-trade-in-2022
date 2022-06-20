@@ -1,11 +1,43 @@
  .status {
-     background-color: green;
-     color: white;
+    background-color: green;
+    color: white;
     background-size: auto; 
     border-radius: 50px;
-    margin-left: 50px;
-    padding-top: 5px;
-    padding-left: 20px;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 45%;
     height: 30px;
     width: 80px;
+    text-align: center;
+}
+
+.col{
+    margin-top: 5%;
+}
+
+.t1{
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+}
+
+.t2{
+    font-family: Plus Jakarta Sans Extra;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: black;
+    text-align: left;
+}
+
+.t3{
+    font-family: Plus Jakarta Sans Extra;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+    text-align: left;
 }

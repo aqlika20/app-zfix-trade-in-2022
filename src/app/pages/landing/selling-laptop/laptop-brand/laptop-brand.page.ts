@@ -14,6 +14,8 @@ import { Storage } from "@ionic/storage";
 import { tokenKey } from "../../../../config/api";
 import { MembershipApiService } from "../../../../services/api/membership-api.service";
 import { AlertController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { ModalPriceComponent } from 'src/app/pages/landing/modal/modal-price/modal-price.component';
 
 type Stores = {id: number, name: string}; 
 
@@ -92,6 +94,7 @@ export class LaptopBrandPage implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     public alertController: AlertController,
+    public modalController: ModalController,
 
   ) {} 
 
@@ -106,14 +109,23 @@ export class LaptopBrandPage implements OnInit {
     this.getBrand();
   }
   
+  async openModalSubmit(event) {
+    const modalSubmit = await this.modalController.create({
+      component: ModalPriceComponent,
+      cssClass: 'my-custom-modal-css',
+      backdropDismiss: false,
+      id: 'my-modal-id'
+    });
+    return await modalSubmit.present();
+  }
+
   customPopoverOptions: any = {
     header: 'Pilih Tempat Trade In',
     message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.'
   };
 
   customPopoverProcessor: any = {
-    header: 'Pilih Processor',
-    message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.'
+    header: 'Pilih Processor'
   };
 
   selectMerk(val){
