@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (" \r\n\r\n<ion-content style=\"--background: #ccc url('../../../../assets/images/phone/background.png') no-repeat center center / cover;\">\r\n  <canvas #screenTest \r\n  (touchstart)=\"startTouch($event)\" \r\n  (touchmove)=\"moveTouch($event)\" \r\n  (touchend)=\"endTouch()\">\r\n \r\n</canvas>\r\n\r\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = (" \n\n<ion-content style=\"--background: #ccc url('../../../../assets/images/phone/background.png') no-repeat center center / cover;\">\n  <canvas #screenTest \n  (touchstart)=\"startTouch($event)\" \n  (touchmove)=\"moveTouch($event)\" \n  (touchend)=\"endTouch()\">\n \n</canvas>\n\n</ion-content>");
 
 /***/ }),
 
@@ -101,7 +101,7 @@ ScreenTestingPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("ion-content {\n  --overflow:hidden;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFuZGluZy9zZWxsaW5nLWhwL3NjcmVlbi10ZXN0aW5nL0Q6XFx6Zml4LXRyYWRlLWluLTIwMjIvc3JjXFxhcHBcXHBhZ2VzXFxsYW5kaW5nXFxzZWxsaW5nLWhwXFxzY3JlZW4tdGVzdGluZ1xcc2NyZWVuLXRlc3RpbmcucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlcy9sYW5kaW5nL3NlbGxpbmctaHAvc2NyZWVuLXRlc3Rpbmcvc2NyZWVuLXRlc3RpbmcucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksaUJBQVc7QUNDZiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2xhbmRpbmcvc2VsbGluZy1ocC9zY3JlZW4tdGVzdGluZy9zY3JlZW4tdGVzdGluZy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY29udGVudHtcclxuICAgIC0tb3ZlcmZsb3c6aGlkZGVuO1xyXG59IiwiaW9uLWNvbnRlbnQge1xuICAtLW92ZXJmbG93OmhpZGRlbjtcbn1cbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("ion-content {\n  --overflow:hidden;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFuZGluZy9zZWxsaW5nLWhwL3NjcmVlbi10ZXN0aW5nL0M6XFxVc2Vyc1xcYXJkaW1cXERlc2t0b3BcXGhhbXBpciBzZWxlc2FpXFxOZXcgZm9sZGVyXFxteVRyYWRlX1YzLjAvc3JjXFxhcHBcXHBhZ2VzXFxsYW5kaW5nXFxzZWxsaW5nLWhwXFxzY3JlZW4tdGVzdGluZ1xcc2NyZWVuLXRlc3RpbmcucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlcy9sYW5kaW5nL3NlbGxpbmctaHAvc2NyZWVuLXRlc3Rpbmcvc2NyZWVuLXRlc3RpbmcucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksaUJBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2xhbmRpbmcvc2VsbGluZy1ocC9zY3JlZW4tdGVzdGluZy9zY3JlZW4tdGVzdGluZy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY29udGVudHtcclxuICAgIC0tb3ZlcmZsb3c6aGlkZGVuO1xyXG59IiwiaW9uLWNvbnRlbnQge1xuICAtLW92ZXJmbG93OmhpZGRlbjtcbn0iXX0= */");
 
 /***/ }),
 

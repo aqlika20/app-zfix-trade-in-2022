@@ -82,6 +82,8 @@ export class TypePage implements OnInit {
       this.router.navigate(['landing', 'kulkas-brand']);
     }else if (id == 6) {
       this.router.navigate(['landing', 'mesin-cuci-brand']);
+    }else if (id == 'notification') {
+      this.router.navigate(['landing', 'notification']);
     }
     
   }
@@ -91,7 +93,6 @@ export class TypePage implements OnInit {
       this.sellingApiService.getNotification(token).subscribe(
         (response: any) => {
         this.count_notification = response.count;
-        console.log(this.count_notification)
         },
         (err) => {
           // this.utilsService.showToast("There is a problem.");

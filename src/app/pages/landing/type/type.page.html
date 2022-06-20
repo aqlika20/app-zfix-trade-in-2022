@@ -10,8 +10,9 @@
           <div class="img">
             <img src="../../../../assets/images/atas_kanan.png" alt="">
           </div>
-          <div class="img_kanan">
-            <img src="../../../../assets/icon/notification.png" alt="">
+          <div class="img_kanan" routerLink="/landing/notification">
+            <img src="../../../../assets/icon/notification.png" alt="" ><ion-badge *ngIf = "count_notification != 0" id="notifications-badge" style=" font-size: 5px;">{{count_notification}}</ion-badge> 
+
           </div>
         </div>
       </ion-col>

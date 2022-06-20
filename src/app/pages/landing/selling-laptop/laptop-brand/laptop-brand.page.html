@@ -19,8 +19,8 @@
     <ion-card class="main-menu">
       <div class="content">
         <div class="itemBorder">
-          <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Pilih tempat melakukan Trade In" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="1">LG Store Pulogadung</ion-select-option>
+          <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Pilih tempat melakukan Trade In" okText="Okay" cancelText="Dismiss" (ionChange)="this.lokasi_trade = $event.target.value">
+            <ion-select-option *ngFor="let item of stores" value="{{item.id}}">{{item.name}}</ion-select-option>
           </ion-select>
         </div>
         <div class="t1" style="margin-top: 30px;">
@@ -123,9 +123,8 @@
         </ion-grid>
 
         <div class="itemBorder2">
-          <ion-select [interfaceOptions]="customPopoverProcessor" placeholder="Pilih Processor" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="1">Intel 7</ion-select-option>
-            <ion-select-option value="2">Ryzen 7000</ion-select-option>
+          <ion-select [interfaceOptions]="customPopoverProcessor" placeholder="Pilih Processor" okText="Okay" cancelText="Dismiss" (ionChange) = "this.processor = $event.target.value">
+            <ion-select-option *ngFor="let row_processor of data_processor" value="{{row_processor.processor}}">{{row_processor.processor}}</ion-select-option> 
           </ion-select>
         </div>
 
@@ -171,7 +170,7 @@
           Kondisi Layar Laptop
         </div>
 
-        <ion-radio-group>
+        <ion-radio-group (ionChange)="radioSelect($event)">
           <ion-item class="radio head" lines="none">
             <ion-label class="t2">Normal</ion-label>
             <ion-radio slot="end" color="primary" value="Normal"></ion-radio>
@@ -196,47 +195,47 @@
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Laptop Menyala</ion-label>
-          <ion-toggle [(ngModel)]="kondisiLaptop"></ion-toggle>
+          <ion-toggle [(ngModel)]="kondisiLaptop" (ionChange)="toggleKondisiLaptop()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Touchscreen</ion-label>
-          <ion-toggle [(ngModel)]="kondisiTouch"></ion-toggle>
+          <ion-toggle [(ngModel)]="kondisiTouch" (ionChange)="toggleTouchscreen()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">LCD Layar Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiLcd"></ion-toggle>
+          <ion-toggle [(ngModel)]="kondisiLcd" (ionChange)="toggleKondisiLayar()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Layar Luar Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiLayarLuar"></ion-toggle>
+          <ion-toggle [(ngModel)]="kondisiLayarLuar" (ionChange)="toggleKondisiLayarLuar()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Keyboard Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiKeyboard"></ion-toggle>
+          <ion-toggle [(ngModel)]="kondisiKeyboard" (ionChange)="toggleKeyboard()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Trackpad Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiTrackpad"></ion-toggle>
+          <ion-toggle [(ngModel)]="kondisiTrackpad" (ionChange)="toggleTrackpad()"></ion-toggle>
         </ion-item>
         
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Port Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiPort"></ion-toggle>
+          <ion-toggle [(ngModel)]="kondisiPort" (ionChange)="togglePort()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
-          <ion-label class="t2">Kondisi Bluetooth Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiBluetooth"></ion-toggle>
+          <ion-label class="t2">Kondisi Bluetooth/Wifi Berfungsi Normal</ion-label>
+          <ion-toggle [(ngModel)]="kondisiBluetooth" (ionChange)="toggleBluetooth()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Speaker Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiSpeaker"></ion-toggle>
+          <ion-toggle [(ngModel)]="kondisiSpeaker" (ionChange)="toggleSpeaker()"></ion-toggle>
         </ion-item>
         <hr>
 

@@ -270,7 +270,20 @@ module.exports = webpackAsyncContext;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\r\n  <ion-router-outlet></ion-router-outlet>\r\n</ion-app>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-app>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/modal/modal-qr/modal-qr.component.html":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/modal/modal-qr/modal-qr.component.html ***!
+  \************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n  <div>\n    <h3>Preview <ion-icon name=\"close\" (click)=\"dismissModal()\"></ion-icon></h3>\n  </div>\n  <div class=\"ion-text-center\" style=\"margin-bottom: 0 !important; margin-top: 10px;\">\n    <ngx-qrcode \n    [width]=240\n    [margin]=\"0\"\n    value = \"{{id}}\">\n    </ngx-qrcode>\n    <p>{{voucher_key}}</p>\n  </div>\n\n  <div class=\"ion-text-center\">\n    <p style=\"font-size: 12px;\">QR Code ini hanya bisa digunakan di lokasi toko yang telah dipilih diawal, harga diatas adalah harga final setelah pengecekan.</p>\n  </div>\n</ion-content>\n");
 
 /***/ }),
 
@@ -283,7 +296,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-list>\r\n  <ion-list-header> ZFix Trade In </ion-list-header>\r\n\r\n  <ion-item *ngFor=\"let item of notification\">\r\n    <ion-label class=\"ion-text-wrap\">\r\n      <h3>{{item.type}}</h3>\r\n      <p>{{item.description}}</p>\r\n    </ion-label>\r\n  </ion-item>\r\n\r\n</ion-list>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-list>\n  <ion-list-header> ZFix Trade In </ion-list-header>\n\n  <ion-item *ngFor=\"let item of notification\">\n    <ion-label class=\"ion-text-wrap\">\n      <h3>{{item.type}}</h3>\n      <p>{{item.description}}</p>\n    </ion-label>\n  </ion-item>\n\n</ion-list>");
 
 /***/ }),
 
@@ -527,6 +540,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @ionic-native/onesignal/ngx */ "./node_modules/@ionic-native/onesignal/__ivy_ngcc__/ngx/index.js");
 /* harmony import */ var src_app_pages_landing_popover_popover_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! src/app/pages/landing/popover/popover.component */ "./src/app/pages/landing/popover/popover.component.ts");
 /* harmony import */ var _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @ionic-native/launch-navigator/ngx */ "./node_modules/@ionic-native/launch-navigator/__ivy_ngcc__/ngx/index.js");
+/* harmony import */ var src_app_pages_landing_modal_modal_qr_modal_qr_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! src/app/pages/landing/modal/modal-qr/modal-qr.component */ "./src/app/pages/landing/modal/modal-qr/modal-qr.component.ts");
+/* harmony import */ var _ionic_native_email_composer_ngx_index__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! @ionic-native/email-composer/ngx/index */ "./node_modules/@ionic-native/email-composer/ngx/index.js");
+
+
 
 
 
@@ -570,7 +587,8 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
-            src_app_pages_landing_popover_popover_component__WEBPACK_IMPORTED_MODULE_35__["PopoverComponent"]
+            src_app_pages_landing_popover_popover_component__WEBPACK_IMPORTED_MODULE_35__["PopoverComponent"],
+            src_app_pages_landing_modal_modal_qr_modal_qr_component__WEBPACK_IMPORTED_MODULE_37__["ModalQrComponent"]
         ],
         entryComponents: [],
         imports: [
@@ -608,6 +626,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_32__["FingerprintAIO"],
             _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_34__["OneSignal"],
             _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_36__["LaunchNavigator"],
+            _ionic_native_email_composer_ngx_index__WEBPACK_IMPORTED_MODULE_38__["EmailComposer"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
@@ -679,6 +698,65 @@ AuthenticationGuard = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         providedIn: 'root'
     })
 ], AuthenticationGuard);
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/landing/modal/modal-qr/modal-qr.component.scss":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/landing/modal/modal-qr/modal-qr.component.scss ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("h3 {\n  margin: 10px !important;\n  font-size: 14px;\n}\n\np {\n  margin-left: 10px;\n  font-size: 12px;\n}\n\nion-icon {\n  margin-left: 80%;\n  background-color: black;\n  color: white;\n  border-radius: 90px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFuZGluZy9tb2RhbC9tb2RhbC1xci9DOlxcVXNlcnNcXGFyZGltXFxEZXNrdG9wXFxoYW1waXIgc2VsZXNhaVxcTmV3IGZvbGRlclxcbXlUcmFkZV9WMy4wL3NyY1xcYXBwXFxwYWdlc1xcbGFuZGluZ1xcbW9kYWxcXG1vZGFsLXFyXFxtb2RhbC1xci5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvbGFuZGluZy9tb2RhbC9tb2RhbC1xci9tb2RhbC1xci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHVCQUFBO0VBQ0EsZUFBQTtBQ0NKOztBREVBO0VBQ0MsaUJBQUE7RUFDQSxlQUFBO0FDQ0Q7O0FERUE7RUFDSSxnQkFBQTtFQUNBLHVCQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9sYW5kaW5nL21vZGFsL21vZGFsLXFyL21vZGFsLXFyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDMgeyBcclxuICAgIG1hcmdpbjogMTBweCAhaW1wb3J0YW50O1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG59XHJcblxyXG5wIHtcclxuIG1hcmdpbi1sZWZ0OiAxMHB4O1xyXG4gZm9udC1zaXplOiAxMnB4O1xyXG59XHJcblxyXG5pb24taWNvbiB7XHJcbiAgICBtYXJnaW4tbGVmdDogODAlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBib3JkZXItcmFkaXVzOiA5MHB4O1xyXG59XHJcblxyXG4vLyAucXIge1xyXG4vLyAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4vLyAgICAgd2lkdGg6IDI0MHB4O1xyXG4vLyAgICAgaGVpZ2h0OiAyNDBweDtcclxuLy8gICAgIG1hcmdpbi1sZWZ0OiA0OHB4O1xyXG4vLyAgICAgbWFyZ2luLXRvcDogNjhweDtcclxuLy8gfSIsImgzIHtcbiAgbWFyZ2luOiAxMHB4ICFpbXBvcnRhbnQ7XG4gIGZvbnQtc2l6ZTogMTRweDtcbn1cblxucCB7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xuICBmb250LXNpemU6IDEycHg7XG59XG5cbmlvbi1pY29uIHtcbiAgbWFyZ2luLWxlZnQ6IDgwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyLXJhZGl1czogOTBweDtcbn0iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/pages/landing/modal/modal-qr/modal-qr.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/landing/modal/modal-qr/modal-qr.component.ts ***!
+  \********************************************************************/
+/*! exports provided: ModalQrComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalQrComponent", function() { return ModalQrComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @techiediaries/ngx-qrcode */ "./node_modules/@techiediaries/ngx-qrcode/__ivy_ngcc__/fesm2015/techiediaries-ngx-qrcode.js");
+
+
+
+
+let ModalQrComponent = class ModalQrComponent {
+    constructor(ModalController, NgxQRCodeModule) {
+        this.ModalController = ModalController;
+        this.NgxQRCodeModule = NgxQRCodeModule;
+    }
+    ngOnInit() { }
+    dismissModal() {
+        this.ModalController.dismiss({
+            'dismissed': true
+        });
+    }
+};
+ModalQrComponent.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] },
+    { type: _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_3__["NgxQRCodeModule"] }
+];
+ModalQrComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-modal-qr',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./modal-qr.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/modal/modal-qr/modal-qr.component.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./modal-qr.component.scss */ "./src/app/pages/landing/modal/modal-qr/modal-qr.component.scss")).default]
+    })
+], ModalQrComponent);
 
 
 
@@ -1157,7 +1235,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\zfix-trade-in-2022\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\ardim\Desktop\hampir selesai\New folder\myTrade_V3.0\src\main.ts */"./src/main.ts");
 
 
 /***/ })

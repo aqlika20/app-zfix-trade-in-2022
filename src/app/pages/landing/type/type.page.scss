@@ -117,3 +117,12 @@ ion-card-subtitle {
 
   margin-top: 30px;
 }
+
+#notifications-badge {
+  // color: red;
+  background: red;
+  position: absolute;
+  top: 15px;
+  right: -1px;
+  border-radius: 200%;
+}

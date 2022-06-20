@@ -93,10 +93,11 @@ export class LaptopBrandPage implements OnInit {
     private activatedRoute: ActivatedRoute,
     public alertController: AlertController,
 
-  ) { } 
+  ) {} 
 
   ngOnInit() {
     this.getStore();
+    this.toggleKondisiLaptop();
   }
   
   ionViewWillEnter() {
@@ -203,6 +204,83 @@ export class LaptopBrandPage implements OnInit {
     element.classList.add("selected");
   }
 
+  radioSelect(event) {
+    this.kondisi_layar = event.detail;
+  }
+
+  toggleKondisiLaptop() {
+    if (this.kondisiLaptop == true) {
+      this.kondisi_laptop = 'Nyala';
+    } else {
+      this.kondisi_laptop = 'Mati Total';
+    }
+  }
+
+  toggleTouchscreen() {
+    if (this.kondisiTouch == true) {
+      this.jenis_layar = 'Touchscreen';
+    } else {
+      this.jenis_layar = 'Non Touchscreen';
+    }
+  }
+
+  toggleKondisiLayar() {
+    if (this.kondisiLcd == true) {
+      this.kondisi_layar = 'Normal';
+    } else {
+      this.kondisi_layar = 'Layar Bermasalah';
+    }
+  }
+
+  toggleKondisiLayarLuar() {
+    if (this.kondisiLayarLuar == true) {
+      this.outer_valueSelected = 'Normal';
+    } else {
+      this.outer_valueSelected = 'Layar Bermasalah';
+    }
+  }
+
+  toggleKeyboard() {
+    if (this.kondisiKeyboard == true) {
+      this.keyboard = 'Normal';
+    } else {
+      this.keyboard = 'Tidak Berfungsi';
+    }
+  }
+
+  toggleTrackpad() {
+    if (this.kondisiTrackpad == true) {
+      this.trackpad = 'Normal';
+    } else {
+      this.trackpad = 'Tidak Berfungsi';
+    }
+  }
+
+  togglePort() {
+    if (this.kondisiPort == true) {
+      this.port = 'Berfungsi';
+    } else {
+      this.port = 'Tidak Berfungsi';
+    }
+  }
+
+  toggleBluetooth() {
+    if (this.kondisiBluetooth == true) {
+      this.wifi = 'Berfungsi';
+    } else {
+      this.wifi = 'Tidak Berfungsi';
+    }
+  }
+
+  toggleSpeaker() {
+    if (this.kondisiSpeaker == true) {
+      this.speaker = 'Berfungsi';
+    } else {
+      this.speaker = 'Tidak Berfungsi';
+    }
+  }
+
+
   getStore(){
     this.storage.get(tokenKey).then((token) => {
       this.sellingApiService.getStore(token).subscribe(
@@ -237,8 +315,9 @@ export class LaptopBrandPage implements OnInit {
   }
 
   submit() {
-    if ((this.brand == null || this.memory == null || this.storages == null || this.lokasi_trade == null )){
+    if ((this.selected_merk == null || this.selected_jenis == null || this.selected_ram == null || this.selected_ukuran == null || this.selected_os == null || this.selected_fisik == null || this.selected_baterai == null || this.selected_kelengkapan == null )){
       this.utilsService.showToast("Lengkapi pengisian form.");
+      console.log(this.kondisi_laptop)
     } else if(this.kondisi_laptop == "Mati Total"){
       alert("Mohon maaf, Anda belum bisa melanjutkan proses ini dikarenakan kondisi unit dalam keadaan mati");
 
@@ -264,18 +343,17 @@ export class LaptopBrandPage implements OnInit {
           handler: () => {
             let navigationExtras: NavigationExtras = {
               queryParams: {
-                  brand: this.brand,
-                  memory: this.memory,
-                  storages: this.storages,
+                  brand: this.selected_merk,
+                  memory: this.selected_ram,
                   lokasi_trade: this.lokasi_trade,
                   inner_valueSelected: this.inner_valueSelected,
                   outer_valueSelected:this.outer_valueSelected,
-                  condition_valueSelected:this.condition_valueSelected,
-                  addition_valueSelected:this. addition_valueSelected,
-                  jenis_storage:this.jenis_storage,
+                  condition_valueSelected:this.selected_fisik,
+                  addition_valueSelected:this. selected_kelengkapan,
+                  jenis_storage:this.selected_jenis,
                   kondisi_laptop:this.kondisi_laptop,
                   jenis_layar:this.jenis_layar,
-                  baterai:this.baterai,
+                  baterai:this.selected_baterai,
                   kondisi_layar:this.kondisi_layar,
                   keyboard:this.keyboard,
                   trackpad:this.trackpad,
@@ -284,8 +362,8 @@ export class LaptopBrandPage implements OnInit {
                   camera:this.camera,
                   speaker:this.speaker,
                   processor:this.processor,
-                  ukuran_laptop:this.ukuran_laptop,
-                  os:this.os,
+                  ukuran_laptop:this.selected_ukuran,
+                  os:this.selected_os,
                   more_addition:this.more_addition
 
               }
