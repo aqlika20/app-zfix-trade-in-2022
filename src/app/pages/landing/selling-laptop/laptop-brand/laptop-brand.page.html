@@ -130,16 +130,9 @@
           </ion-row>
         </ion-grid>
 
-<<<<<<< HEAD
-        <div class="itemBorder2">
+        <div class="itemBorder2" style="margin-top: 14px">
           <ion-select [interfaceOptions]="customPopoverProcessor" placeholder="Pilih Processor" okText="Okay" cancelText="Dismiss" (ionChange) = "this.processor = $event.target.value">
             <ion-select-option *ngFor="let row_processor of data_processor" value="{{row_processor.processor}}">{{row_processor.processor}}</ion-select-option> 
-=======
-        <div class="itemBorder2" style="margin-top: 14px">
-          <ion-select [interfaceOptions]="customPopoverProcessor" placeholder="Pilih Processor" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="1">Intel 7</ion-select-option>
-            <ion-select-option value="2">Ryzen 7000</ion-select-option>
->>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
           </ion-select>
         </div>
 
@@ -185,11 +178,7 @@
           Kondisi Layar Laptop
         </div>
 
-<<<<<<< HEAD
-        <ion-radio-group (ionChange)="radioSelect($event)">
-=======
-        <ion-radio-group style="margin-top: 14px">
->>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
+        <ion-radio-group (ionChange)="radioSelect($event)" style="margin-top: 14px">
           <ion-item class="radio head" lines="none">
             <ion-label class="t2">Normal</ion-label>
             <ion-radio slot="end" color="primary" value="Normal"></ion-radio>
@@ -214,84 +203,47 @@
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Laptop Menyala</ion-label>
-<<<<<<< HEAD
-          <ion-toggle [(ngModel)]="kondisiLaptop" (ionChange)="toggleKondisiLaptop()"></ion-toggle>
-=======
-          <ion-toggle mode="ios" [(ngModel)]="kondisiLaptop"></ion-toggle>
->>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
+          <ion-toggle mode="ios" [(ngModel)]="kondisiLaptop" (ionChange)="toggleKondisiLaptop()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Touchscreen</ion-label>
-<<<<<<< HEAD
-          <ion-toggle [(ngModel)]="kondisiTouch" (ionChange)="toggleTouchscreen()"></ion-toggle>
-=======
-          <ion-toggle mode="ios" [(ngModel)]="kondisiTouch"></ion-toggle>
->>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
+          <ion-toggle mode="ios" [(ngModel)]="kondisiTouch" (ionChange)="toggleTouchscreen()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">LCD Layar Berfungsi Normal</ion-label>
-<<<<<<< HEAD
-          <ion-toggle [(ngModel)]="kondisiLcd" (ionChange)="toggleKondisiLayar()"></ion-toggle>
-=======
-          <ion-toggle mode="ios" [(ngModel)]="kondisiLcd"></ion-toggle>
->>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
+          <ion-toggle mode="ios" [(ngModel)]="kondisiLcd" (ionChange)="toggleKondisiLayar()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Layar Luar Berfungsi Normal</ion-label>
-<<<<<<< HEAD
-          <ion-toggle [(ngModel)]="kondisiLayarLuar" (ionChange)="toggleKondisiLayarLuar()"></ion-toggle>
-=======
-          <ion-toggle mode="ios" [(ngModel)]="kondisiLayarLuar"></ion-toggle>
->>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
+          <ion-toggle mode="ios" [(ngModel)]="kondisiLayarLuar" (ionChange)="toggleKondisiLayarLuar()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Keyboard Berfungsi Normal</ion-label>
-<<<<<<< HEAD
-          <ion-toggle [(ngModel)]="kondisiKeyboard" (ionChange)="toggleKeyboard()"></ion-toggle>
-=======
-          <ion-toggle mode="ios" [(ngModel)]="kondisiKeyboard"></ion-toggle>
->>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
+          <ion-toggle mode="ios" [(ngModel)]="kondisiKeyboard" (ionChange)="toggleKeyboard()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Trackpad Berfungsi Normal</ion-label>
-<<<<<<< HEAD
-          <ion-toggle [(ngModel)]="kondisiTrackpad" (ionChange)="toggleTrackpad()"></ion-toggle>
-=======
-          <ion-toggle mode="ios" [(ngModel)]="kondisiTrackpad"></ion-toggle>
->>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
+          <ion-toggle mode="ios" [(ngModel)]="kondisiTrackpad" (ionChange)="toggleTrackpad()"></ion-toggle>
         </ion-item>
         
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Port Berfungsi Normal</ion-label>
-<<<<<<< HEAD
-          <ion-toggle [(ngModel)]="kondisiPort" (ionChange)="togglePort()"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiPort" (ionChange)="togglePort()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
-          <ion-label class="t2">Kondisi Bluetooth/Wifi Berfungsi Normal</ion-label>
-          <ion-toggle [(ngModel)]="kondisiBluetooth" (ionChange)="toggleBluetooth()"></ion-toggle>
-=======
-          <ion-toggle mode="ios" [(ngModel)]="kondisiPort"></ion-toggle>
-        </ion-item>
-
-        <ion-item class="toggle2" lines="none">
-          <ion-label class="t2">Kondisi Bluetooth Berfungsi Normal</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="kondisiBluetooth"></ion-toggle>
->>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
+          <ion-label class="t2">Kondisi Bluetooth & Wifi Berfungsi Normal</ion-label>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiBluetooth" (ionChange)="toggleBluetooth()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Speaker Berfungsi Normal</ion-label>
-<<<<<<< HEAD
-          <ion-toggle [(ngModel)]="kondisiSpeaker" (ionChange)="toggleSpeaker()"></ion-toggle>
-=======
-          <ion-toggle mode="ios" [(ngModel)]="kondisiSpeaker"></ion-toggle>
->>>>>>> e1124e0ccaa1e710e8bd72857b86b8926d0f402b
+          <ion-toggle mode="ios" [(ngModel)]="kondisiSpeaker" (ionChange)="toggleSpeaker()"></ion-toggle>
         </ion-item>
         <hr>
 
