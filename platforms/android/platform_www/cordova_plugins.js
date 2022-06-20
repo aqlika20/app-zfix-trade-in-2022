@@ -33,6 +33,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
+      "id": "cordova-plugin-actionsheet.ActionSheet",
+      "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
+      "pluginId": "cordova-plugin-actionsheet",
+      "clobbers": [
+        "window.plugins.actionsheet"
+      ]
+    },
+    {
       "id": "cordova-plugin-file.DirectoryEntry",
       "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
       "pluginId": "cordova-plugin-file",
@@ -376,11 +384,35 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
+      "id": "cordova-plugin-dialogs.notification",
+      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
+      "id": "cordova-plugin-dialogs.notification_android",
+      "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+      "pluginId": "cordova-plugin-dialogs",
+      "merges": [
+        "navigator.notification"
+      ]
+    },
+    {
       "id": "cordova-plugin-dreamover-uid.uid",
       "file": "plugins/cordova-plugin-dreamover-uid/www/uid.js",
       "pluginId": "cordova-plugin-dreamover-uid",
       "clobbers": [
         "cordova.plugins.uid"
+      ]
+    },
+    {
+      "id": "cordova-plugin-email-composer.EmailComposer",
+      "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
+      "pluginId": "cordova-plugin-email-composer",
+      "clobbers": [
+        "cordova.plugins.email"
       ]
     },
     {
@@ -588,62 +620,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "Notification"
       ]
-    },
-    {
-      "id": "cordova-plugin-actionsheet.ActionSheet",
-      "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
-      "pluginId": "cordova-plugin-actionsheet",
-      "clobbers": [
-        "window.plugins.actionsheet"
-      ]
-    },
-    {
-      "id": "cordova-plugin-dialogs.notification",
-      "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-      "pluginId": "cordova-plugin-dialogs",
-      "merges": [
-        "navigator.notification"
-      ]
-    },
-    {
-      "id": "cordova-plugin-dialogs.notification_android",
-      "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
-      "pluginId": "cordova-plugin-dialogs",
-      "merges": [
-        "navigator.notification"
-      ]
-    },
-    {
-      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.Common",
-      "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/common.js",
-      "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
-      "clobbers": [
-        "launchnavigator"
-      ]
-    },
-    {
-      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LocalForage",
-      "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/localforage.v1.5.0.min.js",
-      "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
-      "clobbers": [
-        "localforage"
-      ]
-    },
-    {
-      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LaunchNavigator",
-      "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/android/launchnavigator.js",
-      "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
-      "merges": [
-        "launchnavigator"
-      ]
-    },
-    {
-      "id": "cordova-plugin-email-composer.EmailComposer",
-      "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
-      "pluginId": "cordova-plugin-email-composer",
-      "clobbers": [
-        "cordova.plugins.email"
-      ]
     }
   ];
   module.exports.metadata = {
@@ -651,6 +627,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "com-badrit-base64": "0.2.0",
     "com.ourcodeworld.preventscreenshots": "1.0.0",
     "cordova-clipboard": "1.3.0",
+    "cordova-plugin-actionsheet": "2.3.3",
     "cordova-plugin-file": "6.0.2",
     "cordova-plugin-advanced-http": "3.0.1",
     "cordova-plugin-android-permissions": "1.0.2",
@@ -664,7 +641,9 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-badge": "0.8.8",
     "cordova-plugin-camera": "4.1.0",
     "cordova-plugin-camera-preview": "0.12.0",
+    "cordova-plugin-dialogs": "2.0.2",
     "cordova-plugin-dreamover-uid": "1.3.0",
+    "cordova-plugin-email-composer": "0.10.0",
     "cordova-plugin-extended-device-information": "2.2.0",
     "cordova-plugin-fingerprint-aio": "4.0.2",
     "cordova-plugin-ionic-keyboard": "2.2.0",
@@ -681,10 +660,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-x-socialsharing": "6.0.2",
     "cordova.plugins.diagnostic": "6.1.0",
     "onesignal-cordova-plugin": "2.11.4",
-    "phonegap-plugin-local-notification": "1.0.1",
-    "cordova-plugin-actionsheet": "2.3.3",
-    "cordova-plugin-dialogs": "2.0.2",
-    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.6",
-    "cordova-plugin-email-composer": "0.10.0"
+    "phonegap-plugin-local-notification": "1.0.1"
   };
 });
