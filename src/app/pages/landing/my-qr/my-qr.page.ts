@@ -6,6 +6,7 @@ import { SellingApiService } from './../../../services/api/selling-api.service';
 import { UtilitiesService } from './../../../services/utilities.service';
 import { PopoverController } from '@ionic/angular';
 import { ModalFaqComponent } from 'src/app/pages/landing/modal/modal-faq/modal-faq.component';
+// import { ModalHarapDiperhatikanComponent } from 'src/app/pages/landing/modal/modal-harap-diperhatikan/modal-harap-diperhatikan.component';
 import { ModalController } from '@ionic/angular';
 import { ModalQrComponent } from 'src/app/pages/landing/modal/modal-qr/modal-qr.component';
 import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator/ngx';
@@ -118,6 +119,8 @@ export class MyQrPage implements OnInit {
 
   async openMyModal(event) {
     const myModal = await this.modalController.create({
+      // component: ModalHarapDiperhatikanComponent,
+      // cssClass: 'harap-diperhatikan-modal-css',
       component: ModalFaqComponent,
       cssClass: 'my-custom-modal-css',
       backdropDismiss: false,
