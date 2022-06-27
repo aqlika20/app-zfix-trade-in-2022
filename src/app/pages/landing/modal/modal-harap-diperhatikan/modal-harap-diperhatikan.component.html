@@ -1,0 +1,56 @@
+<ion-content>
+  <div class="widht">
+    <div class="right">
+      <ion-icon class="icon" name="close" (click)="dismissModal()"></ion-icon>
+    </div>
+  </div>
+  <div class="desk">
+    <div class="left">
+      <img class="img" src="../../../../assets/images/baru/lampthink.png" alt="">
+      <!-- <ion-icon class="alart" name="alert"></ion-icon> -->
+      <br>
+      <ion-label class="t1">Harap diperhatikan</ion-label>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-1">
+          <ion-icon class="alart" name="checkmark"></ion-icon>
+        </div>
+        <div class="col">
+          <p class="t2">Pastikan kamu mengisi data sesuai dengan benar dan sesuai dengan kondisi yang sebenarnya</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <ion-icon class="alart" name="checkmark"></ion-icon>
+        </div>
+        <div class="col">
+          <p class="t2">Perbedaan data akan mempengaruhi harga akhir setelah pengecekan</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <ion-icon class="alart" name="checkmark"></ion-icon>
+        </div>
+        <div class="col">
+          <p class="t2">Pengecekan akan dilakukan setelah kamu berhasil submit data</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <ion-icon class="alart" name="checkmark"></ion-icon>
+        </div>
+        <div class="col">
+          <p class="t2">Setelah dilakukan pengecekan barang, maka akan mendapatkan hasil</p>
+        </div>
+      </div>
+      <ion-item class="check" lines="none">
+        <ion-label class="t2">Jangan tampilkan lagi</ion-label>
+        <ion-checkbox color="primary" mode="ios" slot="start"></ion-checkbox>
+      </ion-item>
+      <div class="btn">
+        <ion-button style="width: 100%; height: 45px;" shape="round" (click)="submit()">Ok, Mengerti</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

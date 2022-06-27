@@ -1,13 +1,20 @@
 <ion-content>
-  <ion-item>
-    <ion-label class="title">FAQ</ion-label>
-    <ion-icon name="close" (click)="dismissModal()"></ion-icon>
-  </ion-item>
+  <div class="widht">
+    <div class="right">
+      <ion-icon class="icon" name="close" (click)="dismissModal()"></ion-icon>
+    </div>
+  </div>
   <div class="desk">
-    <ion-label class="t1">Mengapa harga yang didapat berbeda?</ion-label>
-    <p class="t2">Harga akan berubah sesuai kondisi unit yang sebenarnya setelah dilakukan pengecekkan oleh tim kami</p>
-    <br>
-    <ion-label class="t1">Mengapa kode saya tidak dapat dipakai?</ion-label>
-    <p class="t2">QR Code ini hanya bisa digunakan di lokasi toko yang telah dipilih oleh kamu</p>
+    <div class="center">
+      <img class="img" src="../../../../assets/icon/lovexxhdpi.png" alt="">
+      <!-- <ion-icon class="alart" name="alert"></ion-icon> -->
+      <br>
+      <ion-label class="t1">Enjoying the app?</ion-label>
+      <br>
+      <p class="t2">How was your experience with Zfix? Let us know what you think</p>
+      <div class="btn">
+        <ion-button style="width: 100%; height: 45px;" shape="round" (click)="submit()">Kirim Feedback</ion-button>
+      </div>
+    </div>
   </div>
 </ion-content>
