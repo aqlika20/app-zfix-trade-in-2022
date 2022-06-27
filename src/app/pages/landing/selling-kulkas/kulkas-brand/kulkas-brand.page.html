@@ -21,32 +21,32 @@
     <ion-card class="main-menu">
       <div class="content">
         <div class="itemBorder">
-          <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Pilih tempat melakukan Trade In" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="1">LG Store Pulogadung</ion-select-option>
+          <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Pilih tempat melakukan Trade In" okText="Okay" cancelText="Dismiss" (ionChange)="this.lokasi_trade = $event.target.value">
+            <ion-select-option *ngFor="let item of stores" value="{{item.id}}">{{item.name}}</ion-select-option>
           </ion-select>
         </div>
         <div class="t1" style="margin-top: 30px;">
           Pilih Merk
-        </div>
+        </div> 
 
         <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
-              <ion-card id="lg" class="kulkas-merk-select" (click)="selectMerk('lg')">
+              <ion-card id="LG" class="kulkas-merk-select" (click)="selectMerk('LG')">
                 <img src="../../../../assets/sponsor/lg_lg.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">LG</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
-              <ion-card id="sharp" class="kulkas-merk-select" (click)="selectMerk('sharp')">
+              <ion-card id="Sharp" class="kulkas-merk-select" (click)="selectMerk('Sharp')">
                 <img src="../../../../assets/sponsor/sharp.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">Sharp</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
-              <ion-card id="sony" class="kulkas-merk-select" (click)="selectMerk('sony')">
+              <ion-card id="Sony" class="kulkas-merk-select" (click)="selectMerk('Sony')">
                 <img src="../../../../assets/sponsor/sony_lg.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">Sony</ion-label>
@@ -55,21 +55,21 @@
           </ion-row>
           <ion-row>
             <ion-col size-md="4">
-              <ion-card id="samsung" class="kulkas-merk-select" (click)="selectMerk('samsung')">
+              <ion-card id="Samsung" class="kulkas-merk-select" (click)="selectMerk('Samsung')">
                 <img src="../../../../assets/sponsor/samsung_lg.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">Samsung</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
-              <ion-card id="xiaomi" class="kulkas-merk-select" (click)="selectMerk('xiaomi')">
+              <ion-card id="Xiaomi" class="kulkas-merk-select" (click)="selectMerk('Xiaomi')">
                 <img src="../../../../assets/sponsor/mi.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">Xiaomi</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
-              <ion-card id="panasonic" class="kulkas-merk-select" (click)="selectMerk('panasonic')">
+              <ion-card id="Panasonic" class="kulkas-merk-select" (click)="selectMerk('Panasonic')">
                 <img src="../../../../assets/sponsor/panasonic.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">Panasonic</ion-label>
@@ -83,18 +83,18 @@
         <!-- <ion-button class="btn2">Show more brand</ion-button> -->
 
         <div class="t2" style="margin-top: 14px">
-          Tipe
+          Model
         </div>
         
         <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
-              <ion-card id="inverter" class="kulkas-tipe-select" (click)="selectTipe('inverter')">
+              <ion-card id="Inverter" class="kulkas-model-select" (click)="selectModel('Inverter')">
                 <ion-label>Inverter</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="6">
-              <ion-card id="noninverter" class="kulkas-tipe-select" (click)="selectTipe('noninverter')">
+              <ion-card id="Non Inverter" class="kulkas-model-select" (click)="selectModel('Non Inverter')">
                 <ion-label>Non Inverter</ion-label>
               </ion-card>
             </ion-col>
@@ -102,18 +102,18 @@
         </ion-grid>
 
         <div class="t2" style="margin-top: 14px">
-          Model
+          tipe
         </div>
 
         <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
-              <ion-card id="one" class="kulkas-model-select" (click)="selectModel('one')">
+              <ion-card id="1 Pintu" class="kulkas-tipe-select" (click)="selectTipe('1 Pintu')">
                 <ion-label style="margin-bottom: 15%;">1 Pintu</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="6">
-              <ion-card id="two" class="kulkas-model-select" (click)="selectModel('two')">
+              <ion-card id="2 Pintu" class="kulkas-tipe-select" (click)="selectTipe('2 Pintu')">
                 <ion-label style="margin-bottom: 15%;">2 Pintu</ion-label>
               </ion-card>
             </ion-col>
@@ -147,31 +147,31 @@
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Kulkas Menyala</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="kondisiKulkas"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiKulkas" (ionChange)="toggleKondisiKulkas()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Rubber Kulkas Berfungsi</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="kondisiRubber"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiRubber" (ionChange)="toggleRubber()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Tutup Freezer Komplit</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="kondisiTutupFreezer"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiTutupFreezer" (ionChange)="toggleTutupFreezer()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kelengkapan Tray Kulkas Komplit</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="kondisiTray"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiTray" (ionChange)="toggleTray()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Freezer Berfungsi Normal</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="kondisiFreezer"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiFreezer" (ionChange)="toggleKondisiFreezer()"></ion-toggle>
         </ion-item>
 
         <div class="btn">
-          <ion-button style="width: 100%;" shape="round" (click)="openModalSubmit($event)">Submit</ion-button>
+          <ion-button style="width: 100%;" shape="round" (click)="submit($event)">Submit</ion-button>
         </div>
         
       </div>

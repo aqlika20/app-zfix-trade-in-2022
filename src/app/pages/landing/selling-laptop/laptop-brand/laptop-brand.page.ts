@@ -15,7 +15,8 @@ import { tokenKey } from "../../../../config/api";
 import { MembershipApiService } from "../../../../services/api/membership-api.service";
 import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
-import { ModalPriceComponent } from 'src/app/pages/landing/modal/modal-price/modal-price.component';
+import { AlarmUnitTolakComponent } from 'src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component';
+import { AlarmFormNullComponent } from 'src/app/pages/landing/modal/modal-laptop/alarm-form-null/alarm-form-null.component';
 
 type Stores = {id: number, name: string}; 
 
@@ -101,22 +102,20 @@ export class LaptopBrandPage implements OnInit {
   ngOnInit() {
     this.getStore();
     this.toggleKondisiLaptop();
+    this.toggleTouchscreen();
+    this.toggleKondisiLayar();
+    this.toggleKondisiLayarLuar();
+    this.toggleKeyboard();
+    this.toggleTrackpad();
+    this.togglePort();
+    this.toggleBluetooth();
+    this.toggleSpeaker();
   }
   
   ionViewWillEnter() {
     this.getStore();
     this.selling.removeSelling();
     this.getBrand();
-  }
-  
-  async openModalSubmit(event) {
-    const modalSubmit = await this.modalController.create({
-      component: ModalPriceComponent,
-      cssClass: 'my-custom-modal-css',
-      backdropDismiss: false,
-      id: 'my-modal-id'
-    });
-    return await modalSubmit.present();
   }
 
   customPopoverOptions: any = {
@@ -217,7 +216,7 @@ export class LaptopBrandPage implements OnInit {
   }
 
   radioSelect(event) {
-    this.kondisi_layar = event.detail;
+    this.kondisi_layar = event.detail.value;
   }
 
   toggleKondisiLaptop() {
@@ -326,18 +325,68 @@ export class LaptopBrandPage implements OnInit {
     });
   }
 
-  submit() {
-    if ((this.selected_merk == null || this.selected_jenis == null || this.selected_ram == null || this.selected_ukuran == null || this.selected_os == null || this.selected_fisik == null || this.selected_baterai == null || this.selected_kelengkapan == null )){
-      this.utilsService.showToast("Lengkapi pengisian form.");
-      console.log(this.kondisi_laptop)
-    } else if(this.kondisi_laptop == "Mati Total"){
-      alert("Mohon maaf, Anda belum bisa melanjutkan proses ini dikarenakan kondisi unit dalam keadaan mati");
+  async openModalSubmit(event) {
 
-    }else {
-      this.presentAlertConfirm();
+    if ((this.selected_merk == null || this.selected_jenis == null || this.selected_ram == null || this.selected_ukuran == null || this.selected_os == null || this.selected_fisik == null || this.selected_baterai == null || this.selected_kelengkapan == null ))
+    {
+      this.utilsService.showToast("Lengkapi pengisian form.");
+
+    } else if(this.kondisi_laptop == "Mati Total"){
+      const modalAlert = await this.modalController.create({
+        component: AlarmUnitTolakComponent,
+        cssClass: 'my-custom-modal-tolak-css',
+        backdropDismiss: false,
+        id: 'my-modal-id'
+      });
+      return await modalAlert.present();
+
+    } else {
+      const modalSubmit = await this.modalController.create({
+        component: AlarmFormNullComponent,
+        cssClass: 'my-custom-modal-css',
+        backdropDismiss: false,
+        id: 'my-modal-id',
+        componentProps: {
+          brand: this.selected_merk,
+          memory: this.selected_ram,
+          lokasi_trade: this.lokasi_trade,
+          outer_valueSelected:this.outer_valueSelected,
+          condition_valueSelected:this.selected_fisik,
+          addition_valueSelected:this. selected_kelengkapan,
+          jenis_storage:this.selected_jenis,
+          kondisi_laptop:this.kondisi_laptop,
+          jenis_layar:this.jenis_layar,
+          baterai:this.selected_baterai,
+          kondisi_layar:this.kondisi_layar,
+          keyboard:this.keyboard,
+          trackpad:this.trackpad,
+          port:this.port,
+          wifi:this.wifi,
+          camera:this.camera,
+          speaker:this.speaker,
+          processor:this.processor,
+          ukuran_laptop:this.selected_ukuran,
+          os:this.selected_os,
+          more_addition:this.more_addition
+        },
+      });
+      return await modalSubmit.present();
 
     }
-  } 
+  }
+
+  // submit() {
+  //   if ((this.selected_merk == null || this.selected_jenis == null || this.selected_ram == null || this.selected_ukuran == null || this.selected_os == null || this.selected_fisik == null || this.selected_baterai == null || this.selected_kelengkapan == null )){
+  //     this.utilsService.showToast("Lengkapi pengisian form.");
+  //     console.log(this.kondisi_laptop)
+  //   } else if(this.kondisi_laptop == "Mati Total"){
+  //     alert("Mohon maaf, Anda belum bisa melanjutkan proses ini dikarenakan kondisi unit dalam keadaan mati");
+
+  //   }else {
+  //     this.presentAlertConfirm();
+
+  //   }
+  // } 
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({

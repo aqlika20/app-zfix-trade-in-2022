@@ -15,7 +15,8 @@ import { tokenKey } from "../../../../config/api";
 import { MembershipApiService } from "../../../../services/api/membership-api.service";
 import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
-import { ModalPriceComponent } from 'src/app/pages/landing/modal/modal-price/modal-price.component';
+import { ModalFormKulkasComponent } from 'src/app/pages/landing/modal/modal-kulkas/modal-form-kulkas/modal-form-kulkas.component';
+import { AlarmUnitTolakComponent } from 'src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component';
 
 @Component({
   selector: 'app-kulkas-brand',
@@ -67,6 +68,11 @@ export class KulkasBrandPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.toggleKondisiKulkas();
+    this.toggleRubber();
+    this.toggleTray();
+    this.toggleKondisiFreezer();
+    this.toggleTutupFreezer();
   }
 
   ionViewWillEnter() {
@@ -74,23 +80,14 @@ export class KulkasBrandPage implements OnInit {
     this.getBrand();
     this.selling.removeSelling();
   }
- 
-  async openModalSubmit(event) {
-    const modalSubmit = await this.modalController.create({
-      component: ModalPriceComponent,
-      cssClass: 'my-custom-modal-css',
-      backdropDismiss: false,
-      id: 'my-modal-id'
-    });
-    return await modalSubmit.present();
-  }
+
   customPopoverOptions: any = {
     header: 'Pilih Tempat Trade In',
     message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.'
   };
 
   selectMerk(val){
-    this.selected_merk = val;
+    this.brand = val;
     
     document.querySelectorAll('.kulkas-merk-select').forEach(element => {
       element.classList.remove("selected");
@@ -101,7 +98,7 @@ export class KulkasBrandPage implements OnInit {
   }
   
   selectTipe(val){
-    this.selected_tipe = val;
+    this.type = val;
     
     document.querySelectorAll('.kulkas-tipe-select').forEach(element => {
       element.classList.remove("selected");
@@ -112,7 +109,7 @@ export class KulkasBrandPage implements OnInit {
   }
 
   selectModel(val){
-    this.selected_model = val;
+    this.model = val;
     
     document.querySelectorAll('.kulkas-model-select').forEach(element => {
       element.classList.remove("selected");
@@ -123,7 +120,7 @@ export class KulkasBrandPage implements OnInit {
   }
 
   selectFisik(val){
-    this.selected_fisik = val;
+    this.kondisi_fisik = val;
     
     document.querySelectorAll('.kulkas-fisik-select').forEach(element => {
       element.classList.remove("selected");
@@ -131,6 +128,46 @@ export class KulkasBrandPage implements OnInit {
     
     var element = document.getElementById(val);
     element.classList.add("selected");
+  }
+
+  toggleKondisiKulkas() {
+    if (this.kondisiKulkas == true) {
+      this.condition = 'Nyala';
+    } else {
+      this.condition = 'Mati';
+    }
+  }
+
+  toggleRubber() {
+    if (this.kondisiRubber == true) {
+      this.rubber = 'Normal';
+    } else {
+      this.rubber = 'Tidak Normal';
+    }
+  }
+
+  toggleTutupFreezer() {
+    if (this.kondisiTutupFreezer == true) {
+      this.tutup_freezer = 'Komplit';
+    } else {
+      this.tutup_freezer = 'Tidak Ada';
+    }
+  }
+
+  toggleTray() {
+    if (this.kondisiTray == true) {
+      this.tray = 'Komplit';
+    } else {
+      this.tray = 'Tidak Ada';
+    }
+  }
+
+  toggleKondisiFreezer() {
+    if (this.kondisiFreezer == true) {
+      this.ice_maker = 'Berfungsi';
+    } else {
+      this.ice_maker = 'Tidak Berfungsi';
+    }
   }
 
 
@@ -165,17 +202,53 @@ export class KulkasBrandPage implements OnInit {
     });
   }
 
-  submit() {
-    if ((this.brand == null || this.type == null || this.lokasi_trade == null || this.model == null ) || (this.brand.replace(/\s/g, "") == "")){
+  async submit() {
+    if ((this.brand == null || this.type == null || this.lokasi_trade == null || this.model == null)){
       this.utilsService.showToast("Lengkapi pengisian form.");
     } 
-    else if((this.condition == "Mati Total")){
-      alert("Mohon maaf, Anda belum bisa melanjutkan proses ini dikarenakan kondisi unit dalam keadaan mati");
+    else if((this.condition == "Mati")){
+      const modalAlert = await this.modalController.create({
+        component: AlarmUnitTolakComponent,
+        cssClass: 'my-custom-modal-tolak-css',
+        backdropDismiss: false,
+        id: 'my-modal-id'
+      });
+      return await modalAlert.present();
     } 
     else {
-      this.presentAlertConfirm();
+      const modalAlert = await this.modalController.create({
+        component: ModalFormKulkasComponent,
+        cssClass: 'my-custom-modal-tolak-css',
+        backdropDismiss: false,
+        id: 'my-modal-id',
+        componentProps: {
+          brand: this.brand,
+          type: this.type,
+          model: this.model,
+          condition: this.condition,
+          kondisi_fisik:this.kondisi_fisik,
+          rubber:this.rubber,
+          tutup_freezer:this.tutup_freezer,
+          tray:this.tray,
+          ice_maker:this.ice_maker,
+          lokasi_trade: this.lokasi_trade
+        }
+      });
+      return await modalAlert.present();
     }
   } 
+
+  // submit() {
+  //   if ((this.brand == null || this.type == null || this.lokasi_trade == null || this.model == null ) || (this.brand.replace(/\s/g, "") == "")){
+  //     this.utilsService.showToast("Lengkapi pengisian form.");
+  //   } 
+  //   else if((this.condition == "Mati Total")){
+  //     alert("Mohon maaf, Anda belum bisa melanjutkan proses ini dikarenakan kondisi unit dalam keadaan mati");
+  //   } 
+  //   else {
+  //     this.presentAlertConfirm();
+  //   }
+  // } 
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({

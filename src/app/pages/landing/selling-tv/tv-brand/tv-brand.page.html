@@ -21,8 +21,8 @@
     <ion-card class="main-menu">
       <div class="content">
         <div class="itemBorder">
-          <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Pilih tempat melakukan Trade In" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="1">LG Store Pulogadung</ion-select-option>
+          <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Pilih tempat melakukan Trade In" okText="Okay" cancelText="Dismiss" (ionChange)="this.lokasi_trade = $event.target.value">
+            <ion-select-option *ngFor="let item of stores" value="{{item.id}}">{{item.name}}</ion-select-option>
           </ion-select>
         </div>
         <div class="t1" style="margin-top: 30px;">
@@ -32,21 +32,21 @@
         <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
-              <ion-card id="lg" class="tv-merk-select" (click)="selectMerk('lg')">
+              <ion-card id="LG" class="tv-merk-select" (click)="selectMerk('LG')">
                 <img src="../../../../assets/sponsor/lg_lg.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">LG</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
-              <ion-card id="sharp" class="tv-merk-select" (click)="selectMerk('sharp')">
+              <ion-card id="Sharp" class="tv-merk-select" (click)="selectMerk('Sharp')">
                 <img src="../../../../assets/sponsor/sharp.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">Sharp</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4" offset-md="3">
-              <ion-card id="sony" class="tv-merk-select" (click)="selectMerk('sony')">
+              <ion-card id="Sony" class="tv-merk-select" (click)="selectMerk('Sony')">
                 <img src="../../../../assets/sponsor/sony_lg.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">Sony</ion-label>
@@ -55,21 +55,21 @@
           </ion-row>
           <ion-row>
             <ion-col size-md="4">
-              <ion-card id="samsung" class="tv-merk-select" (click)="selectMerk('samsung')">
+              <ion-card id="Samsung" class="tv-merk-select" (click)="selectMerk('Samsung')">
                 <img src="../../../../assets/sponsor/samsung_lg.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">Samsung</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
-              <ion-card id="xiaomi" class="tv-merk-select" (click)="selectMerk('xiaomi')">
+              <ion-card id="Xiaomi" class="tv-merk-select" (click)="selectMerk('Xiaomi')">
                 <img src="../../../../assets/sponsor/mi.png" alt="">
                 <br>
-                <ion-label style="margin-bottom: 15%;">Xiaomi</ion-label>
+                <ion-label style="margin-bottom: 15%;">Xiaomi</ion-label> 
               </ion-card>
             </ion-col>
             <ion-col size-md="4" offset-md="3">
-              <ion-card id="panasonic" class="tv-merk-select" (click)="selectMerk('panasonic')">
+              <ion-card id="Panasonic" class="tv-merk-select" (click)="selectMerk('Panasonic')">
                 <img src="../../../../assets/sponsor/panasonic.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">Panasonic</ion-label>
@@ -89,12 +89,12 @@
         <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
-              <ion-card id="led" class="tv-jenis-select" (click)="selectJenis('led')">
+              <ion-card id="LED" class="tv-jenis-select" (click)="selectJenis('LED')">
                 <ion-label>LED</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="6">
-              <ion-card id="smart" class="tv-jenis-select" (click)="selectJenis('smart')">
+              <ion-card id="Smart TV" class="tv-jenis-select" (click)="selectJenis('Smart TV')">
                 <ion-label>Smart TV</ion-label>
               </ion-card>
             </ion-col>
@@ -134,7 +134,7 @@
           Kondisi Layar TV
         </div>
 
-        <ion-radio-group style="margin-top: 14px">
+        <ion-radio-group (ionChange)="radioSelectLayar($event)" style="margin-top: 14px">
           <ion-item class="radio head" lines="none">
             <ion-label class="t2">Normal</ion-label>
             <ion-radio slot="end" color="primary" value="Normal"></ion-radio>
@@ -158,13 +158,20 @@
         <hr>
 
         <ion-item class="toggle" lines="none">
-          <ion-label class="t2">Layar Luar Tidak Tergores</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="kondisiLayarGores"></ion-toggle>
+          <ion-label class="t2">Kondisi TV Menyala</ion-label>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiTV" (ionChange)="toggleKondisiTV()"></ion-toggle>
         </ion-item>
 
+        <!-- outer screen -->
+        <ion-item class="toggle" lines="none">
+          <ion-label class="t2">Layar Luar Tidak Tergores</ion-label>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiLayarGores" (ionChange)="toggleOuterScreen()"></ion-toggle>
+        </ion-item>
+
+        <!-- inner screen -->
         <ion-item class="toggle" lines="none">
           <ion-label class="t2">Layar Berfungsi Normal</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="kondisiNormal"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiNormal" (ionChange)="toggleInnerScreen()"></ion-toggle>
         </ion-item>
         <hr>
 
@@ -172,7 +179,7 @@
           Kondisi Body TV
         </div>
 
-        <ion-radio-group style="margin-top: 14px">
+        <ion-radio-group style="margin-top: 14px" (ionChange)="radioSelectBody($event)">
           <ion-item class="radio head" lines="none">
             <ion-label class="t2">Tidak Bergores / Penyok</ion-label>
             <ion-radio slot="end" color="primary" value="Tidak Bergores / Penyok"></ion-radio>
@@ -224,7 +231,7 @@
           Kelengkapan
         </div>
         
-        <ion-radio-group style="margin-top: 14px">
+        <ion-radio-group style="margin-top: 14px" (ionChange)="radioSelectKelengkapan($event)">
           <ion-item class="radio head" lines="none">
             <ion-label class="t2">Fullset (Remote, Kabel Power)</ion-label>
             <ion-radio slot="end" color="primary" value="Fullset (Remote, Kabel Power)"></ion-radio>
@@ -242,7 +249,7 @@
         </ion-radio-group>
 
         <div class="btn">
-          <ion-button style="width: 100%;" shape="round" (click)="openModalSubmit($event)">Submit</ion-button>
+          <ion-button style="width: 100%;" shape="round" (click)="submit($event)">Submit</ion-button>
         </div>
 
       </div>

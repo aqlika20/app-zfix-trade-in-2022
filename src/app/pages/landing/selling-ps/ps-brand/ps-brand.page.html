@@ -9,7 +9,7 @@
         <div class="icon">
           <ion-icon name="arrow-back-outline"></ion-icon>
         </div>
-      </div>
+      </div> 
       <div class="title">
         Trade Playstation
       </div>
@@ -21,8 +21,8 @@
     <ion-card class="main-menu">
       <div class="content">
         <div class="itemBorder">
-          <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Pilih tempat melakukan Trade In" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="1">LG Store Pulogadung</ion-select-option>
+          <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Pilih tempat melakukan Trade In" okText="Okay" cancelText="Dismiss" (ionChange)="this.lokasi_trade = $event.target.value">
+            <ion-select-option *ngFor="let item of stores" value="{{item.id}}">{{item.name}}</ion-select-option>
           </ion-select>
         </div>
         <div class="t1" style="margin-top: 30px;">
@@ -32,21 +32,21 @@
         <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="4">
-              <ion-card id="ps5" class="ps-varian-select" (click)="selectVarian('ps5')">
+              <ion-card id="PS5" class="ps-varian-select" (click)="selectVarian('PS5')">
                 <img src="../../../../assets/images/baru/ps5xxhdpi.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">PS5</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4">
-              <ion-card id="ps4" class="ps-varian-select" (click)="selectVarian('ps4')">
+              <ion-card id="PS4" class="ps-varian-select" (click)="selectVarian('PS4')">
                 <img src="../../../../assets/images/baru/ps3xxhdpi.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">PS4</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="4" offset-md="3">
-              <ion-card id="ps3" class="ps-varian-select" (click)="selectVarian('ps3')">
+              <ion-card id="PS3" class="ps-varian-select" (click)="selectVarian('PS3')">
                 <img src="../../../../assets/images/baru/ps4xxhdpi.png" alt="">
                 <br>
                 <ion-label style="margin-bottom: 15%;">PS3</ion-label>
@@ -62,12 +62,12 @@
         <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
-              <ion-card id="digital" class="ps-model-select" (click)="selectModel('digital')">
+              <ion-card id="Digital" class="ps-model-select" (click)="selectModel('Digital')">
                 <ion-label>Digital</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="6">
-              <ion-card id="disc" class="ps-model-select" (click)="selectModel('disc')">
+              <ion-card id="Disc" class="ps-model-select" (click)="selectModel('Disc')">
                 <ion-label>Disc</ion-label>
               </ion-card>
             </ion-col>
@@ -81,43 +81,43 @@
         <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="3">
-              <ion-card id="120" class="ps-storage-select" (click)="selectStorage('120')">
-                <ion-label style="margin-bottom: 15%;">120 GB</ion-label>
+              <ion-card id="120GB" class="ps-storage-select" (click)="selectStorage('120GB')">
+                <ion-label style="margin-bottom: 15%;">120GB</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="3">
-              <ion-card id="160" class="ps-storage-select" (click)="selectStorage('160')">
-                <ion-label style="margin-bottom: 15%;">160 GB</ion-label>
+              <ion-card id="160GB" class="ps-storage-select" (click)="selectStorage('160GB')">
+                <ion-label style="margin-bottom: 15%;">160GB</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="3" offset-md="3">
-              <ion-card id="250" class="ps-storage-select" (click)="selectStorage('250')">
-                <ion-label style="margin-bottom: 15%;">250 GB</ion-label>
+              <ion-card id="250GB" class="ps-storage-select" (click)="selectStorage('250GB')">
+                <ion-label style="margin-bottom: 15%;">250GB</ion-label>
               </ion-card>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col size-md="3">
-              <ion-card id="320" class="ps-storage-select" (click)="selectStorage('320')">
-                <ion-label style="margin-bottom: 15%;">320 GB</ion-label>
+              <ion-card id="320GB" class="ps-storage-select" (click)="selectStorage('320GB')">
+                <ion-label style="margin-bottom: 15%;">320GB</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="3">
-              <ion-card id="500" class="ps-storage-select" (click)="selectStorage('500')">
-                <ion-label style="margin-bottom: 15%;">500 GB</ion-label>
+              <ion-card id="500GB" class="ps-storage-select" (click)="selectStorage('500GB')">
+                <ion-label style="margin-bottom: 15%;">500GB</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="3" offset-md="3">
-              <ion-card id="1" class="ps-storage-select" (click)="selectStorage('1')">
-                <ion-label style="margin-bottom: 15%;">1 T</ion-label>
+              <ion-card id="1TB" class="ps-storage-select" (click)="selectStorage('1TB')">
+                <ion-label style="margin-bottom: 15%;">1TB</ion-label>
               </ion-card>
             </ion-col>
           </ion-row>
         </ion-grid>
 
         <ion-item class="toggle" lines="none">
-          <ion-label class="t2">Kondisi Playstation Normal</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="kondisiPlaystation"></ion-toggle>
+          <ion-label class="t2">Kondisi Playstation</ion-label>
+          <ion-toggle mode="ios" [(ngModel)]="kondisiPlaystation" (ionChange)="toggleKondisiPS()"></ion-toggle>
         </ion-item>
 
         <div class="t2" style="margin-top: 14px">
@@ -127,17 +127,17 @@
         <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="3">
-              <ion-card id="mulus" class="ps-stick-select" (click)="selectStick('mulus')">
+              <ion-card id="Mulus" class="ps-stick-select" (click)="selectStick('Mulus')">
                 <ion-label style="margin-bottom: 15%;">Mulus</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="3">
-              <ion-card id="lecet" class="ps-stick-select" (click)="selectStick('lecet')">
+              <ion-card id="Lecet" class="ps-stick-select" (click)="selectStick('Lecet')">
                 <ion-label style="margin-bottom: 15%;">Lecet</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="3" offset-md="3">
-              <ion-card id="dent" class="ps-stick-select" (click)="selectStick('dent')">
+              <ion-card id="Dent" class="ps-stick-select" (click)="selectStick('Dent')">
                 <ion-label style="margin-bottom: 15%;">Dent</ion-label>
               </ion-card>
             </ion-col>
@@ -146,7 +146,7 @@
                   
         <ion-item class="toggle" lines="none">
           <ion-label class="t2">Ada Add On Games</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="addOnGame"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="addOnGame" (ionChange)="toggleAddGame()"></ion-toggle>
         </ion-item>
         <hr>
 
@@ -156,20 +156,20 @@
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Kondisi Stick/Console PS Normal</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="stickNormal"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="stickNormal" (ionChange)="toggleStick()"></ion-toggle>
         </ion-item>
 
         <ion-item class="toggle2" lines="none">
           <ion-label class="t2">Port USB Berfungsi Normal</ion-label>
-          <ion-toggle mode="ios" [(ngModel)]="usbNormal"></ion-toggle>
+          <ion-toggle mode="ios" [(ngModel)]="usbNormal" (ionChange)="togglePort()"></ion-toggle>
         </ion-item>
         <hr>
 
         <div class="t1" style="margin-top: 25px;">
-          Kondisi Stick/Console PS
+          Kelengkapan
         </div>
         
-        <ion-radio-group style="margin-top: 14px">
+        <ion-radio-group style="margin-top: 14px" (ionChange)="radioSelectKelengkapan($event)">
           <ion-item class="radio head" lines="none">
             <ion-label class="t2">Fullset (Stick,kabel power,HDMI)</ion-label>
             <ion-radio slot="end" color="primary" value="Fullset (Stick,kabel power,HDMI)"></ion-radio>
@@ -187,7 +187,7 @@
         </ion-radio-group>
         
         <div class="btn">
-          <ion-button style="width: 100%;" shape="round" (click)="openModalSubmit($event)">Submit</ion-button>
+          <ion-button style="width: 100%;" shape="round" (click)="submit($event)">Submit</ion-button>
         </div>
 
       </div>

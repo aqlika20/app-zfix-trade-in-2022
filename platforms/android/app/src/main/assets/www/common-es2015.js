@@ -437,6 +437,74 @@ const openURL = async (url, ev, direction, animation) => {
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component.html":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component.html ***!
+  \****************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n  <div class=\"widht\">\r\n    <div class=\"right\">\r\n      <ion-icon class=\"icon\" name=\"close\" (click)=\"dismissModal()\"></ion-icon>\r\n    </div>\r\n  </div>\r\n  <div class=\"desk\">\r\n    <div class=\"center\">\r\n      <ion-icon class=\"alart\" name=\"alert\"></ion-icon>\r\n      <br>\r\n      <ion-label class=\"t1\">Unit tidak diterima</ion-label>\r\n      <br>\r\n      <p class=\"t2\">Kamu tidak bisa melanjutkan proses ini karenakan kondisi unit dalam keadaan mati</p>\r\n      <div class=\"btn\">\r\n        <ion-button style=\"width: 100%; height: 45px;\" shape=\"round\" (click)=\"dismissModal()\">Mengerti</ion-button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</ion-content>");
+
+/***/ }),
+
+/***/ "./src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component.scss":
+/*!**************************************************************************************!*\
+  !*** ./src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component.scss ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("ion-icon {\n  background-color: black;\n  color: white;\n  border-radius: 90px;\n}\n\n.widht {\n  width: 100px;\n  height: 20px;\n}\n\n.right {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 7%;\n  left: 90%;\n}\n\n.icon {\n  width: 6%;\n  height: 8%;\n}\n\n.desk {\n  padding: 5%;\n}\n\n.center {\n  text-align: center;\n}\n\n.alart {\n  width: 35px;\n  height: 35px;\n  padding: 3%;\n  margin-bottom: 10px;\n  background-color: red;\n}\n\n.t1 {\n  font-family: Plus Jakarta Sans;\n  font-style: normal;\n  font-weight: 600;\n  font-size: 17px;\n  color: black;\n}\n\n.t2 {\n  font-family: Plus Jakarta Sans;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 15px;\n  color: black;\n}\n\n.btn {\n  width: 100%;\n  color: white;\n  font-family: Plus Jakarta Sans;\n  border-radius: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbGFuZGluZy9tb2RhbC9hbGFybS11bml0LXRvbGFrL0M6XFxVc2Vyc1xcYXJkaW1cXERlc2t0b3BcXGhhbXBpciBzZWxlc2FpXFxOZXcgZm9sZGVyXFxteVRyYWRlX1YzLjAvc3JjXFxhcHBcXHBhZ2VzXFxsYW5kaW5nXFxtb2RhbFxcYWxhcm0tdW5pdC10b2xha1xcYWxhcm0tdW5pdC10b2xhay5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvcGFnZXMvbGFuZGluZy9tb2RhbC9hbGFybS11bml0LXRvbGFrL2FsYXJtLXVuaXQtdG9sYWsuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx1QkFBQTtFQUNBLFlBQUE7RUFDQSxtQkFBQTtBQ0NKOztBREVBO0VBQ0ksWUFBQTtFQUNBLFlBQUE7QUNDSjs7QURFQTtFQUNJLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxPQUFBO0VBQ0EsU0FBQTtBQ0NKOztBREVBO0VBQ0ksU0FBQTtFQUNBLFVBQUE7QUNDSjs7QURFQTtFQUNJLFdBQUE7QUNDSjs7QURFQTtFQUNJLGtCQUFBO0FDQ0o7O0FERUE7RUFDSSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSxtQkFBQTtFQUNBLHFCQUFBO0FDQ0o7O0FERUE7RUFDSSw4QkFBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0VBQ0EsWUFBQTtBQ0NKOztBREVBO0VBQ0ksOEJBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUE7QUNDSjs7QURFQTtFQUNJLFdBQUE7RUFDQSxZQUFBO0VBQ0EsOEJBQUE7RUFDQSxtQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbGFuZGluZy9tb2RhbC9hbGFybS11bml0LXRvbGFrL2FsYXJtLXVuaXQtdG9sYWsuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24taWNvbiB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDkwcHg7XHJcbn1cclxuXHJcbi53aWRodHtcclxuICAgIHdpZHRoOiAxMDBweDtcclxuICAgIGhlaWdodDogMjBweDtcclxufVxyXG5cclxuLnJpZ2h0e1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICB0b3A6IDclO1xyXG4gICAgbGVmdDogOTAlO1xyXG59XHJcblxyXG4uaWNvbntcclxuICAgIHdpZHRoOiA2JTtcclxuICAgIGhlaWdodDogOCU7XHJcbn1cclxuXHJcbi5kZXNre1xyXG4gICAgcGFkZGluZzogNSU7XHJcbn1cclxuXHJcbi5jZW50ZXJ7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5hbGFydHtcclxuICAgIHdpZHRoOiAzNXB4O1xyXG4gICAgaGVpZ2h0OiAzNXB4O1xyXG4gICAgcGFkZGluZzogMyU7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmVkO1xyXG59XHJcblxyXG4udDEge1xyXG4gICAgZm9udC1mYW1pbHk6IFBsdXMgSmFrYXJ0YSBTYW5zO1xyXG4gICAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcclxuICAgIGZvbnQtc2l6ZTogMTdweDtcclxuICAgIGNvbG9yOiBibGFjaztcclxufVxyXG5cclxuLnQyIHtcclxuICAgIGZvbnQtZmFtaWx5OiBQbHVzIEpha2FydGEgU2FucztcclxuICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxuICAgIGZvbnQtd2VpZ2h0OiA0MDA7XHJcbiAgICBmb250LXNpemU6IDE1cHg7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbi5idG57XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGZvbnQtZmFtaWx5OiBQbHVzIEpha2FydGEgU2FucztcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XHJcbn0iLCJpb24taWNvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICBjb2xvcjogd2hpdGU7XG4gIGJvcmRlci1yYWRpdXM6IDkwcHg7XG59XG5cbi53aWRodCB7XG4gIHdpZHRoOiAxMDBweDtcbiAgaGVpZ2h0OiAyMHB4O1xufVxuXG4ucmlnaHQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIHRvcDogNyU7XG4gIGxlZnQ6IDkwJTtcbn1cblxuLmljb24ge1xuICB3aWR0aDogNiU7XG4gIGhlaWdodDogOCU7XG59XG5cbi5kZXNrIHtcbiAgcGFkZGluZzogNSU7XG59XG5cbi5jZW50ZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5hbGFydCB7XG4gIHdpZHRoOiAzNXB4O1xuICBoZWlnaHQ6IDM1cHg7XG4gIHBhZGRpbmc6IDMlO1xuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XG59XG5cbi50MSB7XG4gIGZvbnQtZmFtaWx5OiBQbHVzIEpha2FydGEgU2FucztcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDE3cHg7XG4gIGNvbG9yOiBibGFjaztcbn1cblxuLnQyIHtcbiAgZm9udC1mYW1pbHk6IFBsdXMgSmFrYXJ0YSBTYW5zO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG4gIGZvbnQtc2l6ZTogMTVweDtcbiAgY29sb3I6IGJsYWNrO1xufVxuXG4uYnRuIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZm9udC1mYW1pbHk6IFBsdXMgSmFrYXJ0YSBTYW5zO1xuICBib3JkZXItcmFkaXVzOiAxMDAlO1xufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component.ts":
+/*!************************************************************************************!*\
+  !*** ./src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component.ts ***!
+  \************************************************************************************/
+/*! exports provided: AlarmUnitTolakComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlarmUnitTolakComponent", function() { return AlarmUnitTolakComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+
+
+
+let AlarmUnitTolakComponent = class AlarmUnitTolakComponent {
+    constructor(ModalController) {
+        this.ModalController = ModalController;
+    }
+    ngOnInit() { }
+    dismissModal() {
+        this.ModalController.dismiss({
+            'dismissed': true
+        });
+    }
+};
+AlarmUnitTolakComponent.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] }
+];
+AlarmUnitTolakComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-alarm-unit-tolak',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./alarm-unit-tolak.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./alarm-unit-tolak.component.scss */ "./src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component.scss")).default]
+    })
+], AlarmUnitTolakComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/api/authentication-api.service.ts":
 /*!************************************************************!*\
   !*** ./src/app/services/api/authentication-api.service.ts ***!
@@ -477,6 +545,85 @@ AuthenticationApiService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate
         providedIn: "root",
     })
 ], AuthenticationApiService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/api/membership-api.service.ts":
+/*!********************************************************!*\
+  !*** ./src/app/services/api/membership-api.service.ts ***!
+  \********************************************************/
+/*! exports provided: MembershipApiService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MembershipApiService", function() { return MembershipApiService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./src/app/config/api.js");
+
+
+
+
+let MembershipApiService = class MembershipApiService {
+    constructor(http) {
+        this.http = http;
+    }
+    myClaim(token) {
+        throw new Error("Method not implemented.");
+    }
+    check(token, data) {
+        return this.http.post(_config_api__WEBPACK_IMPORTED_MODULE_3__["apiUrl"] + "membership/check", data, {
+            headers: Object(_config_api__WEBPACK_IMPORTED_MODULE_3__["setToken"])(token),
+        });
+    }
+    activation(token, data) {
+        return this.http.post(_config_api__WEBPACK_IMPORTED_MODULE_3__["apiUrl"] + "membership/activation", data, {
+            headers: Object(_config_api__WEBPACK_IMPORTED_MODULE_3__["setToken"])(token),
+        });
+    }
+    requestForClaim(token, data) {
+        return this.http.post(_config_api__WEBPACK_IMPORTED_MODULE_3__["apiUrl"] + "membership/request-for-claim", data, {
+            headers: Object(_config_api__WEBPACK_IMPORTED_MODULE_3__["setToken"])(token),
+        });
+    }
+    myPlan(token) {
+        return this.http.get(_config_api__WEBPACK_IMPORTED_MODULE_3__["apiUrl"] + "membership/my-plan", {
+            headers: Object(_config_api__WEBPACK_IMPORTED_MODULE_3__["setToken"])(token),
+        });
+    }
+    Claim(token) {
+        return this.http.get(_config_api__WEBPACK_IMPORTED_MODULE_3__["apiUrl"] + "membership/my-claim", {
+            headers: Object(_config_api__WEBPACK_IMPORTED_MODULE_3__["setToken"])(token),
+        });
+    }
+    current(token) {
+        return this.http.get(_config_api__WEBPACK_IMPORTED_MODULE_3__["apiUrl"] + "membership/current", {
+            headers: Object(_config_api__WEBPACK_IMPORTED_MODULE_3__["setToken"])(token),
+        });
+    }
+    getNotif(token) {
+        return this.http.get(_config_api__WEBPACK_IMPORTED_MODULE_3__["apiUrl"] + "user/notification", {
+            headers: Object(_config_api__WEBPACK_IMPORTED_MODULE_3__["setToken"])(token),
+        });
+    }
+    getStore(token) {
+        return this.http.get(_config_api__WEBPACK_IMPORTED_MODULE_3__["apiUrl"] + "membership/store", {
+            headers: Object(_config_api__WEBPACK_IMPORTED_MODULE_3__["setToken"])(token),
+        });
+    }
+};
+MembershipApiService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+MembershipApiService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], MembershipApiService);
 
 
 
@@ -523,6 +670,98 @@ UserApiService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         providedIn: "root",
     })
 ], UserApiService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/helper.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/services/helper.service.ts ***!
+  \********************************************/
+/*! exports provided: HelperService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelperService", function() { return HelperService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+
+
+
+let HelperService = class HelperService {
+    constructor(toastCtrl, alertCtrl) {
+        this.toastCtrl = toastCtrl;
+        this.alertCtrl = alertCtrl;
+    }
+    alertMessage(type, message) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const alert = yield this.alertCtrl.create({
+                header: type,
+                message,
+                buttons: ['OK'],
+            });
+            yield alert.present();
+        });
+    }
+};
+HelperService.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"] }
+];
+HelperService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], HelperService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/membership.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/services/membership.service.ts ***!
+  \************************************************/
+/*! exports provided: MembershipService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MembershipService", function() { return MembershipService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/__ivy_ngcc__/fesm2015/ionic-storage.js");
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config/api */ "./src/app/config/api.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+
+let MembershipService = class MembershipService {
+    constructor(storage, http) {
+        this.storage = storage;
+        this.http = http;
+    }
+    SetSelling(data) {
+        this.storage.set(_config_api__WEBPACK_IMPORTED_MODULE_3__["ActivationKey"], data);
+    }
+    removeSelling() {
+        this.storage.remove(_config_api__WEBPACK_IMPORTED_MODULE_3__["ActivationKey"]);
+    }
+};
+MembershipService.ctorParameters = () => [
+    { type: _ionic_storage__WEBPACK_IMPORTED_MODULE_2__["Storage"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }
+];
+MembershipService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], MembershipService);
 
 
 

@@ -61,7 +61,7 @@ export class TypePage implements OnInit {
   ngOnInit() {
     setInterval(() => { 
       this.Count();
-    }, 3000);
+    }, 5000);
 
   //   cordova.plugins.AppReview.requestReview().catch(function() {
   //     return cordova.plugins.AppReview.openStoreScreen();
