@@ -15,7 +15,8 @@ import { tokenKey } from "../../../../config/api";
 import { MembershipApiService } from "../../../../services/api/membership-api.service";
 import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
-import { ModalPriceComponent } from 'src/app/pages/landing/modal/modal-price/modal-price.component';
+import { ModalFormMesincuciComponent } from 'src/app/pages/landing/modal/modal-mesincuci/modal-form-mesincuci/modal-form-mesincuci.component';
+import { AlarmUnitTolakComponent } from '../../modal/alarm-unit-tolak/alarm-unit-tolak.component';
 
 declare var cordova: any;
 
@@ -53,6 +54,7 @@ export class MesinCuciBrandPage implements OnInit {
   kondisiPengering: boolean = false;
   kondisiAirOtomatis: boolean = false;
   kondisiPemanas: boolean = false;
+  kondisiTutup: boolean = false;
 
   showHidden: boolean = true;
 
@@ -73,22 +75,19 @@ export class MesinCuciBrandPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.toggleAirOtomatis();
+    this.toggleKondisiMesinCuci();
+    this.toggleKondisiTombol();
+    this.togglePemanas();
+    this.togglePembuangan();
+    this.togglePengering();
+    this.toggleRubber();
   }
 
   ionViewWillEnter() {
     this.getStore();
     this.getBrand();
     this.selling.removeSelling();
-  }
-
-  async openModalSubmit(event) {
-    const modalSubmit = await this.modalController.create({
-      component: ModalPriceComponent,
-      cssClass: 'my-custom-modal-css',
-      backdropDismiss: false,
-      id: 'my-modal-id'
-    });
-    return await modalSubmit.present();
   }
   
   customPopoverOptions: any = {
@@ -112,7 +111,7 @@ export class MesinCuciBrandPage implements OnInit {
   }
 
   selectMerk(val){
-    this.selected_merk = val;
+    this.brand = val;
     
     document.querySelectorAll('.cuci-merk-select').forEach(element => {
       element.classList.remove("selected");
@@ -123,7 +122,7 @@ export class MesinCuciBrandPage implements OnInit {
   } 
   
   selectTipe(val){
-    this.selected_tipe = val;
+    this.type = val;
     
     document.querySelectorAll('.cuci-tipe-select').forEach(element => {
       element.classList.remove("selected");
@@ -133,19 +132,19 @@ export class MesinCuciBrandPage implements OnInit {
     element.classList.add("selected");
   }
 
-  selectModel(val){
-    this.selected_model = val;
+  // selectModel(val){
+  //   this.selected_model = val;
     
-    document.querySelectorAll('.cuci-model-select').forEach(element => {
-      element.classList.remove("selected");
-    });
+  //   document.querySelectorAll('.cuci-model-select').forEach(element => {
+  //     element.classList.remove("selected");
+  //   });
     
-    var element = document.getElementById(val);
-    element.classList.add("selected");
-  }
+  //   var element = document.getElementById(val);
+  //   element.classList.add("selected");
+  // }
 
   selectFisik(val){
-    this.selected_fisik = val;
+    this.kondisi_fisik = val;
     
     document.querySelectorAll('.cuci-fisik-select').forEach(element => {
       element.classList.remove("selected");
@@ -153,6 +152,70 @@ export class MesinCuciBrandPage implements OnInit {
     
     var element = document.getElementById(val);
     element.classList.add("selected");
+  }
+
+  toggleKondisiMesinCuci() {
+    if (this.kondisiMesinCuci == true) {
+      this.condition = 'Nyala';
+    } else {
+      this.condition = 'Mati';
+    }
+  }
+
+  toggleRubber() {
+    if (this.kondisiRubber == true) {
+      this.rubber = 'Normal';
+    } else {
+      this.rubber = 'Tidak Normal';
+    }
+  }
+
+  toggleKondisiTombol() {
+    if (this.kondisiTombol == true) {
+      this.tombol = 'Berfungsi Normal';
+    } else {
+      this.tombol = 'Tidak Berfungsi Normal';
+    }
+  }
+
+  togglePembuangan() {
+    if (this.kondisiPembuangan == true) {
+      this.pembuangan = 'Berfungsi';
+    } else {
+      this.pembuangan = 'Tidak Berfungsi';
+    }
+  }
+
+  togglePengering() {
+    if (this.kondisiPengering == true) {
+      this.pengering = 'Berfungsi';
+    } else {
+      this.pengering = 'Tidak Berfungsi';
+    }
+  }
+
+  toggleAirOtomatis() {
+    if (this.kondisiAirOtomatis == true) {
+      this.air_otomatis = 'Berfungsi';
+    } else {
+      this.air_otomatis = 'Tidak Berfungsi';
+    }
+  }
+
+  togglePemanas() {
+    if (this.kondisiPemanas == true) {
+      this.pemanas = 'Berfungsi';
+    } else {
+      this.pemanas = 'Tidak Berfungsi';
+    }
+  }
+
+  toggleKondisiTutup() {
+    if (this.kondisiTutup == true) {
+      this.tutup = 'Berfungsi';
+    } else {
+      this.tutup = 'Tidak Berfungsi';
+    }
   }
 
   getStore(){
@@ -186,17 +249,55 @@ export class MesinCuciBrandPage implements OnInit {
     });
   }
 
-  submit() {
-    if ((this.brand == null || this.type == null || this.lokasi_trade == null ) || (this.brand.replace(/\s/g, "") == "")){
+  async submit() {
+    if ((this.brand == null || this.type == null || this.lokasi_trade == null)){
       this.utilsService.showToast("Lengkapi pengisian form.");
     } 
-    else if((this.condition == "Mati Total")){
-      alert("Mohon maaf, Anda belum bisa melanjutkan proses ini dikarenakan kondisi unit dalam keadaan mati");
+    else if((this.condition == "Mati")){
+      const modalAlert = await this.modalController.create({
+        component: AlarmUnitTolakComponent,
+        cssClass: 'my-custom-modal-tolak-css',
+        backdropDismiss: false,
+        id: 'my-modal-id'
+      });
+      return await modalAlert.present();
     } 
     else {
-      this.presentAlertConfirm();
+      const modalAlert = await this.modalController.create({
+        component: ModalFormMesincuciComponent,
+        cssClass: 'my-custom-modal-tolak-css',
+        backdropDismiss: false,
+        id: 'my-modal-id',
+        componentProps: {
+          brand: this.brand,
+          type: this.type,
+          condition: this.condition,
+          kondisi_fisik:this.kondisi_fisik,
+          rubber:this.rubber,
+          tutup:this.tutup,
+          tombol:this.tombol,
+          pembuangan:this.pembuangan,
+          pengering:this.pengering,
+          air_otomatis:this.air_otomatis,
+          pemanas:this.pemanas,
+          lokasi_trade: this.lokasi_trade
+        }
+      });
+      return await modalAlert.present();
     }
   } 
+
+  // submit() {
+  //   if ((this.brand == null || this.type == null || this.lokasi_trade == null ) || (this.brand.replace(/\s/g, "") == "")){
+  //     this.utilsService.showToast("Lengkapi pengisian form.");
+  //   } 
+  //   else if((this.condition == "Mati Total")){
+  //     alert("Mohon maaf, Anda belum bisa melanjutkan proses ini dikarenakan kondisi unit dalam keadaan mati");
+  //   } 
+  //   else {
+  //     this.presentAlertConfirm();
+  //   }
+  // } 
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({

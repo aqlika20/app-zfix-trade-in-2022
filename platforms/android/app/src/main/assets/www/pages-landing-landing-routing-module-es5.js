@@ -53,9 +53,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'selling-phone',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | selling-hp-brand2-brand2-module */
-        "selling-hp-brand2-brand2-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-hp-brand2-brand2-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-hp/brand2/brand2.module */
         "./src/app/pages/landing/selling-hp/brand2/brand2.module.ts")).then(function (m) {
           return m.Brand2PageModule;
@@ -64,9 +64,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'selling-phone/screen-testing',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | selling-hp-screen-testing-screen-testing-module */
-        "selling-hp-screen-testing-screen-testing-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-hp-screen-testing-screen-testing-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-hp/screen-testing/screen-testing.module */
         "./src/app/pages/landing/selling-hp/screen-testing/screen-testing.module.ts")).then(function (m) {
           return m.ScreenTestingPageModule;
@@ -75,9 +75,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'selling-phone/screen-testing/camera',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | selling-hp-camera-camera-module */
-        "selling-hp-camera-camera-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-hp-camera-camera-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-hp/camera/camera.module */
         "./src/app/pages/landing/selling-hp/camera/camera.module.ts")).then(function (m) {
           return m.CameraPageModule;
@@ -119,9 +119,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'selling-phone/screen-testing/camera/wifi-detect/vibration/fingerprint/allbutton',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | selling-hp-allbuntton-allbuntton-module */
-        "selling-hp-allbuntton-allbuntton-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-hp-allbuntton-allbuntton-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-hp/allbuntton/allbuntton.module */
         "./src/app/pages/landing/selling-hp/allbuntton/allbuntton.module.ts")).then(function (m) {
           return m.AllbunttonPageModule;
@@ -130,9 +130,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'selling-phone/screen-testing/camera/wifi-detect/vibration/fingerprint/allbutton/detail',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | selling-hp-detail-detail-module */
-        "selling-hp-detail-detail-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-hp-detail-detail-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-hp/detail/detail.module */
         "./src/app/pages/landing/selling-hp/detail/detail.module.ts")).then(function (m) {
           return m.DetailPageModule;
@@ -143,7 +143,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | selling-laptop-laptop-brand-laptop-brand-module */
-        [__webpack_require__.e("default~selling-kulkas-kulkas-brand-kulkas-brand-module~selling-laptop-laptop-brand-laptop-brand-mod~2618a642"), __webpack_require__.e("selling-laptop-laptop-brand-laptop-brand-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-laptop-laptop-brand-laptop-brand-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-laptop/laptop-brand/laptop-brand.module */
         "./src/app/pages/landing/selling-laptop/laptop-brand/laptop-brand.module.ts")).then(function (m) {
           return m.LaptopBrandPageModule;
@@ -152,9 +152,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'laptop-brand/detail-unit',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | selling-laptop-detail-unit-detail-unit-module */
-        "selling-laptop-detail-unit-detail-unit-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-laptop-detail-unit-detail-unit-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-laptop/detail-unit/detail-unit.module */
         "./src/app/pages/landing/selling-laptop/detail-unit/detail-unit.module.ts")).then(function (m) {
           return m.DetailUnitPageModule;
@@ -165,7 +165,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | selling-ps-ps-brand-ps-brand-module */
-        [__webpack_require__.e("default~selling-kulkas-kulkas-brand-kulkas-brand-module~selling-laptop-laptop-brand-laptop-brand-mod~2618a642"), __webpack_require__.e("selling-ps-ps-brand-ps-brand-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-ps-ps-brand-ps-brand-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-ps/ps-brand/ps-brand.module */
         "./src/app/pages/landing/selling-ps/ps-brand/ps-brand.module.ts")).then(function (m) {
           return m.PsBrandPageModule;
@@ -174,9 +174,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'ps-brand/detail-unit-ps',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | selling-ps-detail-unit-ps-detail-unit-ps-module */
-        "selling-ps-detail-unit-ps-detail-unit-ps-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-ps-detail-unit-ps-detail-unit-ps-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-ps/detail-unit-ps/detail-unit-ps.module */
         "./src/app/pages/landing/selling-ps/detail-unit-ps/detail-unit-ps.module.ts")).then(function (m) {
           return m.DetailUnitPsPageModule;
@@ -187,7 +187,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | selling-tv-tv-brand-tv-brand-module */
-        [__webpack_require__.e("default~selling-kulkas-kulkas-brand-kulkas-brand-module~selling-laptop-laptop-brand-laptop-brand-mod~2618a642"), __webpack_require__.e("selling-tv-tv-brand-tv-brand-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-tv-tv-brand-tv-brand-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-tv/tv-brand/tv-brand.module */
         "./src/app/pages/landing/selling-tv/tv-brand/tv-brand.module.ts")).then(function (m) {
           return m.TvBrandPageModule;
@@ -196,9 +196,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'tv-brand/detail-tv',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | selling-tv-detail-tv-detail-tv-module */
-        "selling-tv-detail-tv-detail-tv-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-tv-detail-tv-detail-tv-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-tv/detail-tv/detail-tv.module */
         "./src/app/pages/landing/selling-tv/detail-tv/detail-tv.module.ts")).then(function (m) {
           return m.DetailTvPageModule;
@@ -209,7 +209,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | selling-kulkas-kulkas-brand-kulkas-brand-module */
-        [__webpack_require__.e("default~selling-kulkas-kulkas-brand-kulkas-brand-module~selling-laptop-laptop-brand-laptop-brand-mod~2618a642"), __webpack_require__.e("selling-kulkas-kulkas-brand-kulkas-brand-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-kulkas-kulkas-brand-kulkas-brand-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-kulkas/kulkas-brand/kulkas-brand.module */
         "./src/app/pages/landing/selling-kulkas/kulkas-brand/kulkas-brand.module.ts")).then(function (m) {
           return m.KulkasBrandPageModule;
@@ -218,9 +218,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'kulkas-brand/detail-kulkas',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | selling-kulkas-detail-kulkas-detail-kulkas-module */
-        "selling-kulkas-detail-kulkas-detail-kulkas-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-kulkas-detail-kulkas-detail-kulkas-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-kulkas/detail-kulkas/detail-kulkas.module */
         "./src/app/pages/landing/selling-kulkas/detail-kulkas/detail-kulkas.module.ts")).then(function (m) {
           return m.DetailKulkasPageModule;
@@ -231,7 +231,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | selling-mesin-cuci-mesin-cuci-brand-mesin-cuci-brand-module */
-        [__webpack_require__.e("default~selling-kulkas-kulkas-brand-kulkas-brand-module~selling-laptop-laptop-brand-laptop-brand-mod~2618a642"), __webpack_require__.e("selling-mesin-cuci-mesin-cuci-brand-mesin-cuci-brand-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-mesin-cuci-mesin-cuci-brand-mesin-cuci-brand-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-mesin-cuci/mesin-cuci-brand/mesin-cuci-brand.module */
         "./src/app/pages/landing/selling-mesin-cuci/mesin-cuci-brand/mesin-cuci-brand.module.ts")).then(function (m) {
           return m.MesinCuciBrandPageModule;
@@ -240,9 +240,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'mesin-cuci-brand/detail-mesin-cuci',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | selling-mesin-cuci-detail-mesin-cuci-detail-mesin-cuci-module */
-        "selling-mesin-cuci-detail-mesin-cuci-detail-mesin-cuci-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("selling-mesin-cuci-detail-mesin-cuci-detail-mesin-cuci-module")]).then(__webpack_require__.bind(null,
         /*! ./selling-mesin-cuci/detail-mesin-cuci/detail-mesin-cuci.module */
         "./src/app/pages/landing/selling-mesin-cuci/detail-mesin-cuci/detail-mesin-cuci.module.ts")).then(function (m) {
           return m.DetailMesinCuciPageModule;
@@ -312,6 +312,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /*! ./settings/history/history.module */
         "./src/app/pages/landing/settings/history/history.module.ts")).then(function (m) {
           return m.HistoryPageModule;
+        });
+      }
+    }, {
+      path: 'notification',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | notification-notification-module */
+        "notification-notification-module").then(__webpack_require__.bind(null,
+        /*! ./notification/notification.module */
+        "./src/app/pages/landing/notification/notification.module.ts")).then(function (m) {
+          return m.NotificationPageModule;
         });
       }
     }];

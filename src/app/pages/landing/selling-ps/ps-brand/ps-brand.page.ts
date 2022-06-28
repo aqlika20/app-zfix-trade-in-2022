@@ -14,8 +14,8 @@ import { Storage } from "@ionic/storage";
 import { tokenKey } from "../../../../config/api";
 import { MembershipApiService } from "../../../../services/api/membership-api.service";
 import { AlertController } from '@ionic/angular';
-import { PsBrandModalComponent } from '../../modal/ps-brand-modal/ps-brand-modal.component';
-import { ModalPriceComponent } from 'src/app/pages/landing/modal/modal-price/modal-price.component';
+import { ModalFormPsComponent } from 'src/app/pages/landing/modal/modal-ps/modal-form-ps/modal-form-ps.component';
+import { AlarmUnitTolakComponent } from 'src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component';
 
 declare var cordova: any;
 type Stores = {id: number, name: string};
@@ -78,22 +78,16 @@ export class PsBrandPage implements OnInit {
 
   ngOnInit() {
     this.getStore();
+    this.toggleKondisiPS();
+    this.toggleAddGame();
+    this.toggleStick();
+    this.togglePort();
   }
   ionViewWillEnter() {
     this.getStore();
     this.getBrand();
     this.selling.removeSelling();
 
-  }
-
-  async openModalSubmit(event) {
-    const modalSubmit = await this.modalController.create({
-      component: ModalPriceComponent,
-      cssClass: 'my-custom-modal-css',
-      backdropDismiss: false,
-      id: 'my-modal-id'
-    });
-    return await modalSubmit.present();
   }
 
   customPopoverOptions: any = {
@@ -124,7 +118,7 @@ export class PsBrandPage implements OnInit {
   }
 
   selectStorage(val){
-    this.selected_storage = val;
+    this.storages = val;
     
     document.querySelectorAll('.ps-storage-select').forEach(element => {
       element.classList.remove("selected");
@@ -135,7 +129,7 @@ export class PsBrandPage implements OnInit {
   }
 
   selectStick(val){
-    this.selected_stick = val;
+    this.condition_valueSelected = val;
     
     document.querySelectorAll('.ps-stick-select').forEach(element => {
       element.classList.remove("selected");
@@ -143,6 +137,42 @@ export class PsBrandPage implements OnInit {
     
     var element = document.getElementById(val);
     element.classList.add("selected");
+  }
+
+  toggleKondisiPS() {
+    if (this.kondisiPlaystation == true) {
+      this.kondisi_ps = 'Nyala';
+    } else {
+      this.kondisi_ps = 'Mati';
+    }
+  }
+
+  toggleAddGame() {
+    if (this.addOnGame == true) {
+      this.add_games = 'Terisi Game';
+    } else {
+      this.add_games = 'Tidak Terisi';
+    }
+  }
+
+  toggleStick() {
+    if (this.stickNormal == true) {
+      this.console = 'Berfungsi Normal';
+    } else {
+      this.console = 'Tidak Berfungsi Normal';
+    }
+  }
+
+  togglePort() {
+    if (this.usbNormal == true) {
+      this.port = 'Berfungsi Normal';
+    } else {
+      this.port = 'Tidak Berfungsi Normal';
+    }
+  }
+
+  radioSelectKelengkapan(event) {
+    this.addition_valueSelected = event.detail.value;
   }
 
   getStore(){
@@ -179,14 +209,39 @@ export class PsBrandPage implements OnInit {
     });
   }
 
-  submit() {
-    if ((this.storages == null || this.lokasi_trade == null  )  || (this.storages.replace(/\s/g, "") == "") ){
+  async submit() {
+    if ((this.selected_varian == null || this.condition_valueSelected == null || this.storages == null || this.selected_model == null || this.addition_valueSelected == null) ){
       this.utilsService.showToast("Lengkapi pengisian form.");
-    } else if(this.kondisi_ps == "Mati Total"){
-      alert("Mohon maaf, Anda belum bisa melanjutkan proses ini dikarenakan kondisi unit dalam keadaan mati");
-
+    } 
+    else if(this.kondisi_ps == "Mati"){
+        const modalSubmit = await this.modalController.create({
+          component: AlarmUnitTolakComponent,
+          cssClass: 'my-custom-modal-css',
+          backdropDismiss: false,
+          id: 'my-modal-id'
+        });
+        return await modalSubmit.present();
+      
     } else {
-      this.presentAlertConfirm();
+      const modalSubmit = await this.modalController.create({
+        component: ModalFormPsComponent,
+        cssClass: 'my-custom-modal-css',
+        backdropDismiss: false,
+        id: 'my-modal-id',
+        componentProps: {
+          jenis_ps:this.selected_varian,
+          storages: this.storages,
+          type: this.selected_model,
+          lokasi_trade: this.lokasi_trade,
+          condition:this.condition_valueSelected,
+          addition:this.addition_valueSelected,
+          kondisi_ps:this.kondisi_ps,
+          console:this.console,
+          port:this.port,
+          add_games:this.add_games,
+        }
+      });
+      return await modalSubmit.present();
     
     }
   } 

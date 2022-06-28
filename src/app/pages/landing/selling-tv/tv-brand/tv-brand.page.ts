@@ -15,7 +15,8 @@ import { tokenKey } from "../../../../config/api";
 import { MembershipApiService } from "../../../../services/api/membership-api.service";
 import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
-import { ModalPriceComponent } from 'src/app/pages/landing/modal/modal-price/modal-price.component';
+import { ModalFormTvComponent } from 'src/app/pages/landing/modal/modal-tv/modal-form-tv/modal-form-tv.component';
+import { AlarmUnitTolakComponent } from 'src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component';
 
 
 type Stores = {id: number, name: string};
@@ -45,13 +46,14 @@ export class TvBrandPage implements OnInit {
   wifiSelected:string;
   suaraSelected:string;
 
-  selected_merk:string;
-  selected_jenis:string;
-  selected_ukuran:string;
-  selected_suara:string;
+  // selected_merk:string;
+  // selected_jenis:string;
+  // selected_ukuran:string;
+  // selected_suara:string;
 
   kondisiLayarGores: boolean = false;
   kondisiNormal: boolean = false;
+  kondisiTV: boolean = false;
 
   showHidden: boolean = true;
 
@@ -74,22 +76,15 @@ export class TvBrandPage implements OnInit {
    }
 
   ngOnInit() {
-
+    this.toggleInnerScreen();
+    this.toggleOuterScreen();
+    this.toggleKondisiTV();
   }
+
   ionViewWillEnter() {
     this.getStore();
     this.getBrand();
     this.selling.removeSelling();
-  }
-  
-  async openModalSubmit(event) {
-    const modalSubmit = await this.modalController.create({
-      component: ModalPriceComponent,
-      cssClass: 'my-custom-modal-css',
-      backdropDismiss: false,
-      id: 'my-modal-id'
-    });
-    return await modalSubmit.present();
   }
 
   customPopoverOptions: any = {
@@ -113,7 +108,7 @@ export class TvBrandPage implements OnInit {
   }
 
   selectMerk(val){
-    this.selected_merk = val;
+    this.brand = val;
     
     document.querySelectorAll('.tv-merk-select').forEach(element => {
       element.classList.remove("selected");
@@ -124,7 +119,7 @@ export class TvBrandPage implements OnInit {
   }
   
   selectJenis(val){
-    this.selected_jenis = val;
+    this.jenis = val;
     
     document.querySelectorAll('.tv-jenis-select').forEach(element => {
       element.classList.remove("selected");
@@ -135,7 +130,18 @@ export class TvBrandPage implements OnInit {
   }
 
   selectUkuran(val){
-    this.selected_ukuran = val;
+    if (val == 32) {
+      this.inch = '32" inch';
+    }
+    if (val == 40) {
+      this.inch = '40" inch';
+    }
+    if (val == 42) {
+      this.inch = '42" inch';
+    }
+    if (val == 55) {
+      this.inch = '55" inch';
+    }
     
     document.querySelectorAll('.tv-ukuran-select').forEach(element => {
       element.classList.remove("selected");
@@ -146,7 +152,8 @@ export class TvBrandPage implements OnInit {
   }
 
   selectSuara(val){
-    this.selected_suara = val;
+    this.suaraSelected = val;
+    console.log(this.suaraSelected)
     
     document.querySelectorAll('.tv-suara-select').forEach(element => {
       element.classList.remove("selected");
@@ -156,12 +163,47 @@ export class TvBrandPage implements OnInit {
     element.classList.add("selected");
   }
 
+  radioSelectLayar(event) {
+    this.kondisi_layarSelected = event.detail.value;
+  }
+
+  radioSelectBody(event) {
+    this.condition_valueSelected = event.detail.value;
+  }
+
+  radioSelectKelengkapan(event) {
+    this.addition_valueSelected = event.detail.value;
+  }
+
+  toggleOuterScreen() {
+    if (this.kondisiLayarGores == true) {
+      this.outer_valueSelected = 'Layar Luar Tidak Tergores';
+    } else {
+      this.outer_valueSelected = 'Layar Luar Tergores';
+    }
+  }
+
+  toggleInnerScreen() {
+    if (this.kondisiNormal == true) {
+      this.inner_valueSelected = 'Layar Luar Tidak Tergores';
+    } else {
+      this.inner_valueSelected = 'Layar Luar Tergores';
+    }
+  }
+
+  toggleKondisiTV() {
+    if (this.kondisiTV == true) {
+      this.kondisi_tvSelected = 'Nyala';
+    } else {
+      this.kondisi_tvSelected = 'Mati';
+    }
+  }
+
   getStore(){
     this.storage.get(tokenKey).then((token) => {
       this.sellingApiService.getStore(token).subscribe(
         (response: any) => {
          this.stores = response.data.store;
-        //  console.log(this.stores)
         },
         (err) => {
           this.stores = [];
@@ -188,57 +230,83 @@ export class TvBrandPage implements OnInit {
     });
   }
 
-  submit() {
-    if ((this.brand == null || this.jenis == null || this.lokasi_trade == null || this.inch == null || this.inner_valueSelected == null || this.outer_valueSelected == null || this.condition_valueSelected == null || this.addition_valueSelected == null ) || (this.brand.replace(/\s/g, "") == "")){
+  async submit(event) {
+    if ((this.brand == null || this.jenis == null || this.lokasi_trade == null || this.inch == null || this.inner_valueSelected == null || this.outer_valueSelected == null || this.condition_valueSelected == null || this.addition_valueSelected == null )){
       this.utilsService.showToast("Lengkapi pengisian form.");
     } 
     else if((this.kondisi_tvSelected == "Mati")){
-      alert("Mohon maaf, Anda belum bisa melanjutkan proses ini dikarenakan kondisi unit dalam keadaan mati");
+
+        const modalAlert = await this.modalController.create({
+          component: AlarmUnitTolakComponent,
+          cssClass: 'my-custom-modal-tolak-css',
+          backdropDismiss: false,
+          id: 'my-modal-id'
+        });
+        return await modalAlert.present();
     } 
     else {
-      this.presentAlertConfirm();
+      const modalAlert = await this.modalController.create({
+        component: ModalFormTvComponent,
+        cssClass: 'my-custom-modal-tolak-css',
+        backdropDismiss: false,
+        id: 'my-modal-id',
+        componentProps: {
+          brand: this.brand,
+          jenis: this.jenis,
+          lokasi_trade: this.lokasi_trade,
+          inner_valueSelected: this.inner_valueSelected,
+          outer_valueSelected:this.outer_valueSelected,
+          condition_valueSelected:this.condition_valueSelected,
+          addition_valueSelected:this.addition_valueSelected,
+          suara:this.suaraSelected,
+          kondisi_tv:this.kondisi_tvSelected,
+          kondisi_layar:this.kondisi_layarSelected,
+          inch:this.inch
+        },
+      });
+      return await modalAlert.present();
     }
   } 
 
-  async presentAlertConfirm() {
-    const alert = await this.alertController.create({
-      header: 'ZFix',
-      message: 'Apakah data yang di pilih sudah sesuai dengan kondisi yang sebenarnya?',
-      backdropDismiss: false,
-      buttons: [
-        {
-          text: 'Tidak',
-          role: 'cancel',
-          cssClass: 'yourClass',
-          handler: () => {}
-        }, {
-          text: 'Lanjut',
-          handler: () => {
-            let navigationExtras: NavigationExtras = {
-              queryParams: {
-                  brand: this.brand,
-                  jenis: this.jenis,
-                  lokasi_trade: this.lokasi_trade,
-                  inner_valueSelected: this.inner_valueSelected,
-                  outer_valueSelected:this.outer_valueSelected,
-                  condition_valueSelected:this.condition_valueSelected,
-                  addition_valueSelected:this.addition_valueSelected,
-                  port:this.portSelected,
-                  wifi:this.wifiSelected,
-                  suara:this.suaraSelected,
-                  kondisi_tv:this.kondisi_tvSelected,
-                  kondisi_layar:this.kondisi_layarSelected,
-                  inch:this.inch
-              }
-            };
-            this.navCtrl.navigateForward(["/landing/tv-brand/detail-tv"], navigationExtras);
+  // async presentAlertConfirm() {
+  //   const alert = await this.alertController.create({
+  //     header: 'ZFix',
+  //     message: 'Apakah data yang di pilih sudah sesuai dengan kondisi yang sebenarnya?',
+  //     backdropDismiss: false,
+  //     buttons: [
+  //       {
+  //         text: 'Tidak',
+  //         role: 'cancel',
+  //         cssClass: 'yourClass',
+  //         handler: () => {}
+  //       }, {
+  //         text: 'Lanjut',
+  //         handler: () => {
+  //           let navigationExtras: NavigationExtras = {
+  //             queryParams: {
+  //                 brand: this.brand,
+  //                 jenis: this.jenis,
+  //                 lokasi_trade: this.lokasi_trade,
+  //                 inner_valueSelected: this.inner_valueSelected,
+  //                 outer_valueSelected:this.outer_valueSelected,
+  //                 condition_valueSelected:this.condition_valueSelected,
+  //                 addition_valueSelected:this.addition_valueSelected,
+  //                 port:this.portSelected,
+  //                 wifi:this.wifiSelected,
+  //                 suara:this.suaraSelected,
+  //                 kondisi_tv:this.kondisi_tvSelected,
+  //                 kondisi_layar:this.kondisi_layarSelected,
+  //                 inch:this.inch
+  //             }
+  //           };
+  //           this.navCtrl.navigateForward(["/landing/tv-brand/detail-tv"], navigationExtras);
               
-          }
-        }, 
-      ]
-    });
-    await alert.present();
-  }
+  //         }
+  //       }, 
+  //     ]
+  //   });
+  //   await alert.present();
+  // }
  
   
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-alarm-unit-tolak',
@@ -7,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlarmUnitTolakComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private ModalController: ModalController
+
+  ) { }
 
   ngOnInit() {}
+
+  dismissModal() {
+    this.ModalController.dismiss({ 
+      'dismissed': true
+    });
+  }
 
 }

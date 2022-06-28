@@ -63,7 +63,7 @@ export class TypePage implements OnInit {
   ngOnInit() {
     setInterval(() => { 
       this.Count();
-    }, 3000);
+    }, 5000);
 
     setTimeout(() => {
       var d = new Date();
