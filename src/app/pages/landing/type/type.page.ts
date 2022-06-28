@@ -45,6 +45,8 @@ export class TypePage implements OnInit {
     },
   ];
   count_notification: any;
+  dateTime;
+  time:string;
   constructor(
     private authService: AuthenticationService,
     private storage: Storage,
@@ -62,6 +64,26 @@ export class TypePage implements OnInit {
     setInterval(() => { 
       this.Count();
     }, 3000);
+
+    setTimeout(() => {
+      var d = new Date();
+      
+      // this.time = d.getHours().toString();
+      if(d.getHours() == 24 || d.getHours() == 1 || d.getHours() == 2 || d.getHours() == 3 || d.getHours() == 4 || d.getHours() == 5 || d.getHours() == 6 || d.getHours() == 7 || d.getHours() == 8 || d.getHours() == 9 || d.getHours() == 10 || d.getHours() == 11){
+        this.time = 'Selamat Pagi,';
+      } 
+      else if(d.getHours() == 12 || d.getHours() == 13 || d.getHours() == 14){
+        this.time = "Selamat Siang,";
+      }
+      else if(d.getHours() == 15 || d.getHours() == 16 || d.getHours() == 17){
+        this.time = "Selamat Sore,";
+      }
+      else if(d.getHours() == 18 || d.getHours() == 19 || d.getHours() == 20 || d.getHours() == 21 || d.getHours() == 22 || d.getHours() == 23){
+        this.time = "Selamat Malam,";
+      }
+
+
+    });
 
   //   cordova.plugins.AppReview.requestReview().catch(function() {
   //     return cordova.plugins.AppReview.openStoreScreen();

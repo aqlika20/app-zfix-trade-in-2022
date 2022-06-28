@@ -95,3 +95,17 @@
     background: #FFFFFF;
     border-radius: 20px;
  }
+
+ @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/src/assets/fonts/PlusJakartaSans-Regular.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Plus Jakarta Sans Extra';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/src/assets/fonts/PlusJakartaSans-ExtraBold.ttf');
+  }

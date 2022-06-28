@@ -77,10 +77,36 @@
             </ion-col>
           </ion-row>
         </ion-grid>
-        <div class="show" style="margin-top: 14px">
+        <div class="show" style="margin-top: 14px" (click)="showMore()">
           <a>Show more brand</a> <ion-icon class="ic_drop" name="caret-down-outline"></ion-icon>
         </div>
-        <!-- <ion-button class="btn2">Show more brand</ion-button> -->
+        <div id="hide" hidden="true">
+          <ion-grid style="margin-top: 14px">
+            <ion-row>
+              <ion-col size-md="4">
+                <ion-card id="razer" class="kulkas-merk-select" (click)="selectMerk('razer')">
+                  <img style="margin-top: 8%; margin-bottom: 8%;" src="../../../../assets/sponsor/razer.png" alt="">
+                  <br>
+                  <ion-label style="margin-bottom: 15%;">Razer</ion-label>
+                </ion-card>
+              </ion-col>
+              <ion-col size-md="4">
+                <ion-card id="apple" class="kulkas-merk-select" (click)="selectMerk('apple')">
+                  <img style="margin-top: 8%; margin-bottom: 8%;" src="../../../../assets/sponsor/apple.png" alt="">
+                  <br>
+                  <ion-label style="margin-bottom: 15%;">Apple</ion-label>
+                </ion-card>
+              </ion-col> 
+              <ion-col size-md="4">
+                <ion-card id="alienware" class="kulkas-merk-select" (click)="selectMerk('alienware')">
+                  <img style="margin-top: 8%; margin-bottom: 8%;" src="../../../../assets/sponsor/alienware.png" alt="">
+                  <br>
+                  <ion-label style="margin-bottom: 15%;">Alienware</ion-label>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
 
         <div class="t2" style="margin-top: 14px">
           Tipe
