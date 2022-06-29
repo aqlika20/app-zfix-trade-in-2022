@@ -7,6 +7,9 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx/index';
   styleUrls: ['./call-us.page.scss'],
 })
 export class CallUsPage implements OnInit {
+  option: string;
+  reason: string;
+  description: string;
 
   sendObj = {
     to: '',
@@ -25,9 +28,9 @@ export class CallUsPage implements OnInit {
 
   sendEmail(){
     let email = {
-      to: 'aqlika@macantech.asia',
-      subject: 'tes',
-      body: 'test',
+      to: 'cs@zfix.id',
+      subject: this.option +'-'+ this.reason,
+      body: this.description,
       isHtml: true
       }; 
     

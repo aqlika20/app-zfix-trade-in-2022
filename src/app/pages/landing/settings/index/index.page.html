@@ -20,14 +20,14 @@
     <ion-label class="text">
       <p *ngIf="user != {}">
         <span style="font-size: 18px;">{{ user.data?.user.name }}</span>
-        <span style="font-size: 11px;" routerLink="../../profile">edit profile<img class="avatars" style="margin-left: 2%;" src="./assets/icon/arrow-circle-rightmdpi.png"></span></p>
+        <span style="font-size: 11px;" routerLink="../../profile">Ubah Profile<img class="avatars" style="margin-left: 2%;" src="./assets/icon/arrow-circle-rightmdpi.png"></span></p>
 
     </ion-label>
   </ion-item>
 
   <ion-item lines="none">
     <ion-text>
-      <p style="font-size: 12px;">General</p>
+      <p style="font-size: 12px;">Umum</p>
     </ion-text>
   </ion-item>
 
@@ -54,7 +54,7 @@
 
   <ion-item lines="none">
     <ion-text>
-      <p style="font-size: 12px;">Other
+      <p style="font-size: 12px;">Lainnya
     </ion-text>
   </ion-item>
 
@@ -74,14 +74,14 @@
 
   <ion-item lines="none" (click)="logout()">
     <ion-text>
-      <p style="font-size: 12px;">Log out <img class="avatars" src="./assets/icon/arrow-circle-rightmdpi.png">
+      <p style="font-size: 12px;">Keluar <img class="avatars" src="./assets/icon/arrow-circle-rightmdpi.png">
       </p>
     </ion-text>
   </ion-item>
 
   <ion-item lines="none">
     <ion-text>
-      <p style="font-size: 12px;">Version: {{VersionNumber}}</p>
+      <p style="font-size: 12px;">Versi: {{VersionNumber}}</p>
     </ion-text>
   </ion-item>
   

@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<ion-content [fullscreen]=\"true\" mode=\"md\">\r\n  \r\n  <div class=\"content\">\r\n    <div class=\"icon\" routerLink=\"/landing/setting\">\r\n      <ion-icon name=\"arrow-back-outline\"></ion-icon>\r\n    </div>\r\n    \r\n    <h1>Contact US</h1>\r\n\r\n    <div class=\"itemBorder\">\r\n      <ion-select [interfaceOptions]=\"customPopoverOptions\" placeholder=\"What's your problem\" okText=\"Okay\" cancelText=\"Dismiss\">\r\n        <ion-select-option value=\"1\">1</ion-select-option>\r\n      </ion-select>\r\n    </div>\r\n  \r\n    <ion-item class=\"border\">\r\n      <ion-input type=\"text\"  placeholder=\"Your Reason\"></ion-input>\r\n    </ion-item>\r\n  \r\n    <ion-item class=\"border\">\r\n      <ion-textarea type=\"text\"  placeholder=\"Description\" style=\"height: 200px;\"></ion-textarea>\r\n    </ion-item>\r\n  \r\n    <div class=\"btn\">\r\n      <ion-button class=\"btn2\" shape=\"round\" (click)=\"submit()\">Submit</ion-button>\r\n    </div>\r\n  </div>\r\n  \r\n</ion-content>\r\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<ion-content [fullscreen]=\"true\" mode=\"md\">\r\n  \r\n  <div class=\"content\">\r\n    <div class=\"icon\" routerLink=\"/landing/setting\">\r\n      <ion-icon name=\"arrow-back-outline\"></ion-icon>\r\n    </div>\r\n    \r\n    <h1>Hubungi Kami Melalui:</h1>\r\n    <h2 style=\"color: blue;\"><a href=\"tel:+62 877-0477-5575\">Telphone: +62 877-0477-5575</a></h2>\r\n    <h2><a href=\"https://api.whatsapp.com/send?phone=6287704775575\" >Whatsapp: 087704775575</a></h2>\r\n    <h2>Email, Dengan Mengisi Form Dibawah ini.</h2>\r\n    <div class=\"itemBorder\">\r\n      <ion-select [interfaceOptions]=\"customPopoverOptions\" placeholder=\"Apa masalah Anda\" okText=\"Okay\" cancelText=\"Dismiss\" (ionChange)=\"this.option = $event.target.value\">\r\n        <ion-select-option value=\"Tidak Bisa Digunakan\">Tidak Bisa Digunakan</ion-select-option>\r\n        <ion-select-option value=\"Lapor Masalah\">Lapor Masalah</ion-select-option>\r\n      </ion-select>\r\n    </div>\r\n  \r\n    <ion-item class=\"border\">\r\n      <ion-input type=\"text\" [(ngModel)]=\"reason\" placeholder=\"Alasan Anda\"></ion-input>\r\n    </ion-item>\r\n  \r\n    <ion-item class=\"border\">\r\n      <ion-textarea type=\"text\" [(ngModel)]=\"description\"  placeholder=\"Deskripsi\" style=\"height: 200px;\"></ion-textarea>\r\n    </ion-item>\r\n  \r\n    <div class=\"btn\">\r\n      <ion-button class=\"btn2\" shape=\"round\" (click)=\"sendEmail()\">Submit</ion-button>\r\n    </div>\r\n  </div>\r\n  \r\n</ion-content>\r\n  ");
 
 /***/ }),
 
@@ -137,9 +137,9 @@ let CallUsPage = class CallUsPage {
     }
     sendEmail() {
         let email = {
-            to: 'aqlika@macantech.asia',
-            subject: 'tes',
-            body: 'test',
+            to: 'cs@zfix.id',
+            subject: this.option + '-' + this.reason,
+            body: this.description,
             isHtml: true
         };
         this.emailComposer.open(email);

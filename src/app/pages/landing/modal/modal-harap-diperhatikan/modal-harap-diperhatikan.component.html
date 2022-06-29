@@ -46,11 +46,11 @@
       </div>
       <ion-item class="check" lines="none">
         <ion-label class="t2">Jangan tampilkan lagi</ion-label>
-        <ion-checkbox color="primary" mode="ios" slot="start"></ion-checkbox>
+        <ion-checkbox color="primary" mode="ios" slot="start" [(ngModel)]="agree" (ionChange)="checkboxClick()"></ion-checkbox>
       </ion-item>
       <div class="btn">
         <ion-button style="width: 100%; height: 45px;" shape="round" (click)="submit()">Ok, Mengerti</ion-button>
-      </div>
+      </div> 
     </div>
   </div>
 </ion-content>

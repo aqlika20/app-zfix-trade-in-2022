@@ -10,7 +10,7 @@
   <ion-card>
     <ion-card-header>
        <ion-card-title>
-         Sign Up
+         Daftar
        </ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -32,10 +32,10 @@
       <ion-item>
         <ion-input placeholder="Address"  name="address" type="text" [(ngModel)]="credential.address" pattern="^\w+( +\w+)*$" required></ion-input>
       </ion-item>
-      <input type="checkbox" id="option" style="margin-top: 20px;"/>
-      <ion-label for="option"> <span class="font-family: Plus Jakarta Sans; pading-left: 5px;"> Saya setuju dengan Syarat dan Ketentuan</span> </ion-label><br>
+      <ion-checkbox [(ngModel)]="agree" (ionChange)="checkboxClick()"></ion-checkbox>
+      <ion-label for="option" (click)="showModal()" style="color:#045FC4;"> <span class="font-family: Plus Jakarta Sans; pading-left: 5px;"> Saya setuju dengan Syarat dan Ketentuan</span> </ion-label><br>
       <div class="botton-section">
-        <ion-button (click)="register()">Sign Up</ion-button>
+        <ion-button (click)="register()">Daftar</ion-button>
       </div>
       <div style="margin-top: 20px; text-align: center;">
         <p style="font-family: Plus Jakarta Sans;">Sudah punya akun? <a class="forgot" routerLink="/login">Login</a></p>

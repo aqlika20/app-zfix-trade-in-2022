@@ -77,35 +77,37 @@
             </ion-col>
           </ion-row>
         </ion-grid>
-        <div class="show" style="margin-top: 14px" (click)="showMore()">
-          <a>Show more brand</a> <ion-icon class="ic_drop" name="caret-down-outline"></ion-icon>
-        </div>
         <div id="hide" hidden="true">
           <ion-grid style="margin-top: 14px">
             <ion-row>
               <ion-col size-md="4">
-                <ion-card id="razer" class="laptop-merk-select" (click)="selectMerk('razer')">
-                  <img style="margin-top: 8%; margin-bottom: 8%;" src="../../../../assets/sponsor/razer.png" alt="">
-                  <br>
-                  <ion-label style="margin-bottom: 15%;">Razer</ion-label>
-                </ion-card>
-              </ion-col>
-              <ion-col size-md="4">
-                <ion-card id="apple" class="laptop-merk-select" (click)="selectMerk('apple')">
+                <ion-card id="Apple" class="laptop-merk-select" (click)="selectMerk('Apple')">
                   <img style="margin-top: 8%; margin-bottom: 8%;" src="../../../../assets/sponsor/apple.png" alt="">
                   <br>
                   <ion-label style="margin-bottom: 15%;">Apple</ion-label>
                 </ion-card>
               </ion-col> 
+
               <ion-col size-md="4">
-                <ion-card id="alienware" class="laptop-merk-select" (click)="selectMerk('alienware')">
+                <!-- <ion-card id="razer" class="laptop-merk-select" (click)="selectMerk('razer')">
+                  <img style="margin-top: 8%; margin-bottom: 8%;" src="../../../../assets/sponsor/razer.png" alt="">
+                  <br>
+                  <ion-label style="margin-bottom: 15%;">Razer</ion-label>
+                </ion-card> -->
+              </ion-col>
+              
+              <ion-col size-md="4">
+                <!-- <ion-card id="alienware" class="laptop-merk-select" (click)="selectMerk('alienware')">
                   <img style="margin-top: 8%; margin-bottom: 8%;" src="../../../../assets/sponsor/alienware.png" alt="">
                   <br>
                   <ion-label style="margin-bottom: 15%;">Alienware</ion-label>
-                </ion-card>
+                </ion-card> -->
               </ion-col>
             </ion-row>
           </ion-grid>
+        </div>
+        <div class="show" style="margin-top: 14px" (click)="showMore()">
+          <a>Show more brand</a> <ion-icon class="ic_drop" name="caret-down-outline"></ion-icon>
         </div>
 
         <div class="t2" style="margin-top: 14px">
@@ -169,12 +171,18 @@
         <ion-grid style="margin-top: 14px">
           <ion-row>
             <ion-col size-md="6">
-              <ion-card id="mac" class="laptop-os-select" (click)="selectOs('mac')">
+              <ion-card id="MAC OS" class="laptop-os-select" (click)="selectOs('MAC OS')" *ngIf = "selected_merk == undefined || selected_merk == 'Apple'" disabled="false">
+                <ion-label>MAC OS</ion-label>
+              </ion-card>
+              <ion-card id="MAC OS" class="laptop-os-select" *ngIf = "selected_merk != undefined && selected_merk != 'Apple'" disabled="true">
                 <ion-label>MAC OS</ion-label>
               </ion-card>
             </ion-col>
             <ion-col size-md="6">
-              <ion-card id="Windows" class="laptop-os-select" (click)="selectOs('Windows')">
+              <ion-card id="Windows" class="laptop-os-select" (click)="selectOs('Windows')" *ngIf = "selected_merk == undefined || selected_merk != 'Apple'" disabled="false">
+                <ion-label>Windows</ion-label>
+              </ion-card>
+              <ion-card id="Windows" class="laptop-os-select" *ngIf = "selected_merk != undefined && selected_merk == 'Apple'" disabled="true">
                 <ion-label>Windows</ion-label>
               </ion-card>
             </ion-col>

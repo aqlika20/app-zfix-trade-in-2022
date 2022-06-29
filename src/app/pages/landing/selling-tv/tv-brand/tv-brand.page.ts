@@ -17,6 +17,7 @@ import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { ModalFormTvComponent } from 'src/app/pages/landing/modal/modal-tv/modal-form-tv/modal-form-tv.component';
 import { AlarmUnitTolakComponent } from 'src/app/pages/landing/modal/alarm-unit-tolak/alarm-unit-tolak.component';
+import { ModalHarapDiperhatikanComponent } from 'src/app/pages/landing/modal/modal-harap-diperhatikan/modal-harap-diperhatikan.component';
 
 
 type Stores = {id: number, name: string};
@@ -56,7 +57,7 @@ export class TvBrandPage implements OnInit {
   kondisiTV: boolean = false;
 
   showHidden: boolean = true;
-
+  agree: boolean;
   constructor(
     private membershipApiService: MembershipApiService,
     private storage: Storage,
@@ -79,6 +80,14 @@ export class TvBrandPage implements OnInit {
     this.toggleInnerScreen();
     this.toggleOuterScreen();
     this.toggleKondisiTV();
+
+    // this.storage.get('Warning').then((result) => { 
+    //   if(result){
+
+    //   } else {
+    //     this.Announcement();
+    //   }
+    // });
   }
 
   ionViewWillEnter() {
@@ -105,6 +114,19 @@ export class TvBrandPage implements OnInit {
       document.getElementById("hide").hidden = true;
 
     }
+  }
+
+  async Announcement(){
+    const modalAlert = await this.modalController.create({
+      component: ModalHarapDiperhatikanComponent,
+      cssClass: 'harap-diperhatikan-modal-css',
+      backdropDismiss: false,
+      id: 'my-modal-id',
+      componentProps: {
+        agree: this.agree
+      },
+    });
+    return await modalAlert.present();
   }
 
   selectMerk(val){

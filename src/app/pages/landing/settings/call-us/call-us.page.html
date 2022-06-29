@@ -6,24 +6,27 @@
       <ion-icon name="arrow-back-outline"></ion-icon>
     </div>
     
-    <h1>Contact US</h1>
-
+    <h1>Hubungi Kami Melalui:</h1>
+    <h2 style="color: blue;"><a href="tel:+62 877-0477-5575">Telphone: +62 877-0477-5575</a></h2>
+    <h2><a href="https://api.whatsapp.com/send?phone=6287704775575" >Whatsapp: 087704775575</a></h2>
+    <h2>Email, Dengan Mengisi Form Dibawah ini.</h2>
     <div class="itemBorder">
-      <ion-select [interfaceOptions]="customPopoverOptions" placeholder="What's your problem" okText="Okay" cancelText="Dismiss">
-        <ion-select-option value="1">1</ion-select-option>
+      <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Apa masalah Anda" okText="Okay" cancelText="Dismiss" (ionChange)="this.option = $event.target.value">
+        <ion-select-option value="Tidak Bisa Digunakan">Tidak Bisa Digunakan</ion-select-option>
+        <ion-select-option value="Lapor Masalah">Lapor Masalah</ion-select-option>
       </ion-select>
     </div>
   
     <ion-item class="border">
-      <ion-input type="text"  placeholder="Your Reason"></ion-input>
+      <ion-input type="text" [(ngModel)]="reason" placeholder="Alasan Anda"></ion-input>
     </ion-item>
   
     <ion-item class="border">
-      <ion-textarea type="text"  placeholder="Description" style="height: 200px;"></ion-textarea>
+      <ion-textarea type="text" [(ngModel)]="description"  placeholder="Deskripsi" style="height: 200px;"></ion-textarea>
     </ion-item>
   
     <div class="btn">
-      <ion-button class="btn2" shape="round" (click)="submit()">Submit</ion-button>
+      <ion-button class="btn2" shape="round" (click)="sendEmail()">Submit</ion-button>
     </div>
   </div>
   

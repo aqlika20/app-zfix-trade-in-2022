@@ -4,6 +4,8 @@ import { AuthenticationService } from '../../services/authentication.service';
 import { UtilitiesService } from '../../services/utilities.service';
 import { Md5 } from 'ts-md5/dist/md5';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
+import { ModalController } from '@ionic/angular';
+import { SyaratKetentuanComponent } from 'src/app/pages/landing/modal/syarat-ketentuan/syarat-ketentuan.component';
 
 @Component({
   selector: 'app-register',
@@ -14,8 +16,10 @@ import { OneSignal } from '@ionic-native/onesignal/ngx';
 export class RegisterPage implements OnInit {
 
   credential: any = {}
+  agree:boolean;
 
-  constructor(private authApiService: AuthenticationApiService, private authService: AuthenticationService, public utilsService: UtilitiesService, private _md5: Md5, public oneSignal: OneSignal,) 
+  constructor(private authApiService: AuthenticationApiService, private authService: AuthenticationService, public utilsService: UtilitiesService, private _md5: Md5, public oneSignal: OneSignal,public modalController: ModalController,
+    ) 
   { 
     function makeid(length) {
       var result           = '';
@@ -39,9 +43,13 @@ export class RegisterPage implements OnInit {
   }
 
   register() {
-    if ((this.credential.email == null || this.credential.name == null || this.credential.contact == null || this.credential.address == null || this.credential.password == null || this.credential.confirm_password == null) || (this.credential.email.replace(/\s/g, "") == "" || this.credential.name.replace(/\s/g, "") == ""  || this.credential.contact.replace(/\s/g, "") == ""  || this.credential.address.replace(/\s/g, "") == ""  || this.credential.password.replace(/\s/g, "") == ""  || this.credential.confirm_password.replace(/\s/g, "") == "" )){
-      this.utilsService.showToast("Lengkapi pengisian form.");
+     if (this.agree == false || this.agree == null) {
+      alert("Harap Checklist Syarat & Ketentuan")
+    }
+    else if ((this.credential.email == null || this.credential.name == null || this.credential.contact == null || this.credential.address == null || this.credential.password == null || this.credential.confirm_password == null) || (this.credential.email.replace(/\s/g, "") == "" || this.credential.name.replace(/\s/g, "") == ""  || this.credential.contact.replace(/\s/g, "") == ""  || this.credential.address.replace(/\s/g, "") == ""  || this.credential.password.replace(/\s/g, "") == ""  || this.credential.confirm_password.replace(/\s/g, "") == "" )){
+      alert("Lengkapi pengisian form.");
     } 
+    
     else {
       this.utilsService.showToast('Tunggu Sebentar.');      
       this.authApiService.register(this.credential).subscribe(response => {
@@ -70,5 +78,15 @@ export class RegisterPage implements OnInit {
 
   hideKeyboard() {
     this.utilsService.hideKeyboard()
+  }
+
+ async showModal(){
+    const modalAlert = await this.modalController.create({
+      component: SyaratKetentuanComponent,
+      cssClass: 'my-custom-modal-syarat-ketentuan-css',
+      backdropDismiss: false,
+      id: 'my-modal-id'
+    });
+    return await modalAlert.present();
   }
 }
