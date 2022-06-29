@@ -55,6 +55,8 @@ export class TvBrandPage implements OnInit {
   kondisiNormal: boolean = false;
   kondisiTV: boolean = false;
 
+  showHidden: boolean = true;
+
   constructor(
     private membershipApiService: MembershipApiService,
     private storage: Storage,
@@ -89,6 +91,21 @@ export class TvBrandPage implements OnInit {
     header: 'Pilih Tempat Trade In',
     message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.'
   };
+
+  showMore(){
+
+    if(this.showHidden === true){
+
+      this.showHidden = false;
+      document.getElementById("hide").hidden = false;
+
+    }else if(this.showHidden === false){
+
+      this.showHidden = true;
+      document.getElementById("hide").hidden = true;
+
+    }
+  }
 
   selectMerk(val){
     this.brand = val;

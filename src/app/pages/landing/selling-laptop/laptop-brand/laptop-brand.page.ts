@@ -82,6 +82,8 @@ export class LaptopBrandPage implements OnInit {
   kondisiBluetooth: boolean = false;
   kondisiSpeaker: boolean = false;
 
+  showHidden: boolean = true;
+
   searchStore;
   constructor(
     private membershipApiService: MembershipApiService,
@@ -126,6 +128,21 @@ export class LaptopBrandPage implements OnInit {
   customPopoverProcessor: any = {
     header: 'Pilih Processor'
   };
+
+  showMore(){
+
+    if(this.showHidden === true){
+
+      this.showHidden = false;
+      document.getElementById("hide").hidden = false;
+
+    }else if(this.showHidden === false){
+
+      this.showHidden = true;
+      document.getElementById("hide").hidden = true;
+
+    }
+  }
 
   selectMerk(val){
     this.selected_merk = val;
