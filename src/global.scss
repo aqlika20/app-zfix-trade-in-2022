@@ -97,18 +97,12 @@
  }
 
  @font-face {
-    font-family: 'Plus Jakarta Sans';
+    font-family: Plus Jakarta Sans;
     font-style: normal;
     font-weight: normal;
-    src: url('/src/assets/fonts/PlusJakartaSans-Regular.ttf');
+    src: url(assets/fonts/webfonts/PlusJakartaSans-ExtraBold.woff2);
   }
   
-  @font-face {
-    font-family: 'Plus Jakarta Sans Extra';
-    font-style: normal;
-    font-weight: bold;
-    src: url('/src/assets/fonts/PlusJakartaSans-ExtraBold.ttf');
-  }
  .my-custom-modal-price-css .modal-wrapper {
     display: flex;
     flex-direction: column;

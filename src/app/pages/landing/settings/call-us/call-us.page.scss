@@ -8,7 +8,7 @@ ion-label{
 
 h1 {
   margin-top: 20px;
-  font-family: Plus Jakarta Sans Extra;
+  font-family: Plus Jakarta Sans;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -82,4 +82,33 @@ ion-textarea{
   font-weight: 400;
   border-radius: 60%;
   margin-top: 6%;
+}
+
+.button-call {
+  background-color: #dfedf6;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  // width: 20%;
+  border-radius: 25px;
+  padding: 15px 55px;
+  
+}
+
+.button-whatsapp {
+  background-color: #7FFFD4;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  // width: 20%;
+  border-radius: 25px;
+  padding: 15px 32px;
 }

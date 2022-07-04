@@ -12,7 +12,7 @@
       </div>
       <div class="title">
         Trade Laptop
-      </div>
+      </div> 
       <div class="subtitle">
         Silahkan isi data dibawah ini
       </div>
@@ -106,7 +106,7 @@
             </ion-row>
           </ion-grid>
         </div>
-        <div class="show" style="margin-top: 14px" (click)="showMore()">
+        <div class="show" style="margin-top: 14px" (click)="showMore()" id="hides">
           <a>Show more brand</a> <ion-icon class="ic_drop" name="caret-down-outline"></ion-icon>
         </div>
 
@@ -185,7 +185,7 @@
               <ion-card id="Windows" class="laptop-os-select" *ngIf = "selected_merk != undefined && selected_merk == 'Apple'" disabled="true">
                 <ion-label>Windows</ion-label>
               </ion-card>
-            </ion-col>
+            </ion-col> 
           </ion-row>
         </ion-grid>
         

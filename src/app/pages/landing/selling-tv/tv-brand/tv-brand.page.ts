@@ -107,6 +107,7 @@ export class TvBrandPage implements OnInit {
 
       this.showHidden = false;
       document.getElementById("hide").hidden = false;
+      document.getElementById("hides").hidden = true;
 
     }else if(this.showHidden === false){
 

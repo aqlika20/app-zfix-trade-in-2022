@@ -6,10 +6,13 @@
       <ion-icon name="arrow-back-outline"></ion-icon>
     </div>
     
-    <h1>Hubungi Kami Melalui:</h1>
-    <h2 style="color: blue;"><a href="tel:+62 877-0477-5575">Telphone: +62 877-0477-5575</a></h2>
-    <h2><a href="https://api.whatsapp.com/send?phone=6287704775575" >Whatsapp: 087704775575</a></h2>
-    <h2>Email, Dengan Mengisi Form Dibawah ini.</h2>
+    <h1>Hubungi Kami Melalui</h1>
+    <section>
+      <a class="button-whatsapp" href="https://api.whatsapp.com/send?phone=6287704775575"><img src="../../../../assets/icon/whatsapp.png" alt="" style="height: 20px; width: 20px;">&nbsp; Whatsapp</a>
+      
+      <a class="button-call" href="tel:+62 877-0477-5575"><img src="../../../../assets/icon/phone-call.png" alt="" style="height: 20px; width: 20px;">&nbsp; Call</a>
+    </section>
+    <br>
     <div class="itemBorder">
       <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Apa masalah Anda" okText="Okay" cancelText="Dismiss" (ionChange)="this.option = $event.target.value">
         <ion-select-option value="Tidak Bisa Digunakan">Tidak Bisa Digunakan</ion-select-option>
