@@ -1,7 +1,7 @@
 <ion-content>
   <h2>QRku<img (click)="openMyModal($event)" class="img" src="../../../../assets/images/Vector.png" alt=""></h2>
   
-  <div class="desk">
+  <div class="desk" *ngIf = "qrKulkas == '' && qrLaptop == '' && qrMesinCuci == '' && qrPS == '' && qrTV == ''"> 
     <div class="center">
       <div class="crd">
         <img src="../../../../assets/icon/zfx.png" alt="">
@@ -13,7 +13,7 @@
   
   <ion-card *ngFor="let item of qrLaptop">
     <div *ngFor="let vou of vouchers">
-      <ion-list (click)="openMyModalQR(vou.voucher_key, item.id)" *ngIf = "item.status == 4 && item.jenis_layanan == 2">
+      <ion-list (click)="openMyModalQR(vou.voucher_key, item.id)" *ngIf = "item.status == 4 && item.jenis_layanan == 2 && item.voucher_id == vou.id">
         <ion-item>
           <ion-grid>
             <ion-row>
@@ -38,7 +38,7 @@
       </ion-list>
     </div>
 
-    <ion-list lines="none" *ngFor="let loc of stores">
+    <div lines="none" *ngFor="let loc of stores">
       <ion-item *ngIf = "item.lokasi_trade == loc.id ">
         <ion-grid>
           <ion-row>
@@ -50,18 +50,18 @@
               </ion-label>
             </ion-col>
             <ion-col size="3">
-              <img style="height: 48px; width: 48px;" class="qr" (click)="openMyModal($event)" src="../../../../assets/images/maps.png" alt="">
+              <img style="height: 48px; width: 48px; float:right;" class="qr" (click)="openMyModal($event)" src="../../../../assets/images/maps.png" alt="">
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-item>
-    </ion-list>
+    </div>
 
 </ion-card>
 
   <ion-card *ngFor="let item of qrTV">
       <div *ngFor="let vou of vouchers">
-        <ion-list (click)="openMyModalQR(vou.voucher_key, item.id)" *ngIf = "item.status == 4 && item.jenis_layanan == 3">
+        <ion-list (click)="openMyModalQR(vou.voucher_key, item.id)" *ngIf = "item.status == 4 && item.jenis_layanan == 3 && item.voucher_id == vou.id">
           <ion-item>
             <ion-grid>
               <ion-row>
@@ -86,7 +86,7 @@
         </ion-list>
       </div>
 
-      <ion-list lines="none" *ngFor="let loc of stores">
+      <div lines="none" *ngFor="let loc of stores">
         <ion-item *ngIf = "item.lokasi_trade == loc.id ">
           <ion-grid>
             <ion-row>
@@ -97,19 +97,19 @@
                   </h3>
                 </ion-label>
               </ion-col>
-              <ion-col size="3">
-                <img style="height: 48px; width: 48px;" class="qr" (click)="openMyModal($event)" src="../../../../assets/images/maps.png" alt="">
+              <ion-col size="4">
+                <img style="height: 48px; width: 48px; float:right;" class="qr" (click)="openMyModal($event)" src="../../../../assets/images/maps.png" alt="">
               </ion-col>
             </ion-row>
           </ion-grid>
         </ion-item>
-      </ion-list>
+      </div>
 
   </ion-card>
 
   <ion-card *ngFor="let item of qrPS">
     <div *ngFor="let vou of vouchers">
-      <ion-list (click)="openMyModalQR(vou.voucher_key, item.id)" *ngIf = "item.status == 4 && item.jenis_layanan == 4">
+      <ion-list (click)="openMyModalQR(vou.voucher_key, item.id)" *ngIf = "item.status == 4 && item.jenis_layanan == 4 && item.voucher_id == vou.id">
         <ion-item>
           <ion-grid>
             <ion-row>
@@ -134,7 +134,7 @@
       </ion-list>
     </div>
 
-    <ion-list lines="none" *ngFor="let loc of stores">
+    <div lines="none" *ngFor="let loc of stores">
       <ion-item *ngIf = "item.lokasi_trade == loc.id ">
         <ion-grid>
           <ion-row>
@@ -146,18 +146,18 @@
               </ion-label>
             </ion-col>
             <ion-col size="3">
-              <img style="height: 48px; width: 48px;" class="qr" (click)="openMyModal($event)" src="../../../../assets/images/maps.png" alt="">
+              <img style="height: 48px; width: 48px; float:right;" class="qr" (click)="openMyModal($event)" src="../../../../assets/images/maps.png" alt="">
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-item>
-    </ion-list>
+    </div>
 
 </ion-card>
 
 <ion-card *ngFor="let item of qrKulkas">
   <div *ngFor="let vou of vouchers">
-    <ion-list (click)="openMyModalQR(vou.voucher_key, item.id)" *ngIf = "item.status == 4 && item.jenis_layanan == 5">
+    <ion-list (click)="openMyModalQR(vou.voucher_key, item.id)" *ngIf = "item.status == 4 && item.jenis_layanan == 5 && item.voucher_id == vou.id">
       <ion-item>
         <ion-grid>
           <ion-row>
@@ -182,7 +182,7 @@
     </ion-list>
   </div>
 
-  <ion-list lines="none" *ngFor="let loc of stores">
+  <div lines="none" *ngFor="let loc of stores">
     <ion-item *ngIf = "item.lokasi_trade == loc.id ">
       <ion-grid>
         <ion-row>
@@ -194,18 +194,18 @@
             </ion-label>
           </ion-col>
           <ion-col size="3">
-            <img style="height: 48px; width: 48px;" class="qr" (click)="openMyModal($event)" src="../../../../assets/images/maps.png" alt="">
+            <img style="height: 48px; width: 48px; float:right;" class="qr" (click)="openMyModal($event)" src="../../../../assets/images/maps.png" alt="">
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-item>
-  </ion-list>
+  </div>
 
 </ion-card>
 
 <ion-card *ngFor="let item of qrMesinCuci">
   <div *ngFor="let vou of vouchers">
-    <ion-list (click)="openMyModalQR(vou.voucher_key, item.id)" *ngIf = "item.status == 4 && item.jenis_layanan == 6">
+    <ion-list (click)="openMyModalQR(vou.voucher_key, item.id)" *ngIf = "item.status == 4 && item.jenis_layanan == 6 && item.voucher_id == vou.id">
       <ion-item>
         <ion-grid>
           <ion-row>
@@ -230,7 +230,7 @@
     </ion-list>
   </div>
 
-  <ion-list lines="none" *ngFor="let loc of stores">
+  <div lines="none" *ngFor="let loc of stores">
     <ion-item *ngIf = "item.lokasi_trade == loc.id ">
       <ion-grid>
         <ion-row>
@@ -242,12 +242,12 @@
             </ion-label>
           </ion-col>
           <ion-col size="3">
-            <img style="height: 48px; width: 48px;" class="qr" (click)="openMyModal($event)" src="../../../../assets/images/maps.png" alt="">
+            <img style="height: 48px; width: 48px; float:right;" class="qr" (click)="openMyModal($event)" src="../../../../assets/images/maps.png" alt="">
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-item>
-  </ion-list>
+  </div>
 
 </ion-card>
   

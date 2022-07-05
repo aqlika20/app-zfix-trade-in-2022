@@ -61,9 +61,9 @@ export class MyQrPage implements OnInit {
   }
 
   ionViewWillEnter() {
-  setInterval(() => { 
+  // setInterval(() => { 
     this.getQRCODE();
-  }, 2000);
+  // }, 2000);
   this.getTransaction();
   }
 
