@@ -8,7 +8,7 @@ h2 {
     margin-right: 20px;
 }
 
-img { 
+.img { 
     margin-left: 75%;
 }
 
@@ -19,6 +19,44 @@ img {
 
 p{
     margin-left: 10px;
+}
+
+.desk{
+    padding: 5%;
+}
+
+.center{
+    text-align: center;
+}
+
+.crd{
+    height: 270px;
+    margin: 30px;
+    padding-top: 28%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: none !important;
+    border: 1px solid #EBEBEB;
+}
+
+.alart{
+    width: 35px;
+    height: 35px;
+    padding: 3%;
+    background-color: red;
+}
+
+.t2 {
+    font-family: Plus Jakarta Sans;
+    font-size: 15px;
+    color: rgba(116, 116, 116, 1);
+}
+
+.img2{
+    height: 70px;
+    width: 70px;
 }
 
 .text {

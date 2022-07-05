@@ -1,5 +1,15 @@
 <ion-content>
-  <h2>QRku<img (click)="openMyModal($event)" src="../../../../assets/images/Vector.png" alt=""></h2>
+  <h2>QRku<img (click)="openMyModal($event)" class="img" src="../../../../assets/images/Vector.png" alt=""></h2>
+  
+  <div class="desk">
+    <div class="center">
+      <div class="crd">
+        <img src="../../../../assets/icon/zfx.png" alt="">
+      </div>
+      <br>
+      <p class="t2">QR Code kamu akan muncul setelah proses tukar tambah kamu berhasil disetujui</p>
+    </div>
+  </div>
   
   <ion-card *ngFor="let item of qrLaptop">
     <div *ngFor="let vou of vouchers">
