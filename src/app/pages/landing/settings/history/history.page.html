@@ -7,9 +7,50 @@
   </ion-toolbar>
 </ion-header>
 
+<div *ngFor="let item of trLaptop">
+  <ion-card *ngIf = "item.jenis_layanan == 2">
+    <ion-grid>
+      <ion-row>
+        <ion-col style="padding-left: 5%;">
+          <div class="t1">
+            Barang
+          </div>     
+          <div class="t2">
+            Laptop {{item.brand}}
+          </div>
+        </ion-col>
+        <ion-col style="padding-right: 5%;">
+          <p class="status">status</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="padding-left: 5%;">
+          <div class="t1">
+            Tipe
+          </div>
+          <div class="t2">
+            Ram : {{item.memory}} GB
+          </div>
+          <div class="t2">
+            Storage : {{item.storages}} GB
+          </div>
+        </ion-col>
+        <ion-col style="padding-right: 5%;">
+          <div class="t1">
+            Harga
+          </div>
+          <div class="t3">
+            Rp.{{item.price | number}}
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</div>
+
 <ion-content fullscreen>
-  <div *ngFor="let item of trLaptop">
-    <ion-card *ngIf = "item.jenis_layanan == 2">
+  <div *ngFor="let item of trTV">
+    <ion-card *ngIf = "item.jenis_layanan == 3">
       <ion-grid>
         <ion-row>
           <ion-col style="padding-left: 5%;">
@@ -46,46 +87,7 @@
     </ion-card>
   </div>
 
-  <div *ngFor="let item of trTV">
-    <ion-card *ngIf = "item.jenis_layanan == 3">
-      <ion-grid>
-        <ion-row>
-          <ion-col style="padding-left: 5%;">
-            <div class="t1">
-              Barang
-            </div>     
-            <div class="t2">
-              Laptop {{item.brand}}
-            </div>
-          </ion-col>
-          <ion-col style="padding-right: 5%;">
-            <p class="status">status</p>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col style="padding-left: 5%;">
-            <div class="t1">
-              Tipe
-            </div>
-            <div class="t2">
-              Ram : {{item.memory}} GB
-            </div>
-            <div class="t2">
-              Storage : {{item.storages}} GB
-            </div>
-          </ion-col>
-          <ion-col style="padding-right: 5%;">
-            <div class="t1">
-              Harga
-            </div>
-            <div class="t3">
-              Rp.{{item.price | number}}
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-  </div>
+  
 
   <div *ngFor="let item of trPS">
     <ion-card *ngIf = "item.jenis_layanan == 4">
