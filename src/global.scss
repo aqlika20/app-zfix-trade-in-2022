@@ -153,3 +153,15 @@
    background: #FFFFFF;
    border-radius: 20px;
 }
+
+.customAlertCss{
+   .alert-message.sc-ion-alert-md {
+     background-color: #FFFAEB !important;
+     border: 1px solid #F79009 !important;
+     border-radius: 4px !important;
+     color: #3D3D3D !important;
+     margin: 15px !important;
+     padding: 10px !important;
+     font-size: 12px !important;
+   }
+ }
