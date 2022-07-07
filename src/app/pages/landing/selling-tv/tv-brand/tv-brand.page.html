@@ -24,7 +24,7 @@
           <ion-select [interfaceOptions]="customPopoverOptions" placeholder="Pilih tempat melakukan Trade In" okText="Okay" cancelText="Dismiss" (ionChange)="this.lokasi_trade = $event.target.value">
             <ion-select-option *ngFor="let item of stores" value="{{item.id}}">{{item.name}}</ion-select-option>
           </ion-select>
-        </div>
+        </div> 
         <div class="t1" style="margin-top: 30px;">
           Pilih Merk
         </div>

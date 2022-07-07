@@ -122,7 +122,7 @@ export class LaptopBrandPage implements OnInit {
 
   customPopoverOptions: any = {
     header: 'Pilih Tempat Trade In',
-    message: 'Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.',
+    message: '<ion-row><ion-col class="col-icon"><img src="../../../../assets/icon/info-circle-orangexxxhdpi.png" class="mr-3" alt="Sample Image"></ion-col><ion-col>Toko yang telah dipilih tidak dapat diubah, voucher yang kamu terima hanya berlaku di toko yang kamu pilih.</ion-col></ion-row>',
     cssClass: 'customAlertCss',
   };
 
